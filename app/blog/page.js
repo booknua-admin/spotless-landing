@@ -51,6 +51,7 @@ export default function BlogPage() {
                   <span>&middot;</span>
                   <span>{featured.readTime}</span>
                 </div>
+                <span className="blog-card-link">Read article &rarr;</span>
               </div>
             </a>
           )}
