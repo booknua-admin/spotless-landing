@@ -1,9 +1,15 @@
 import ProductCTA from '../../../components/product-cta';
+import JsonLd from '../../../components/json-ld';
+import { getPageSeo, SITE_URL } from '../../../lib/seo';
+import { breadcrumbSchema } from '../../../lib/schema';
+
+const seo = getPageSeo('/product/finance');
 
 export const metadata = {
-  title: 'Finance Tools — Spotless',
-  description:
-    'Revenue analytics, transaction tracking, payout management, and financial reporting for cleaning companies.',
+  title: seo.title,
+  description: seo.description,
+  openGraph: { title: seo.title, description: seo.description, type: 'website' },
+  twitter: { card: 'summary_large_image', title: seo.title, description: seo.description },
 };
 
 export default function FinancePage() {
@@ -232,6 +238,11 @@ export default function FinancePage() {
       </section>
 
       <ProductCTA />
+      <JsonLd data={breadcrumbSchema([
+        { name: 'Home', url: SITE_URL },
+        { name: 'Product', url: `${SITE_URL}/product` },
+        { name: 'Finance', url: `${SITE_URL}/product/finance` },
+      ])} />
     </>
   );
 }

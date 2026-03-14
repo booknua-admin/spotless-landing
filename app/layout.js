@@ -1,6 +1,8 @@
 import Script from 'next/script';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
+import JsonLd from '../components/json-ld';
+import { organizationSchema } from '../lib/schema';
 import '../css/styles.css';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
@@ -26,6 +28,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <Footer />
+        <JsonLd data={organizationSchema()} />
         <Script src="/js/main.js" strategy="afterInteractive" />
       </body>
     </html>

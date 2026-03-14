@@ -1,9 +1,15 @@
 import ProductCTA from '../../components/product-cta';
+import JsonLd from '../../components/json-ld';
+import { getPageSeo, SITE_URL } from '../../lib/seo';
+import { breadcrumbSchema } from '../../lib/schema';
+
+const seo = getPageSeo('/tools');
 
 export const metadata = {
-  title: 'Free Tools — Spotless',
-  description:
-    'Free calculators and estimators to help service business owners price jobs, estimate profits, and plan their startup.',
+  title: seo.title,
+  description: seo.description,
+  openGraph: { title: seo.title, description: seo.description, type: 'website' },
+  twitter: { card: 'summary_large_image', title: seo.title, description: seo.description },
 };
 
 const tools = [
@@ -65,6 +71,11 @@ export default function ToolsPage() {
       </section>
 
       <ProductCTA />
+
+      <JsonLd data={breadcrumbSchema([
+        { name: 'Home', url: SITE_URL },
+        { name: 'Free Tools', url: `${SITE_URL}/tools` },
+      ])} />
     </div>
   );
 }
