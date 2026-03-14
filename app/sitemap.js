@@ -1,4 +1,4 @@
-import { getAllSlugs, getAllCategories } from '../lib/blog';
+import { getAllSlugs, getAllCategories, categorySlug } from '../lib/blog';
 import { getAllCompetitorSlugs } from '../lib/comparisons';
 
 const BASE_URL = 'https://spotlessapp.io';
@@ -67,7 +67,7 @@ export default function sitemap() {
   }));
 
   const categoryPages = categories.map((cat) => ({
-    url: `${BASE_URL}/blog/category/${cat.toLowerCase().replace(/\s+/g, '-')}`,
+    url: `${BASE_URL}/blog/category/${categorySlug(cat)}`,
     lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: 0.5,

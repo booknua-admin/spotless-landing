@@ -1,17 +1,17 @@
 import { notFound } from 'next/navigation';
-import { getAllCategories, getPostsByCategory } from '../../../../lib/blog';
+import { getAllCategories, getPostsByCategory, categorySlug } from '../../../../lib/blog';
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
   return getAllCategories().map((cat) => ({
-    category: cat.toLowerCase().replace(/\s+/g, '-'),
+    category: categorySlug(cat),
   }));
 }
 
 export function generateMetadata({ params }) {
   const category = getAllCategories().find(
-    (c) => c.toLowerCase().replace(/\s+/g, '-') === params.category,
+    (c) => categorySlug(c) === params.category,
   );
 
   if (!category) {
@@ -27,7 +27,7 @@ export function generateMetadata({ params }) {
 export default function CategoryPage({ params }) {
   const allCategories = getAllCategories();
   const category = allCategories.find(
-    (c) => c.toLowerCase().replace(/\s+/g, '-') === params.category,
+    (c) => categorySlug(c) === params.category,
   );
 
   if (!category) {
@@ -56,7 +56,7 @@ export default function CategoryPage({ params }) {
             {allCategories.map((cat) => (
               <a
                 key={cat}
-                href={`/blog/category/${cat.toLowerCase().replace(/\s+/g, '-')}`}
+                href={`/blog/category/${categorySlug(cat)}`}
                 className={`blog-pill${cat === category ? ' active' : ''}`}
               >
                 {cat}
