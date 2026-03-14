@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import { compileMDX } from 'next-mdx-remote/rsc';
+import remarkGfm from 'remark-gfm';
 import ProductCTA from '../../../components/product-cta';
 import { getAllSlugs, getPostBySlug, getRelatedPosts } from '../../../lib/blog';
 
@@ -83,6 +84,11 @@ export default async function BlogPostPage({ params }) {
   const { content } = await compileMDX({
     source: post.content,
     components: mdxComponents,
+    options: {
+      mdxOptions: {
+        remarkPlugins: [remarkGfm],
+      },
+    },
   });
 
   const related = getRelatedPosts(params.slug, 3);
