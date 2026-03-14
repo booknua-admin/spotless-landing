@@ -89,42 +89,84 @@ export default function Navbar() {
                         <div className="mega-menu-icon">&#127968;</div>
                         <div>
                           <div className="mega-menu-title">Residential Cleaning</div>
-                          <div className="mega-menu-desc">Recurring clients, automated invoicing, schedule management</div>
+                          <div className="mega-menu-desc">House &amp; apartment cleaning</div>
                         </div>
                       </a>
                       <a href="/commercial" className="mega-menu-item" role="menuitem">
                         <div className="mega-menu-icon">&#127970;</div>
                         <div>
                           <div className="mega-menu-title">Commercial Cleaning</div>
-                          <div className="mega-menu-desc">Multi-site contracts, team scheduling, compliance tracking</div>
+                          <div className="mega-menu-desc">Office &amp; facility cleaning</div>
                         </div>
                       </a>
-                      <a href="/airbnb" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#9992;</div>
+                      <a href="/pressure-washing" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#128166;</div>
                         <div>
-                          <div className="mega-menu-title">Airbnb Turnovers</div>
-                          <div className="mega-menu-desc">Fast turnovers, calendar sync, property management</div>
+                          <div className="mega-menu-title">Pressure Washing</div>
+                          <div className="mega-menu-desc">Power washing services</div>
                         </div>
                       </a>
-                      <a href="/move-in-out" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#128230;</div>
+                      <a href="/auto-detailing" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#128663;</div>
                         <div>
-                          <div className="mega-menu-title">Move-In / Move-Out</div>
-                          <div className="mega-menu-desc">One-off deep cleans, checklists, before/after photos</div>
+                          <div className="mega-menu-title">Auto Detailing</div>
+                          <div className="mega-menu-desc">Car detailing &amp; wash</div>
                         </div>
                       </a>
-                      <a href="/deep-cleaning" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#10024;</div>
+                      <a href="/window-cleaning" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#128999;</div>
                         <div>
-                          <div className="mega-menu-title">Deep Cleaning</div>
-                          <div className="mega-menu-desc">Detailed scoping, premium pricing, specialist equipment</div>
+                          <div className="mega-menu-title">Window Cleaning</div>
+                          <div className="mega-menu-desc">Glass &amp; window services</div>
                         </div>
                       </a>
-                      <a href="/post-construction" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#127959;</div>
+                      <a href="/pool-cleaning" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#127946;</div>
                         <div>
-                          <div className="mega-menu-title">Post-Construction</div>
-                          <div className="mega-menu-desc">Phase-based cleaning, contractor coordination, progress tracking</div>
+                          <div className="mega-menu-title">Pool Cleaning</div>
+                          <div className="mega-menu-desc">Pool maintenance</div>
+                        </div>
+                      </a>
+                      <a href="/landscaping" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#127793;</div>
+                        <div>
+                          <div className="mega-menu-title">Landscaping</div>
+                          <div className="mega-menu-desc">Lawn &amp; garden care</div>
+                        </div>
+                      </a>
+                      <a href="/pest-control" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#128027;</div>
+                        <div>
+                          <div className="mega-menu-title">Pest Control</div>
+                          <div className="mega-menu-desc">Bug &amp; pest removal</div>
+                        </div>
+                      </a>
+                      <a href="/carpet-cleaning" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#129529;</div>
+                        <div>
+                          <div className="mega-menu-title">Carpet Cleaning</div>
+                          <div className="mega-menu-desc">Floor &amp; carpet care</div>
+                        </div>
+                      </a>
+                      <a href="/junk-removal" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#128465;</div>
+                        <div>
+                          <div className="mega-menu-title">Junk Removal</div>
+                          <div className="mega-menu-desc">Haul-away services</div>
+                        </div>
+                      </a>
+                      <a href="/soft-washing" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#129529;</div>
+                        <div>
+                          <div className="mega-menu-title">Soft Washing</div>
+                          <div className="mega-menu-desc">Gentle exterior cleaning</div>
+                        </div>
+                      </a>
+                      <a href="/painting" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#127912;</div>
+                        <div>
+                          <div className="mega-menu-title">Painting</div>
+                          <div className="mega-menu-desc">Interior &amp; exterior painting</div>
                         </div>
                       </a>
                     </div>
@@ -163,10 +205,16 @@ export default function Navbar() {
           <div className="mobile-accordion-panel">
             <a href="/residential">Residential Cleaning</a>
             <a href="/commercial">Commercial Cleaning</a>
-            <a href="/airbnb">Airbnb Turnovers</a>
-            <a href="/move-in-out">Move-In / Move-Out</a>
-            <a href="/deep-cleaning">Deep Cleaning</a>
-            <a href="/post-construction">Post-Construction</a>
+            <a href="/pressure-washing">Pressure Washing</a>
+            <a href="/auto-detailing">Auto Detailing</a>
+            <a href="/window-cleaning">Window Cleaning</a>
+            <a href="/pool-cleaning">Pool Cleaning</a>
+            <a href="/landscaping">Landscaping</a>
+            <a href="/pest-control">Pest Control</a>
+            <a href="/carpet-cleaning">Carpet Cleaning</a>
+            <a href="/junk-removal">Junk Removal</a>
+            <a href="/soft-washing">Soft Washing</a>
+            <a href="/painting">Painting</a>
           </div>
         </div>
         <a href="/#pricing">Pricing</a>

@@ -28,10 +28,16 @@ export default function Footer() {
             <h4>Solutions</h4>
             <a href="/residential">Residential Cleaning</a>
             <a href="/commercial">Commercial Cleaning</a>
-            <a href="/airbnb">Airbnb Turnovers</a>
-            <a href="/move-in-out">Move-In / Move-Out</a>
-            <a href="/deep-cleaning">Deep Cleaning</a>
-            <a href="/post-construction">Post-Construction</a>
+            <a href="/pressure-washing">Pressure Washing</a>
+            <a href="/auto-detailing">Auto Detailing</a>
+            <a href="/window-cleaning">Window Cleaning</a>
+            <a href="/pool-cleaning">Pool Cleaning</a>
+            <a href="/landscaping">Landscaping</a>
+            <a href="/pest-control">Pest Control</a>
+            <a href="/carpet-cleaning">Carpet Cleaning</a>
+            <a href="/junk-removal">Junk Removal</a>
+            <a href="/soft-washing">Soft Washing</a>
+            <a href="/painting">Painting</a>
           </div>
           <div className="footer-col">
             <h4>Company</h4>

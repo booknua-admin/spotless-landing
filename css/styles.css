@@ -1926,6 +1926,12 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 8px;
 }
+.mega-menu-inner:not(:has(.mega-menu-highlight)) {
+  grid-template-columns: 1fr;
+}
+.mega-menu-inner:not(:has(.mega-menu-highlight)) .mega-menu-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
 
 .mega-menu-item {
   display: flex;
