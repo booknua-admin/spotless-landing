@@ -1,9 +1,15 @@
 import ProductCTA from '../../../components/product-cta';
+import JsonLd from '../../../components/json-ld';
+import { getPageSeo, SITE_URL } from '../../../lib/seo';
+import { breadcrumbSchema } from '../../../lib/schema';
+
+const seo = getPageSeo('/product/payments');
 
 export const metadata = {
-  title: 'Payments & Invoicing — Spotless',
-  description:
-    'Auto-generate invoices, accept card payments, manage recurring billing, and send payment reminders automatically.',
+  title: seo.title,
+  description: seo.description,
+  openGraph: { title: seo.title, description: seo.description, type: 'website' },
+  twitter: { card: 'summary_large_image', title: seo.title, description: seo.description },
 };
 
 export default function PaymentsPage() {
@@ -212,8 +218,8 @@ export default function PaymentsPage() {
             </div>
             <div className="product-mini-card">
               <div className="product-mini-card-icon">&#128280;</div>
-              <h4>Stripe Integration</h4>
-              <p>Secure, PCI-compliant payments powered by Stripe. Setup takes minutes.</p>
+              <h4>Secure Payments</h4>
+              <p>PCI-compliant payment processing built in. Setup takes minutes.</p>
             </div>
             <div className="product-mini-card">
               <div className="product-mini-card-icon">&#8634;</div>
@@ -259,6 +265,11 @@ export default function PaymentsPage() {
       </section>
 
       <ProductCTA />
+      <JsonLd data={breadcrumbSchema([
+        { name: 'Home', url: SITE_URL },
+        { name: 'Product', url: `${SITE_URL}/product` },
+        { name: 'Payments', url: `${SITE_URL}/product/payments` },
+      ])} />
     </>
   );
 }

@@ -1,9 +1,15 @@
 import ProductCTA from '../../../components/product-cta';
+import JsonLd from '../../../components/json-ld';
+import { getPageSeo, SITE_URL } from '../../../lib/seo';
+import { breadcrumbSchema } from '../../../lib/schema';
+
+const seo = getPageSeo('/product/referrals-reviews');
 
 export const metadata = {
-  title: 'Referrals & Reviews — Spotless',
-  description:
-    'Automatically collect reviews, funnel happy customers to Google, run referral programs, and build a 5-star reputation on autopilot.',
+  title: seo.title,
+  description: seo.description,
+  openGraph: { title: seo.title, description: seo.description, type: 'website' },
+  twitter: { card: 'summary_large_image', title: seo.title, description: seo.description },
 };
 
 export default function ReferralsReviewsPage() {
@@ -263,6 +269,11 @@ export default function ReferralsReviewsPage() {
       </section>
 
       <ProductCTA />
+      <JsonLd data={breadcrumbSchema([
+        { name: 'Home', url: SITE_URL },
+        { name: 'Product', url: `${SITE_URL}/product` },
+        { name: 'Referrals & Reviews', url: `${SITE_URL}/product/referrals-reviews` },
+      ])} />
     </>
   );
 }

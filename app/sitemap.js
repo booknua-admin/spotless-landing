@@ -1,15 +1,18 @@
 import { getAllSlugs, getAllCategories } from '../lib/blog';
+import { getAllCompetitorSlugs } from '../lib/comparisons';
 
 const BASE_URL = 'https://spotlessapp.io';
 
 export default function sitemap() {
   const blogSlugs = getAllSlugs();
   const categories = getAllCategories();
+  const competitorSlugs = getAllCompetitorSlugs();
 
   const staticPages = [
     { url: BASE_URL, lastModified: new Date(), changeFrequency: 'weekly', priority: 1.0 },
     { url: `${BASE_URL}/product`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${BASE_URL}/pricing`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE_URL}/compare`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/about`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
     { url: `${BASE_URL}/careers`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
     { url: `${BASE_URL}/contact`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
@@ -31,6 +34,7 @@ export default function sitemap() {
     'residential', 'commercial', 'pressure-washing', 'auto-detailing',
     'window-cleaning', 'pool-cleaning', 'airbnb', 'pest-control',
     'carpet-cleaning', 'junk-removal', 'soft-washing', 'move-in-out',
+    'maid-service-software',
   ].map((slug) => ({
     url: `${BASE_URL}/${slug}`,
     lastModified: new Date(),
@@ -43,6 +47,13 @@ export default function sitemap() {
     'cleaning-time-estimator', 'startup-cost-calculator',
   ].map((slug) => ({
     url: `${BASE_URL}/tools/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }));
+
+  const comparePages = competitorSlugs.map((slug) => ({
+    url: `${BASE_URL}/compare/${slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly',
     priority: 0.7,
@@ -67,6 +78,7 @@ export default function sitemap() {
     ...productPages,
     ...solutionPages,
     ...toolPages,
+    ...comparePages,
     ...blogPages,
     ...categoryPages,
   ];

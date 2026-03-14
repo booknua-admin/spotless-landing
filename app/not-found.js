@@ -16,11 +16,20 @@ export default function NotFound() {
             Let&apos;s get you back to <span className="highlight">Spotless.</span>
           </h1>
           <p className="niche-hero-sub">
-            The route you requested is not available in this deployment.
+            The page you requested does not exist or has been moved.
           </p>
-          <div className="hero-actions" style={{ justifyContent: 'center' }}>
+          <div className="hero-actions" style={{ justifyContent: 'center', flexWrap: 'wrap', gap: '12px' }}>
             <a href="/" className="btn-primary btn-primary-lg">
               Return Home <span>&rarr;</span>
+            </a>
+            <a href="/blog" className="btn-ghost">
+              Blog
+            </a>
+            <a href="/tools" className="btn-ghost">
+              Free Tools
+            </a>
+            <a href="/pricing" className="btn-ghost">
+              Pricing
             </a>
           </div>
         </div>

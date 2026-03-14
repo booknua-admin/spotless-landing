@@ -1,9 +1,15 @@
 import ProductCTA from '../../../components/product-cta';
+import JsonLd from '../../../components/json-ld';
+import { getPageSeo, SITE_URL } from '../../../lib/seo';
+import { breadcrumbSchema } from '../../../lib/schema';
+
+const seo = getPageSeo('/product/finance');
 
 export const metadata = {
-  title: 'Finance Tools — Spotless',
-  description:
-    'Revenue analytics, transaction tracking, payout management, and financial reporting for cleaning companies.',
+  title: seo.title,
+  description: seo.description,
+  openGraph: { title: seo.title, description: seo.description, type: 'website' },
+  twitter: { card: 'summary_large_image', title: seo.title, description: seo.description },
 };
 
 export default function FinancePage() {
@@ -106,9 +112,9 @@ export default function FinancePage() {
                     </thead>
                     <tbody>
                       <tr><td>Mar 14</td><td>Johnson &mdash; Standard Clean</td><td style={{ color: '#16a34a', fontWeight: 600 }}>+&euro;85.00</td><td><span className="mockup-badge green">Income</span></td></tr>
-                      <tr><td>Mar 14</td><td>Stripe processing fee</td><td style={{ color: '#dc2626', fontWeight: 600 }}>-&euro;2.77</td><td><span className="mockup-badge gray">Fee</span></td></tr>
+                      <tr><td>Mar 14</td><td>Processing fee</td><td style={{ color: '#dc2626', fontWeight: 600 }}>-&euro;2.77</td><td><span className="mockup-badge gray">Fee</span></td></tr>
                       <tr><td>Mar 13</td><td>Park View &mdash; Deep Clean</td><td style={{ color: '#16a34a', fontWeight: 600 }}>+&euro;220.00</td><td><span className="mockup-badge green">Income</span></td></tr>
-                      <tr><td>Mar 13</td><td>Stripe processing fee</td><td style={{ color: '#dc2626', fontWeight: 600 }}>-&euro;6.68</td><td><span className="mockup-badge gray">Fee</span></td></tr>
+                      <tr><td>Mar 13</td><td>Processing fee</td><td style={{ color: '#dc2626', fontWeight: 600 }}>-&euro;6.68</td><td><span className="mockup-badge gray">Fee</span></td></tr>
                       <tr><td>Mar 12</td><td>Airbnb #3 &mdash; Turnover</td><td style={{ color: '#16a34a', fontWeight: 600 }}>+&euro;65.00</td><td><span className="mockup-badge green">Income</span></td></tr>
                     </tbody>
                   </table>
@@ -232,6 +238,11 @@ export default function FinancePage() {
       </section>
 
       <ProductCTA />
+      <JsonLd data={breadcrumbSchema([
+        { name: 'Home', url: SITE_URL },
+        { name: 'Product', url: `${SITE_URL}/product` },
+        { name: 'Finance', url: `${SITE_URL}/product/finance` },
+      ])} />
     </>
   );
 }

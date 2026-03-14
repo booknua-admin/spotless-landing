@@ -1,10 +1,47 @@
 import ProductCTA from '../../components/product-cta';
+import JsonLd from '../../components/json-ld';
+import { getPageSeo, SITE_URL } from '../../lib/seo';
+import { faqPageSchema, breadcrumbSchema } from '../../lib/schema';
+
+const seo = getPageSeo('/pricing');
 
 export const metadata = {
-  title: 'Pricing — Spotless',
-  description:
-    'Simple, transparent pricing for cleaning companies and service businesses. No hidden fees, no contracts. Free plan available, paid plans from $29/month.',
+  title: seo.title,
+  description: seo.description,
+  openGraph: { title: seo.title, description: seo.description, type: 'website' },
+  twitter: { card: 'summary_large_image', title: seo.title, description: seo.description },
 };
+
+const FAQ_ITEMS = [
+  {
+    question: 'Can I switch plans later?',
+    answer: 'Absolutely. You can upgrade or downgrade your plan at any time from your account settings. When you upgrade, you\'ll get immediate access to the new features and we\'ll pro-rate the difference. When you downgrade, the change takes effect at the start of your next billing cycle.',
+  },
+  {
+    question: 'What happens after my free trial?',
+    answer: 'If you love Spotless (and we think you will), you\'ll be asked to pick a paid plan and enter your payment details. If you decide it\'s not for you, you can stay on the Free plan or your account simply expires — no charge, no questions asked.',
+  },
+  {
+    question: 'Is there a free plan?',
+    answer: 'Yes! Our Free plan includes up to 3 staff members, 1 booking form, email notifications, a customer portal, and basic reporting. It\'s a great way to get started with no commitment.',
+  },
+  {
+    question: 'How does annual billing work?',
+    answer: 'When you choose annual billing, you pay for 10 months upfront and get 2 months free. For example, the Pro plan is $29/mo monthly or $290/year ($24.17/mo). You can switch between monthly and annual billing at any time.',
+  },
+  {
+    question: 'Do you charge per transaction?',
+    answer: 'Spotless charges a flat monthly fee plus a transaction fee of 2.9% + €1.50 per payment processed. Business plan customers get lower transaction fees. There are no hidden charges or revenue cuts beyond this.',
+  },
+  {
+    question: 'What payment methods do you accept?',
+    answer: 'We accept all major credit and debit cards (Visa, Mastercard, American Express). For annual Business plans, we can also arrange bank transfer / direct debit if preferred.',
+  },
+  {
+    question: 'Can I cancel anytime?',
+    answer: 'Yes. There are no contracts and no cancellation fees. You can cancel your subscription at any time from your account settings. Your access continues until the end of your current billing period, and you can export all your data before you go.',
+  },
+];
 
 export default function PricingPage() {
   return (
@@ -130,7 +167,7 @@ export default function PricingPage() {
                 <li><span className="pricing-check">&#10003;</span> White-label branding</li>
                 <li><span className="pricing-check">&#10003;</span> API access</li>
                 <li><span className="pricing-check">&#10003;</span> Same-day payouts</li>
-                <li><span className="pricing-check">&#10003;</span> Lower transaction fees (2.5% + $1.00)</li>
+                <li><span className="pricing-check">&#10003;</span> Lower transaction fees</li>
                 <li><span className="pricing-check">&#10003;</span> Priority support</li>
               </ul>
               <a href="https://app.spotlessapp.io/register" className="btn-primary dark">Start Free Trial</a>
@@ -358,89 +395,31 @@ export default function PricingPage() {
             </p>
           </div>
           <div className="faq-list">
-            <div className="faq-item animate-on-scroll">
-              <button className="faq-question">
-                Can I switch plans later?
-                <span className="faq-icon">+</span>
-              </button>
-              <div className="faq-answer">
-                <div className="faq-answer-inner">
-                  Absolutely. You can upgrade or downgrade your plan at any time from your account settings. When you upgrade, you&rsquo;ll get immediate access to the new features and we&rsquo;ll pro-rate the difference. When you downgrade, the change takes effect at the start of your next billing cycle.
+            {FAQ_ITEMS.map((item) => (
+              <div key={item.question} className="faq-item animate-on-scroll">
+                <button className="faq-question">
+                  {item.question}
+                  <span className="faq-icon">+</span>
+                </button>
+                <div className="faq-answer">
+                  <div className="faq-answer-inner">
+                    {item.answer}
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="faq-item animate-on-scroll">
-              <button className="faq-question">
-                What happens after my free trial?
-                <span className="faq-icon">+</span>
-              </button>
-              <div className="faq-answer">
-                <div className="faq-answer-inner">
-                  If you love Spotless (and we think you will), you&rsquo;ll be asked to pick a paid plan and enter your payment details. If you decide it&rsquo;s not for you, you can stay on the Free plan or your account simply expires &mdash; no charge, no questions asked.
-                </div>
-              </div>
-            </div>
-            <div className="faq-item animate-on-scroll">
-              <button className="faq-question">
-                Is there a free plan?
-                <span className="faq-icon">+</span>
-              </button>
-              <div className="faq-answer">
-                <div className="faq-answer-inner">
-                  Yes! Our Free plan includes up to 3 staff members, 1 booking form, email notifications, a customer portal, and basic reporting. It&rsquo;s a great way to get started with no commitment.
-                </div>
-              </div>
-            </div>
-            <div className="faq-item animate-on-scroll">
-              <button className="faq-question">
-                How does annual billing work?
-                <span className="faq-icon">+</span>
-              </button>
-              <div className="faq-answer">
-                <div className="faq-answer-inner">
-                  When you choose annual billing, you pay for 10 months upfront and get 2 months free. For example, the Pro plan is $29/mo monthly or $290/year ($24.17/mo). You can switch between monthly and annual billing at any time.
-                </div>
-              </div>
-            </div>
-            <div className="faq-item animate-on-scroll">
-              <button className="faq-question">
-                Do you charge per transaction?
-                <span className="faq-icon">+</span>
-              </button>
-              <div className="faq-answer">
-                <div className="faq-answer-inner">
-                  Spotless never takes a cut of your revenue. You pay one flat monthly fee and that&rsquo;s it. The only transaction fees you&rsquo;ll see are the standard Stripe processing fees, which go directly to Stripe &mdash; not to us. Business plan customers get lower transaction fees (2.5% + $1.00).
-                </div>
-              </div>
-            </div>
-            <div className="faq-item animate-on-scroll">
-              <button className="faq-question">
-                What payment methods do you accept?
-                <span className="faq-icon">+</span>
-              </button>
-              <div className="faq-answer">
-                <div className="faq-answer-inner">
-                  We accept all major credit and debit cards (Visa, Mastercard, American Express) through Stripe. For annual Business plans, we can also arrange bank transfer / direct debit if preferred.
-                </div>
-              </div>
-            </div>
-            <div className="faq-item animate-on-scroll">
-              <button className="faq-question">
-                Can I cancel anytime?
-                <span className="faq-icon">+</span>
-              </button>
-              <div className="faq-answer">
-                <div className="faq-answer-inner">
-                  Yes. There are no contracts and no cancellation fees. You can cancel your subscription at any time from your account settings. Your access continues until the end of your current billing period, and you can export all your data before you go.
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA */}
       <ProductCTA />
+
+      <JsonLd data={faqPageSchema(FAQ_ITEMS)} />
+      <JsonLd data={breadcrumbSchema([
+        { name: 'Home', url: SITE_URL },
+        { name: 'Pricing', url: `${SITE_URL}/pricing` },
+      ])} />
     </>
   );
 }

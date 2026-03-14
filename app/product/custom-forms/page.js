@@ -1,9 +1,15 @@
 import ProductCTA from '../../../components/product-cta';
+import JsonLd from '../../../components/json-ld';
+import { getPageSeo, SITE_URL } from '../../../lib/seo';
+import { breadcrumbSchema } from '../../../lib/schema';
+
+const seo = getPageSeo('/product/custom-forms');
 
 export const metadata = {
-  title: 'Custom Booking Forms — Spotless',
-  description:
-    'Build branded booking and quote request forms that embed on your website. Capture property details and auto-generate accurate quotes.',
+  title: seo.title,
+  description: seo.description,
+  openGraph: { title: seo.title, description: seo.description, type: 'website' },
+  twitter: { card: 'summary_large_image', title: seo.title, description: seo.description },
 };
 
 export default function CustomFormsPage() {
@@ -242,6 +248,11 @@ export default function CustomFormsPage() {
       </section>
 
       <ProductCTA />
+      <JsonLd data={breadcrumbSchema([
+        { name: 'Home', url: SITE_URL },
+        { name: 'Product', url: `${SITE_URL}/product` },
+        { name: 'Custom Forms', url: `${SITE_URL}/product/custom-forms` },
+      ])} />
     </>
   );
 }

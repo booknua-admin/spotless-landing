@@ -464,7 +464,7 @@ export default function ProductOverviewPage() {
                     <tbody>
                       <tr><td>Johnson &mdash; Standard Clean</td><td style={{ color: '#16a34a', fontWeight: 600 }}>+&euro;85</td><td><span className="mockup-badge green">Income</span></td></tr>
                       <tr><td>Park View &mdash; Deep Clean</td><td style={{ color: '#16a34a', fontWeight: 600 }}>+&euro;220</td><td><span className="mockup-badge green">Income</span></td></tr>
-                      <tr><td>Stripe processing fee</td><td style={{ color: '#dc2626', fontWeight: 600 }}>-&euro;4.20</td><td><span className="mockup-badge gray">Fee</span></td></tr>
+                      <tr><td>Processing fee</td><td style={{ color: '#dc2626', fontWeight: 600 }}>-&euro;4.20</td><td><span className="mockup-badge gray">Fee</span></td></tr>
                     </tbody>
                   </table>
                 </div>

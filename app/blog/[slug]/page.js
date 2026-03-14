@@ -2,7 +2,10 @@ import { notFound } from 'next/navigation';
 import { compileMDX } from 'next-mdx-remote/rsc';
 import remarkGfm from 'remark-gfm';
 import ProductCTA from '../../../components/product-cta';
+import JsonLd from '../../../components/json-ld';
 import { getAllSlugs, getPostBySlug, getRelatedPosts } from '../../../lib/blog';
+import { articleSchema, breadcrumbSchema } from '../../../lib/schema';
+import { SITE_URL } from '../../../lib/seo';
 
 export const dynamicParams = false;
 
@@ -20,12 +23,20 @@ export function generateMetadata({ params }) {
   return {
     title: `${post.title} — Spotless`,
     description: post.description,
+    alternates: {
+      canonical: `/blog/${params.slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.description,
       type: 'article',
       publishedTime: post.date,
       authors: [post.author],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.description,
     },
   };
 }
@@ -153,6 +164,13 @@ export default async function BlogPostPage({ params }) {
       )}
 
       <ProductCTA />
+
+      <JsonLd data={articleSchema(post)} />
+      <JsonLd data={breadcrumbSchema([
+        { name: 'Home', url: SITE_URL },
+        { name: 'Blog', url: `${SITE_URL}/blog` },
+        { name: post.title, url: `${SITE_URL}/blog/${post.slug}` },
+      ])} />
     </div>
   );
 }

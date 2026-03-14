@@ -1,9 +1,15 @@
 import { getAllPosts, getAllCategories } from '../../lib/blog';
+import JsonLd from '../../components/json-ld';
+import { getPageSeo, SITE_URL } from '../../lib/seo';
+import { breadcrumbSchema } from '../../lib/schema';
+
+const seo = getPageSeo('/blog');
 
 export const metadata = {
-  title: 'Blog — Spotless',
-  description:
-    'Guides, strategies, and tools for cleaning and service business owners. Pricing advice, growth tactics, and operational tips from the Spotless team.',
+  title: seo.title,
+  description: seo.description,
+  openGraph: { title: seo.title, description: seo.description, type: 'website' },
+  twitter: { card: 'summary_large_image', title: seo.title, description: seo.description },
 };
 
 export default function BlogPage() {
@@ -74,6 +80,11 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
+
+      <JsonLd data={breadcrumbSchema([
+        { name: 'Home', url: SITE_URL },
+        { name: 'Blog', url: `${SITE_URL}/blog` },
+      ])} />
     </div>
   );
 }
