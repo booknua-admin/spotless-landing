@@ -1,4 +1,4 @@
-import { getAllPosts, getAllCategories } from '../../lib/blog';
+import { getAllPosts, getAllCategories, categorySlug } from '../../lib/blog';
 import JsonLd from '../../components/json-ld';
 import { getPageSeo, SITE_URL } from '../../lib/seo';
 import { breadcrumbSchema } from '../../lib/schema';
@@ -39,7 +39,7 @@ export default function BlogPage() {
           <div className="blog-category-pills animate-on-scroll">
             <a href="/blog" className="blog-pill active">All</a>
             {categories.map((cat) => (
-              <a key={cat} href={`/blog/category/${cat.toLowerCase().replace(/\s+/g, '-')}`} className="blog-pill">
+              <a key={cat} href={`/blog/category/${categorySlug(cat)}`} className="blog-pill">
                 {cat}
               </a>
             ))}
