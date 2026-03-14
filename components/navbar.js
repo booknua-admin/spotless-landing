@@ -82,9 +82,9 @@ export default function Navbar() {
                 Solutions <span className="nav-chevron">&#9662;</span>
               </button>
               <div className="mega-menu" role="menu">
-                <div className="container-lg">
-                  <div className="mega-menu-inner solutions-grid">
-                    <div className="mega-menu-grid">
+                <div className="container">
+                  <div className="mega-menu-inner">
+                    <div className="mega-menu-grid solutions-grid">
                       <a href="/residential" className="mega-menu-item" role="menuitem">
                         <div className="mega-menu-icon">&#127968;</div>
                         <div>
@@ -169,6 +169,12 @@ export default function Navbar() {
                           <div className="mega-menu-desc">End-of-tenancy cleaning</div>
                         </div>
                       </a>
+                    </div>
+                    <div className="mega-menu-highlight">
+                      <div className="mega-menu-highlight-tag">Solutions</div>
+                      <h3>Built for your industry</h3>
+                      <p>Every feature tailored to how your specific business actually works.</p>
+                      <a href="/#pricing" className="btn-primary">See Pricing &rarr;</a>
                     </div>
                   </div>
                 </div>
