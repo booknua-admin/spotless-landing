@@ -218,8 +218,8 @@ export default function PaymentsPage() {
             </div>
             <div className="product-mini-card">
               <div className="product-mini-card-icon">&#128280;</div>
-              <h4>Stripe Integration</h4>
-              <p>Secure, PCI-compliant payments powered by Stripe. Setup takes minutes.</p>
+              <h4>Secure Payments</h4>
+              <p>PCI-compliant payment processing built in. Setup takes minutes.</p>
             </div>
             <div className="product-mini-card">
               <div className="product-mini-card-icon">&#8634;</div>

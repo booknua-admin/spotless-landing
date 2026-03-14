@@ -112,9 +112,9 @@ export default function FinancePage() {
                     </thead>
                     <tbody>
                       <tr><td>Mar 14</td><td>Johnson &mdash; Standard Clean</td><td style={{ color: '#16a34a', fontWeight: 600 }}>+&euro;85.00</td><td><span className="mockup-badge green">Income</span></td></tr>
-                      <tr><td>Mar 14</td><td>Stripe processing fee</td><td style={{ color: '#dc2626', fontWeight: 600 }}>-&euro;2.77</td><td><span className="mockup-badge gray">Fee</span></td></tr>
+                      <tr><td>Mar 14</td><td>Processing fee</td><td style={{ color: '#dc2626', fontWeight: 600 }}>-&euro;2.77</td><td><span className="mockup-badge gray">Fee</span></td></tr>
                       <tr><td>Mar 13</td><td>Park View &mdash; Deep Clean</td><td style={{ color: '#16a34a', fontWeight: 600 }}>+&euro;220.00</td><td><span className="mockup-badge green">Income</span></td></tr>
-                      <tr><td>Mar 13</td><td>Stripe processing fee</td><td style={{ color: '#dc2626', fontWeight: 600 }}>-&euro;6.68</td><td><span className="mockup-badge gray">Fee</span></td></tr>
+                      <tr><td>Mar 13</td><td>Processing fee</td><td style={{ color: '#dc2626', fontWeight: 600 }}>-&euro;6.68</td><td><span className="mockup-badge gray">Fee</span></td></tr>
                       <tr><td>Mar 12</td><td>Airbnb #3 &mdash; Turnover</td><td style={{ color: '#16a34a', fontWeight: 600 }}>+&euro;65.00</td><td><span className="mockup-badge green">Income</span></td></tr>
                     </tbody>
                   </table>

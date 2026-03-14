@@ -31,11 +31,11 @@ const FAQ_ITEMS = [
   },
   {
     question: 'Do you charge per transaction?',
-    answer: 'Spotless never takes a cut of your revenue. You pay one flat monthly fee and that\'s it. The only transaction fees you\'ll see are the standard Stripe processing fees, which go directly to Stripe — not to us. Business plan customers get lower transaction fees (2.5% + $1.00).',
+    answer: 'Spotless charges a flat monthly fee plus a transaction fee of 2.9% + €1.50 per payment processed. Business plan customers get lower transaction fees. There are no hidden charges or revenue cuts beyond this.',
   },
   {
     question: 'What payment methods do you accept?',
-    answer: 'We accept all major credit and debit cards (Visa, Mastercard, American Express) through Stripe. For annual Business plans, we can also arrange bank transfer / direct debit if preferred.',
+    answer: 'We accept all major credit and debit cards (Visa, Mastercard, American Express). For annual Business plans, we can also arrange bank transfer / direct debit if preferred.',
   },
   {
     question: 'Can I cancel anytime?',
@@ -167,7 +167,7 @@ export default function PricingPage() {
                 <li><span className="pricing-check">&#10003;</span> White-label branding</li>
                 <li><span className="pricing-check">&#10003;</span> API access</li>
                 <li><span className="pricing-check">&#10003;</span> Same-day payouts</li>
-                <li><span className="pricing-check">&#10003;</span> Lower transaction fees (2.5% + $1.00)</li>
+                <li><span className="pricing-check">&#10003;</span> Lower transaction fees</li>
                 <li><span className="pricing-check">&#10003;</span> Priority support</li>
               </ul>
               <a href="https://app.spotlessapp.io/register" className="btn-primary dark">Start Free Trial</a>
