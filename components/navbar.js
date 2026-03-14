@@ -1,9 +1,125 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
+
 export default function Navbar() {
+  const navRef = useRef(null);
+
+  useEffect(() => {
+    const nav = navRef.current;
+    if (!nav) return;
+
+    // Mega menu hover logic
+    const navItems = nav.querySelectorAll('.nav-item.has-mega-menu');
+    let hoverTimeout;
+
+    const handlers = [];
+
+    navItems.forEach(item => {
+      const btn = item.querySelector('.nav-link-btn');
+
+      const onEnter = () => {
+        clearTimeout(hoverTimeout);
+        navItems.forEach(other => {
+          if (other !== item) other.classList.remove('active');
+        });
+        item.classList.add('active');
+        if (btn) btn.setAttribute('aria-expanded', 'true');
+      };
+
+      const onLeave = () => {
+        hoverTimeout = setTimeout(() => {
+          item.classList.remove('active');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+        }, 150);
+      };
+
+      const onClick = (e) => {
+        e.preventDefault();
+        const isOpen = item.classList.contains('active');
+        navItems.forEach(other => other.classList.remove('active'));
+        if (!isOpen) {
+          item.classList.add('active');
+          if (btn) btn.setAttribute('aria-expanded', 'true');
+        } else {
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+        }
+      };
+
+      item.addEventListener('mouseenter', onEnter);
+      item.addEventListener('mouseleave', onLeave);
+      if (btn) btn.addEventListener('click', onClick);
+
+      handlers.push({ item, btn, onEnter, onLeave, onClick });
+    });
+
+    // Close on click outside
+    const onDocClick = (e) => {
+      if (!e.target.closest('.nav-item')) {
+        navItems.forEach(item => {
+          item.classList.remove('active');
+          const btn = item.querySelector('.nav-link-btn');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+        });
+      }
+    };
+    document.addEventListener('click', onDocClick);
+
+    // Close on Escape
+    const onEscape = (e) => {
+      if (e.key === 'Escape') {
+        navItems.forEach(item => {
+          item.classList.remove('active');
+          const btn = item.querySelector('.nav-link-btn');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+        });
+      }
+    };
+    document.addEventListener('keydown', onEscape);
+
+    // Mobile menu
+    const mobileToggle = nav.querySelector('.mobile-toggle');
+    const mobileMenu = nav.parentElement?.querySelector('.mobile-menu');
+    const mobileClose = mobileMenu?.querySelector('.mobile-menu-close');
+
+    if (mobileToggle && mobileMenu) {
+      mobileToggle.addEventListener('click', () => {
+        mobileMenu.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+      if (mobileClose) {
+        mobileClose.addEventListener('click', () => {
+          mobileMenu.classList.remove('open');
+          document.body.style.overflow = '';
+        });
+      }
+    }
+
+    // Mobile accordion
+    const accordionToggles = mobileMenu?.querySelectorAll('.mobile-accordion-toggle') || [];
+    accordionToggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const parent = toggle.parentElement;
+        const isOpen = parent.classList.contains('open');
+        mobileMenu.querySelectorAll('.mobile-accordion').forEach(a => a.classList.remove('open'));
+        if (!isOpen) parent.classList.add('open');
+      });
+    });
+
+    return () => {
+      handlers.forEach(({ item, btn, onEnter, onLeave, onClick }) => {
+        item.removeEventListener('mouseenter', onEnter);
+        item.removeEventListener('mouseleave', onLeave);
+        if (btn) btn.removeEventListener('click', onClick);
+      });
+      document.removeEventListener('click', onDocClick);
+      document.removeEventListener('keydown', onEscape);
+    };
+  }, []);
+
   return (
     <>
-      <nav className="navbar" id="navbar">
+      <nav className="navbar" id="navbar" ref={navRef}>
         <div className="container">
           <a href="/" className="nav-logo">
             <span className="nav-logo-text">Spotless.</span>
