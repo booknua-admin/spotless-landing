@@ -45,6 +45,7 @@ export default function TimeEstimator() {
   });
   const [results, setResults] = useState(null);
   const [gateEmail, setGateEmail] = useState('');
+  const [gateUnlocked, setGateUnlocked] = useState(false);
 
   function handleChange(field, value) {
     setForm((prev) => ({ ...prev, [field]: value }));
@@ -184,8 +185,8 @@ export default function TimeEstimator() {
             </div>
           </div>
 
-          <div className="tool-gated" style={{ marginTop: '24px' }}>
-            <div className="tool-gated-blur">
+          <div className={gateUnlocked ? '' : 'tool-gated'} style={{ marginTop: '24px' }}>
+            <div className={gateUnlocked ? '' : 'tool-gated-blur'}>
               <div className="tool-results">
                 <div className="tool-results-title">Per-Room Breakdown</div>
                 {results.roomBreakdown.map((r) => (
@@ -219,19 +220,21 @@ export default function TimeEstimator() {
                 </div>
               </div>
             </div>
-            <div className="tool-gate-overlay">
-              <h4>Unlock Full Breakdown</h4>
-              <p>Enter your email to see the per-room breakdown, staff allocation, and suggested pricing.</p>
-              <div className="tool-gate-form">
-                <input
-                  type="email"
-                  placeholder="you@company.com"
-                  value={gateEmail}
-                  onChange={(e) => setGateEmail(e.target.value)}
-                />
-                <button>Unlock</button>
+            {!gateUnlocked && (
+              <div className="tool-gate-overlay">
+                <h4>Unlock Full Breakdown</h4>
+                <p>Enter your email to see the per-room breakdown, staff allocation, and suggested pricing.</p>
+                <div className="tool-gate-form">
+                  <input
+                    type="email"
+                    placeholder="you@company.com"
+                    value={gateEmail}
+                    onChange={(e) => setGateEmail(e.target.value)}
+                  />
+                  <button onClick={() => { if (gateEmail && gateEmail.includes('@')) setGateUnlocked(true); }}>Unlock</button>
+                </div>
               </div>
-            </div>
+            )}
           </div>
 
           <div style={{ textAlign: 'center', marginTop: '32px' }}>
