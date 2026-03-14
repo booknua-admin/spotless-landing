@@ -1432,8 +1432,8 @@ body {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 48px;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+  gap: 40px;
   margin-bottom: 48px;
 }
 
@@ -1826,7 +1826,8 @@ body {
   .testimonial-grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
   .pricing-grid { grid-template-columns: 1fr 1fr; max-width: 840px; margin: 0 auto; }
   .roi-grid { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; }
   .comparison-grid { grid-template-columns: 1fr; max-width: 500px; }
   .solution-grid { grid-template-columns: 1fr 1fr; }
 }
@@ -1843,7 +1844,8 @@ body {
   .hero-float-card { display: none; }
   .hero-actions { flex-direction: column; }
   .final-cta-actions { flex-direction: column; }
-  .footer-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; }
   .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
   .solution-grid { grid-template-columns: 1fr; }
   .signup-form-row { flex-direction: column; }

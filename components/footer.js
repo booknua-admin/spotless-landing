@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="container">
         <div className="footer-grid">
-          <div>
+          <div className="footer-brand">
             <a href="/" className="nav-logo" style={{ display: 'inline-flex' }}>
               <span className="nav-logo-text">Spotless.</span>
             </a>
@@ -28,6 +28,7 @@ export default function Footer() {
             <h4>Solutions</h4>
             <a href="/residential">Residential Cleaning</a>
             <a href="/commercial">Commercial Cleaning</a>
+            <a href="/maid-service-software">Maid Services</a>
             <a href="/pressure-washing">Pressure Washing</a>
             <a href="/auto-detailing">Auto Detailing</a>
             <a href="/window-cleaning">Window Cleaning</a>
@@ -44,6 +45,10 @@ export default function Footer() {
             <a href="/blog">Blog</a>
             <a href="/tools">Free Tools</a>
             <a href="/tools/pricing-calculator">Pricing Calculator</a>
+            <a href="/tools/profit-margin-calculator">Profit Margin Calculator</a>
+            <a href="/tools/cleaning-time-estimator">Time Estimator</a>
+            <a href="/tools/startup-cost-calculator">Startup Cost Calculator</a>
+            <a href="/compare">Compare</a>
           </div>
           <div className="footer-col">
             <h4>Company</h4>
@@ -58,6 +63,7 @@ export default function Footer() {
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>
             <a href="#">GDPR</a>
+            <a href="/sitemap.xml">Sitemap</a>
           </div>
         </div>
       </div>
