@@ -1,4 +1,6 @@
 import Script from 'next/script';
+import Navbar from '../components/navbar';
+import Footer from '../components/footer';
 import '../css/styles.css';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
@@ -21,7 +23,9 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
+        <Navbar />
         {children}
+        <Footer />
         <Script src="/js/main.js" strategy="afterInteractive" />
       </body>
     </html>
