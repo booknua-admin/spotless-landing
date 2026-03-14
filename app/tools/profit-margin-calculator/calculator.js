@@ -17,6 +17,7 @@ export default function ProfitMarginCalculator() {
   });
   const [results, setResults] = useState(null);
   const [gateEmail, setGateEmail] = useState('');
+  const [gateUnlocked, setGateUnlocked] = useState(false);
 
   function handleChange(field, value) {
     setForm((prev) => ({ ...prev, [field]: Number(value) }));
@@ -128,8 +129,8 @@ export default function ProfitMarginCalculator() {
             </div>
           </div>
 
-          <div className="tool-gated" style={{ marginTop: '24px' }}>
-            <div className="tool-gated-blur">
+          <div className={gateUnlocked ? '' : 'tool-gated'} style={{ marginTop: '24px' }}>
+            <div className={gateUnlocked ? '' : 'tool-gated-blur'}>
               <div className="tool-results">
                 <div className="tool-results-title">Detailed Analysis</div>
                 <div className="tool-result-row">
@@ -164,19 +165,21 @@ export default function ProfitMarginCalculator() {
                 </div>
               </div>
             </div>
-            <div className="tool-gate-overlay">
-              <h4>Unlock Detailed Analysis</h4>
-              <p>Enter your email to see industry benchmarks, recommendations, and your break-even point.</p>
-              <div className="tool-gate-form">
-                <input
-                  type="email"
-                  placeholder="you@company.com"
-                  value={gateEmail}
-                  onChange={(e) => setGateEmail(e.target.value)}
-                />
-                <button>Unlock</button>
+            {!gateUnlocked && (
+              <div className="tool-gate-overlay">
+                <h4>Unlock Detailed Analysis</h4>
+                <p>Enter your email to see industry benchmarks, recommendations, and your break-even point.</p>
+                <div className="tool-gate-form">
+                  <input
+                    type="email"
+                    placeholder="you@company.com"
+                    value={gateEmail}
+                    onChange={(e) => setGateEmail(e.target.value)}
+                  />
+                  <button onClick={() => { if (gateEmail && gateEmail.includes('@')) setGateUnlocked(true); }}>Unlock</button>
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </>
       )}
