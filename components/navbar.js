@@ -78,29 +78,63 @@ export default function Navbar() {
                 </div>
               </div>
             </li>
-            <li className="nav-item has-dropdown">
+            <li className="nav-item has-mega-menu">
               <button className="nav-link-btn" aria-expanded="false" aria-haspopup="true">
                 Solutions <span className="nav-chevron">&#9662;</span>
               </button>
-              <div className="nav-dropdown" role="menu">
-                <a href="/residential" role="menuitem">Residential Cleaning</a>
-                <a href="/commercial" role="menuitem">Commercial Cleaning</a>
-                <a href="/airbnb" role="menuitem">Airbnb Turnovers</a>
-                <a href="/move-in-out" role="menuitem">Move-In / Move-Out</a>
-                <a href="/deep-cleaning" role="menuitem">Deep Cleaning</a>
-                <a href="/post-construction" role="menuitem">Post-Construction</a>
+              <div className="mega-menu" role="menu">
+                <div className="container">
+                  <div className="mega-menu-inner">
+                    <div className="mega-menu-grid">
+                      <a href="/residential" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#127968;</div>
+                        <div>
+                          <div className="mega-menu-title">Residential Cleaning</div>
+                          <div className="mega-menu-desc">Recurring clients, automated invoicing, schedule management</div>
+                        </div>
+                      </a>
+                      <a href="/commercial" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#127970;</div>
+                        <div>
+                          <div className="mega-menu-title">Commercial Cleaning</div>
+                          <div className="mega-menu-desc">Multi-site contracts, team scheduling, compliance tracking</div>
+                        </div>
+                      </a>
+                      <a href="/airbnb" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#9992;</div>
+                        <div>
+                          <div className="mega-menu-title">Airbnb Turnovers</div>
+                          <div className="mega-menu-desc">Fast turnovers, calendar sync, property management</div>
+                        </div>
+                      </a>
+                      <a href="/move-in-out" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#128230;</div>
+                        <div>
+                          <div className="mega-menu-title">Move-In / Move-Out</div>
+                          <div className="mega-menu-desc">One-off deep cleans, checklists, before/after photos</div>
+                        </div>
+                      </a>
+                      <a href="/deep-cleaning" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#10024;</div>
+                        <div>
+                          <div className="mega-menu-title">Deep Cleaning</div>
+                          <div className="mega-menu-desc">Detailed scoping, premium pricing, specialist equipment</div>
+                        </div>
+                      </a>
+                      <a href="/post-construction" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#127959;</div>
+                        <div>
+                          <div className="mega-menu-title">Post-Construction</div>
+                          <div className="mega-menu-desc">Phase-based cleaning, contractor coordination, progress tracking</div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </li>
             <li><a href="/#pricing">Pricing</a></li>
-            <li className="nav-item has-dropdown">
-              <button className="nav-link-btn" aria-expanded="false" aria-haspopup="true">
-                Resources <span className="nav-chevron">&#9662;</span>
-              </button>
-              <div className="nav-dropdown" role="menu">
-                <a href="/#roi" role="menuitem">ROI Calculator</a>
-                <a href="/#faq" role="menuitem">FAQ</a>
-              </div>
-            </li>
+            <li><a href="/#roi">ROI Calculator</a></li>
           </ul>
           <div className="nav-cta">
             <a href="#" className="btn-ghost">Log In</a>
@@ -137,13 +171,7 @@ export default function Navbar() {
           </div>
         </div>
         <a href="/#pricing">Pricing</a>
-        <div className="mobile-accordion">
-          <button className="mobile-accordion-toggle">Resources <span className="mobile-accordion-chevron">&#9662;</span></button>
-          <div className="mobile-accordion-panel">
-            <a href="/#roi">ROI Calculator</a>
-            <a href="/#faq">FAQ</a>
-          </div>
-        </div>
+        <a href="/#roi">ROI Calculator</a>
         <a href="#" className="btn-ghost">Log In</a>
         <a href="/#cta" className="btn-primary">Start Free Trial</a>
       </div>
