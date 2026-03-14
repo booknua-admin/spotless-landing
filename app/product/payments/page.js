@@ -11,60 +11,130 @@ export default function PaymentsPage() {
     <>
       <section className="product-hero">
         <div className="container">
-          <div className="product-hero-icon animate-on-scroll">&#128179;</div>
           <div className="section-tag animate-on-scroll">Payments &amp; Invoicing</div>
-          <h1 className="animate-on-scroll">Get paid on time,<br />every time</h1>
+          <h1 className="animate-on-scroll">Stop chasing money.<br />Let it chase you.</h1>
           <p className="section-sub animate-on-scroll">
             Invoices send themselves, cards charge on completion, and reminders chase the rest.
             98% average collection rate.
           </p>
-        </div>
-      </section>
 
-      <section className="product-feature-section">
-        <div className="container">
-          <div className="product-feature-grid animate-on-scroll">
-            <div className="product-feature-content">
-              <h3>Card Payments</h3>
-              <p>
-                Accept Visa, Mastercard, and all major cards directly through Spotless. Charge
-                on job completion, collect deposits upfront, or set up saved cards for recurring
-                customers. Powered by Stripe for rock-solid security.
-              </p>
-            </div>
-            <div className="product-feature-visual" style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.4)', fontWeight: 600 }}>PAYMENT RECEIVED</div>
-              <div style={{ fontSize: '36px', fontWeight: 800, color: 'var(--green-accent)', marginTop: '8px' }}>&euro;120.00</div>
-              <div style={{ fontSize: '13px', color: 'rgba(255,255,255,0.5)', marginTop: '4px' }}>Visa ending 4242 &middot; Instant</div>
+          {/* Hero mockup: Transaction list */}
+          <div className="animate-on-scroll" style={{ marginTop: '48px', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>
+            <div className="mockup-window">
+              <div className="mockup-topbar">
+                <div className="mockup-topbar-dot r"></div>
+                <div className="mockup-topbar-dot y"></div>
+                <div className="mockup-topbar-dot g"></div>
+                <div className="mockup-topbar-url">app.spotlessapp.io/payments</div>
+              </div>
+              <div className="mockup-body">
+                <div className="mockup-stat-row" style={{ gridTemplateColumns: 'repeat(3, 1fr)', marginBottom: '16px' }}>
+                  <div className="mockup-stat-card">
+                    <div className="mockup-stat-label">This Month</div>
+                    <div className="mockup-stat-value">&euro;8,420</div>
+                    <div className="mockup-stat-change">&uarr; 18%</div>
+                  </div>
+                  <div className="mockup-stat-card teal">
+                    <div className="mockup-stat-label">Collection Rate</div>
+                    <div className="mockup-stat-value">98%</div>
+                  </div>
+                  <div className="mockup-stat-card orange">
+                    <div className="mockup-stat-label">Overdue</div>
+                    <div className="mockup-stat-value">&euro;170</div>
+                    <div className="mockup-stat-change" style={{ color: 'var(--orange-accent)' }}>2 invoices</div>
+                  </div>
+                </div>
+                <table className="mockup-table">
+                  <thead>
+                    <tr><th>Invoice</th><th>Customer</th><th>Date</th><th>Amount</th><th>Status</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>#INV-0251</td><td>Johnson Family</td><td>Mar 14</td>
+                      <td style={{ fontWeight: 600 }}>&euro;85.00</td>
+                      <td><span className="mockup-badge green">Paid</span></td>
+                    </tr>
+                    <tr>
+                      <td>#INV-0250</td><td>Park View Office</td><td>Mar 13</td>
+                      <td style={{ fontWeight: 600 }}>&euro;220.00</td>
+                      <td><span className="mockup-badge green">Paid</span></td>
+                    </tr>
+                    <tr>
+                      <td>#INV-0249</td><td>Oak Street</td><td>Mar 12</td>
+                      <td style={{ fontWeight: 600 }}>&euro;150.00</td>
+                      <td><span className="mockup-badge orange">Pending</span></td>
+                    </tr>
+                    <tr>
+                      <td>#INV-0248</td><td>Ellis Residence</td><td>Mar 10</td>
+                      <td style={{ fontWeight: 600 }}>&euro;95.00</td>
+                      <td><span className="mockup-badge green">Paid</span></td>
+                    </tr>
+                    <tr>
+                      <td>#INV-0247</td><td>Maple Court</td><td>Mar 8</td>
+                      <td style={{ fontWeight: 600 }}>&euro;120.00</td>
+                      <td><span className="mockup-badge red">Overdue</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Feature: Invoice */}
       <section className="product-feature-section">
         <div className="container">
           <div className="product-feature-grid animate-on-scroll">
             <div className="product-feature-content">
-              <h3>Auto-Invoicing</h3>
+              <h3>Professional Auto-Invoicing</h3>
               <p>
                 Jobs finish, invoices send. Spotless generates professional, branded invoices
                 automatically when a job is marked complete. Customers get a clear breakdown of
                 services, and you never have to open a spreadsheet again.
               </p>
             </div>
-            <div className="product-feature-visual">
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', padding: '8px 0', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
-                  <span style={{ color: 'rgba(255,255,255,0.6)', fontSize: '13px' }}>Standard Clean</span>
-                  <span style={{ color: 'var(--white)', fontSize: '13px', fontWeight: 600 }}>&euro;85</span>
+            <div className="product-feature-visual" style={{ padding: '0', overflow: 'hidden', background: 'transparent', boxShadow: 'none', border: 'none' }}>
+              <div className="mockup-window">
+                <div className="mockup-topbar">
+                  <div className="mockup-topbar-dot r"></div>
+                  <div className="mockup-topbar-dot y"></div>
+                  <div className="mockup-topbar-dot g"></div>
+                  <div className="mockup-topbar-url">app.spotlessapp.io/invoice/INV-0251</div>
                 </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', padding: '8px 0', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
-                  <span style={{ color: 'rgba(255,255,255,0.6)', fontSize: '13px' }}>Oven Cleaning</span>
-                  <span style={{ color: 'var(--white)', fontSize: '13px', fontWeight: 600 }}>&euro;25</span>
-                </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', padding: '8px 0' }}>
-                  <span style={{ color: 'var(--white)', fontSize: '14px', fontWeight: 700 }}>Total</span>
-                  <span style={{ color: 'var(--lime)', fontSize: '14px', fontWeight: 700 }}>&euro;110</span>
+                <div className="mockup-body" style={{ padding: '24px' }}>
+                  <div className="mockup-invoice">
+                    <div className="mockup-invoice-header">
+                      <div>
+                        <div className="mockup-invoice-title">Invoice #INV-0251</div>
+                        <div className="mockup-invoice-number">Johnson Family &middot; Mar 14, 2026</div>
+                      </div>
+                      <span className="mockup-badge green">Paid</span>
+                    </div>
+                    <div className="mockup-invoice-line">
+                      <span>Standard House Clean (3 bed)</span>
+                      <span style={{ fontWeight: 600 }}>&euro;85.00</span>
+                    </div>
+                    <div className="mockup-invoice-line">
+                      <span>Oven Cleaning</span>
+                      <span style={{ fontWeight: 600 }}>&euro;25.00</span>
+                    </div>
+                    <div className="mockup-invoice-line">
+                      <span>Fridge Clean</span>
+                      <span style={{ fontWeight: 600 }}>&euro;15.00</span>
+                    </div>
+                    <div className="mockup-invoice-line">
+                      <span style={{ color: 'var(--mint)' }}>Weekly discount (10%)</span>
+                      <span style={{ fontWeight: 600, color: 'var(--mint)' }}>-&euro;12.50</span>
+                    </div>
+                    <div className="mockup-invoice-total">
+                      <span>Total</span>
+                      <span>&euro;112.50</span>
+                    </div>
+                  </div>
+                  <div style={{ textAlign: 'center', marginTop: '14px' }}>
+                    <div className="mockup-btn primary" style={{ padding: '10px 32px' }}>Pay Now &mdash; &euro;112.50</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -72,28 +142,59 @@ export default function PaymentsPage() {
         </div>
       </section>
 
+      {/* Feature: Recurring Billing */}
       <section className="product-feature-section">
         <div className="container">
           <div className="product-feature-grid animate-on-scroll">
             <div className="product-feature-content">
-              <h3>Recurring Billing</h3>
+              <h3>Recurring Billing Dashboard</h3>
               <p>
                 Set up recurring charges for regular customers. Cards are billed automatically on
-                schedule — weekly, fortnightly, or monthly. Customers can manage their payment
+                schedule &mdash; weekly, fortnightly, or monthly. Customers can manage their payment
                 method through the client portal. Zero admin on your end.
               </p>
             </div>
-            <div className="product-feature-visual">
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                {[{ client: 'Johnson Family', amount: '€85/wk', status: 'Active' }, { client: 'Park View Office', amount: '€150/2wk', status: 'Active' }, { client: 'Airbnb #12', amount: '€65/clean', status: 'Active' }].map((sub, i) => (
-                  <div key={i} style={{ background: 'var(--navy)', padding: '10px 14px', borderRadius: '8px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span style={{ color: 'var(--white)', fontSize: '13px', fontWeight: 600 }}>{sub.client}</span>
-                    <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-                      <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '12px' }}>{sub.amount}</span>
-                      <span style={{ color: 'var(--green-accent)', fontSize: '11px', fontWeight: 600 }}>{sub.status}</span>
-                    </div>
+            <div className="product-feature-visual" style={{ padding: '0', overflow: 'hidden', background: 'transparent', boxShadow: 'none', border: 'none' }}>
+              <div className="mockup-window">
+                <div className="mockup-topbar">
+                  <div className="mockup-topbar-dot r"></div>
+                  <div className="mockup-topbar-dot y"></div>
+                  <div className="mockup-topbar-dot g"></div>
+                  <div className="mockup-topbar-url">app.spotlessapp.io/subscriptions</div>
+                </div>
+                <div className="mockup-body">
+                  <div className="mockup-main-header">
+                    <div className="mockup-main-title">Active Subscriptions</div>
+                    <div className="mockup-btn primary">+ New Subscription</div>
                   </div>
-                ))}
+                  <table className="mockup-table">
+                    <thead>
+                      <tr><th>Customer</th><th>Amount</th><th>Frequency</th><th>Next Billing</th><th>Status</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Johnson Family</td><td style={{ fontWeight: 600 }}>&euro;85.00</td>
+                        <td>Weekly</td><td>Mar 21</td>
+                        <td><span className="mockup-badge green">Active</span></td>
+                      </tr>
+                      <tr>
+                        <td>Park View Office</td><td style={{ fontWeight: 600 }}>&euro;150.00</td>
+                        <td>Fortnightly</td><td>Mar 27</td>
+                        <td><span className="mockup-badge green">Active</span></td>
+                      </tr>
+                      <tr>
+                        <td>Mitchell Home</td><td style={{ fontWeight: 600 }}>&euro;75.00</td>
+                        <td>Monthly</td><td>Apr 1</td>
+                        <td><span className="mockup-badge green">Active</span></td>
+                      </tr>
+                      <tr>
+                        <td>Airbnb #12</td><td style={{ fontWeight: 600 }}>&euro;65.00</td>
+                        <td>Per clean</td><td>On demand</td>
+                        <td><span className="mockup-badge blue">On demand</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>

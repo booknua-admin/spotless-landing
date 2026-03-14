@@ -10,10 +10,10 @@ export default function ProductCTA() {
           starts now &mdash; no credit card needed.
         </p>
         <div className="final-cta-actions animate-on-scroll">
-          <a href="#" className="btn-primary btn-primary-lg">
+          <a href="https://app.spotlessapp.io/register" className="btn-primary btn-primary-lg">
             Start Your Free Trial <span>&rarr;</span>
           </a>
-          <a href="#" className="btn-ghost">
+          <a href="/contact" className="btn-ghost">
             Book a Demo
           </a>
         </div>

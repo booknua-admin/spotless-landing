@@ -5,8 +5,7 @@ export default function Footer() {
         <div className="footer-grid">
           <div>
             <a href="/" className="nav-logo" style={{ display: 'inline-flex' }}>
-              <div className="nav-logo-icon">&#10022;</div>
-              <span className="nav-logo-text">Spotless</span>
+              <span className="nav-logo-text">Spotless.</span>
             </a>
             <p className="footer-brand-text">
               The operating system for modern cleaning companies. Built by people who understand the
@@ -23,23 +22,34 @@ export default function Footer() {
             <a href="/product/finance">Finance</a>
             <a href="/product/referrals-reviews">Referrals &amp; Reviews</a>
             <a href="/product/automations">Automations</a>
-            <a href="/#pricing">Pricing</a>
+            <a href="/pricing">Pricing</a>
           </div>
           <div className="footer-col">
             <h4>Solutions</h4>
             <a href="/residential">Residential Cleaning</a>
             <a href="/commercial">Commercial Cleaning</a>
+            <a href="/pressure-washing">Pressure Washing</a>
+            <a href="/auto-detailing">Auto Detailing</a>
+            <a href="/window-cleaning">Window Cleaning</a>
+            <a href="/pool-cleaning">Pool Cleaning</a>
             <a href="/airbnb">Airbnb Turnovers</a>
+            <a href="/pest-control">Pest Control</a>
+            <a href="/carpet-cleaning">Carpet Cleaning</a>
+            <a href="/junk-removal">Junk Removal</a>
+            <a href="/soft-washing">Soft Washing</a>
             <a href="/move-in-out">Move-In / Move-Out</a>
-            <a href="/deep-cleaning">Deep Cleaning</a>
-            <a href="/post-construction">Post-Construction</a>
+          </div>
+          <div className="footer-col">
+            <h4>Resources</h4>
+            <a href="/blog">Blog</a>
+            <a href="/tools">Free Tools</a>
+            <a href="/tools/pricing-calculator">Pricing Calculator</a>
           </div>
           <div className="footer-col">
             <h4>Company</h4>
-            <a href="#">About</a>
-            <a href="#">Blog</a>
-            <a href="#">Careers</a>
-            <a href="#">Contact</a>
+            <a href="/about">About</a>
+            <a href="/careers">Careers</a>
+            <a href="/contact">Contact</a>
           </div>
         </div>
         <div className="footer-bottom">

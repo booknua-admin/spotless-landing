@@ -18,7 +18,103 @@ export default function ProductOverviewPage() {
             From the first booking request to the 5-star review, Spotless runs your entire cleaning
             company. Here&rsquo;s what a day looks like when everything just works.
           </p>
-          <div className="product-categories-grid animate-on-scroll">
+
+          {/* Dashboard Mockup */}
+          <div className="animate-on-scroll" style={{ marginTop: '48px', maxWidth: '900px', marginLeft: 'auto', marginRight: 'auto' }}>
+            <div className="mockup-window">
+              <div className="mockup-topbar">
+                <div className="mockup-topbar-dot r"></div>
+                <div className="mockup-topbar-dot y"></div>
+                <div className="mockup-topbar-dot g"></div>
+                <div className="mockup-topbar-url">app.spotlessapp.io/dashboard</div>
+              </div>
+              <div className="mockup-sidebar-layout">
+                <div className="mockup-sidebar">
+                  <div className="mockup-sidebar-brand">Spotless.</div>
+                  <div className="mockup-sidebar-item active">
+                    <span className="mockup-sidebar-icon">&#9679;</span> Overview
+                  </div>
+                  <div className="mockup-sidebar-item">
+                    <span className="mockup-sidebar-icon">&#128197;</span> Schedule
+                  </div>
+                  <div className="mockup-sidebar-item">
+                    <span className="mockup-sidebar-icon">&#128101;</span> Customers
+                  </div>
+                  <div className="mockup-sidebar-item">
+                    <span className="mockup-sidebar-icon">&#128179;</span> Invoices
+                  </div>
+                  <div className="mockup-sidebar-item">
+                    <span className="mockup-sidebar-icon">&#128100;</span> Staff
+                  </div>
+                  <div className="mockup-sidebar-item">
+                    <span className="mockup-sidebar-icon">&#128200;</span> Finance
+                  </div>
+                </div>
+                <div className="mockup-main-content">
+                  <div className="mockup-main-header">
+                    <div className="mockup-main-title">Dashboard</div>
+                    <div className="mockup-btn primary">+ New</div>
+                  </div>
+                  <div className="mockup-stat-row" style={{ marginBottom: '16px' }}>
+                    <div className="mockup-stat-card blue">
+                      <div className="mockup-stat-label">Jobs Today</div>
+                      <div className="mockup-stat-value">12</div>
+                      <div className="mockup-stat-change">3 in progress</div>
+                    </div>
+                    <div className="mockup-stat-card teal">
+                      <div className="mockup-stat-label">Revenue (MTD)</div>
+                      <div className="mockup-stat-value">&euro;14,280</div>
+                      <div className="mockup-stat-change">&uarr; 23% vs last month</div>
+                    </div>
+                    <div className="mockup-stat-card orange">
+                      <div className="mockup-stat-label">Pending Invoices</div>
+                      <div className="mockup-stat-value">4</div>
+                      <div className="mockup-stat-change" style={{ color: 'var(--orange-accent)' }}>&euro;680 outstanding</div>
+                    </div>
+                    <div className="mockup-stat-card purple">
+                      <div className="mockup-stat-label">Avg Rating</div>
+                      <div className="mockup-stat-value">4.9</div>
+                      <div className="mockup-stat-change">247 reviews</div>
+                    </div>
+                  </div>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '14px' }}>
+                    <div>
+                      <div className="mockup-section-title">Today&rsquo;s Schedule</div>
+                      <div className="mockup-alert-card green">
+                        <div className="mockup-alert-dot"></div>
+                        9:00 &mdash; Johnson Residence (Sarah M.)
+                      </div>
+                      <div className="mockup-alert-card blue">
+                        <div className="mockup-alert-dot"></div>
+                        11:00 &mdash; 42 Oak Street (James K.)
+                      </div>
+                      <div className="mockup-alert-card green">
+                        <div className="mockup-alert-dot"></div>
+                        14:00 &mdash; Airbnb Turnover (Lucy P.)
+                      </div>
+                    </div>
+                    <div>
+                      <div className="mockup-section-title">Action Required</div>
+                      <div className="mockup-alert-card amber">
+                        <div className="mockup-alert-dot"></div>
+                        Quote request &mdash; 4 Bed Deep Clean
+                      </div>
+                      <div className="mockup-alert-card amber">
+                        <div className="mockup-alert-dot"></div>
+                        Payment overdue &mdash; Park View Office
+                      </div>
+                      <div className="mockup-alert-card blue">
+                        <div className="mockup-alert-dot"></div>
+                        New review &mdash; 5 stars from Rachel K.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="product-categories-grid animate-on-scroll" style={{ marginTop: '56px' }}>
             <a href="/product/scheduling" className="product-category-card">
               <div className="mega-menu-icon">&#128197;</div>
               <h4>Scheduling</h4>
@@ -71,17 +167,38 @@ export default function ProductOverviewPage() {
                 Explore Custom Forms <span>&rarr;</span>
               </a>
             </div>
-            <div className="story-visual">
-              <div className="story-visual-inner">
-                <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', justifyContent: 'center' }}>
-                  <span style={{ background: 'rgba(200,230,49,0.15)', color: 'var(--lime)', padding: '8px 16px', borderRadius: '8px', fontSize: '13px', fontWeight: 600 }}>3 Bed House &#10003;</span>
-                  <span style={{ background: 'rgba(91,141,239,0.15)', color: 'var(--blue-accent)', padding: '8px 16px', borderRadius: '8px', fontSize: '13px', fontWeight: 600 }}>Weekly &#10003;</span>
-                  <span style={{ background: 'rgba(52,211,153,0.15)', color: 'var(--green-accent)', padding: '8px 16px', borderRadius: '8px', fontSize: '13px', fontWeight: 600 }}>Deep Clean &#10003;</span>
-                  <span style={{ background: 'rgba(167,139,250,0.15)', color: 'var(--purple-accent)', padding: '8px 16px', borderRadius: '8px', fontSize: '13px', fontWeight: 600 }}>Oven + Fridge &#10003;</span>
+            <div className="story-visual" style={{ padding: '0', overflow: 'hidden', background: 'transparent', boxShadow: 'none', border: 'none' }}>
+              <div className="mockup-window" style={{ width: '100%' }}>
+                <div className="mockup-topbar">
+                  <div className="mockup-topbar-dot r"></div>
+                  <div className="mockup-topbar-dot y"></div>
+                  <div className="mockup-topbar-dot g"></div>
+                  <div className="mockup-topbar-url">yoursite.com/book</div>
                 </div>
-                <div style={{ textAlign: 'center', marginTop: '24px' }}>
-                  <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.4)', fontWeight: 600 }}>ESTIMATED QUOTE</div>
-                  <div style={{ fontSize: '32px', fontWeight: 800, color: 'var(--lime)', marginTop: '4px' }}>&euro;85</div>
+                <div className="mockup-body" style={{ padding: '24px' }}>
+                  <div className="mockup-section-title" style={{ fontSize: '14px', marginBottom: '16px' }}>Request a Quote</div>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '14px' }}>
+                    <div className="mockup-form-field">
+                      <div className="mockup-form-label">Property Type</div>
+                      <div className="mockup-form-input select">House &#9662;</div>
+                    </div>
+                    <div className="mockup-form-field">
+                      <div className="mockup-form-label">Bedrooms</div>
+                      <div className="mockup-form-input select">3 Bedrooms &#9662;</div>
+                    </div>
+                  </div>
+                  <div className="mockup-form-field" style={{ marginBottom: '14px' }}>
+                    <div className="mockup-form-label">Frequency</div>
+                    <div className="mockup-form-radio-group">
+                      <div className="mockup-form-radio"><div className="mockup-form-radio-dot active"></div> Weekly</div>
+                      <div className="mockup-form-radio"><div className="mockup-form-radio-dot"></div> Fortnightly</div>
+                      <div className="mockup-form-radio"><div className="mockup-form-radio-dot"></div> One-off</div>
+                    </div>
+                  </div>
+                  <div style={{ background: '#f0fdf4', border: '1px solid #bbf7d0', borderRadius: '8px', padding: '12px', textAlign: 'center' }}>
+                    <div style={{ fontSize: '10px', fontWeight: 600, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Estimated Quote</div>
+                    <div style={{ fontSize: '28px', fontWeight: 800, color: '#16a34a', marginTop: '4px' }}>&euro;85</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -105,15 +222,49 @@ export default function ProductOverviewPage() {
                 Explore Scheduling <span>&rarr;</span>
               </a>
             </div>
-            <div className="story-visual">
-              <div className="story-visual-inner">
-                <div style={{ display: 'flex', gap: '8px', flexDirection: 'column' }}>
-                  {['9:00 — Johnson Residence', '11:00 — 42 Oak Street', '14:00 — Airbnb Turnover'].map((job, i) => (
-                    <div key={i} style={{ background: 'var(--navy)', padding: '12px 16px', borderRadius: '8px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                      <span style={{ color: 'var(--white)', fontSize: '13px', fontWeight: 600 }}>{job}</span>
-                      <span style={{ color: 'var(--green-accent)', fontSize: '12px', fontWeight: 600 }}>Confirmed</span>
+            <div className="story-visual" style={{ padding: '0', overflow: 'hidden', background: 'transparent', boxShadow: 'none', border: 'none' }}>
+              <div className="mockup-window" style={{ width: '100%' }}>
+                <div className="mockup-topbar">
+                  <div className="mockup-topbar-dot r"></div>
+                  <div className="mockup-topbar-dot y"></div>
+                  <div className="mockup-topbar-dot g"></div>
+                  <div className="mockup-topbar-url">app.spotlessapp.io/schedule</div>
+                </div>
+                <div className="mockup-body">
+                  <div className="mockup-calendar">
+                    <div className="mockup-cal-day">
+                      <div className="mockup-cal-day-header">Mon 14</div>
+                      <div className="mockup-cal-event green">9:00 Johnson</div>
+                      <div className="mockup-cal-event blue">11:00 Oak St</div>
+                      <div className="mockup-cal-event green">14:00 Airbnb</div>
+                      <div className="mockup-cal-event purple">16:00 Deep Cln</div>
                     </div>
-                  ))}
+                    <div className="mockup-cal-day">
+                      <div className="mockup-cal-day-header">Tue 15</div>
+                      <div className="mockup-cal-event blue">8:30 Park View</div>
+                      <div className="mockup-cal-event green">10:00 Ellis Rd</div>
+                      <div className="mockup-cal-event orange">13:00 Quote</div>
+                    </div>
+                    <div className="mockup-cal-day">
+                      <div className="mockup-cal-day-header">Wed 16</div>
+                      <div className="mockup-cal-event green">9:00 Mitchell</div>
+                      <div className="mockup-cal-event teal">11:30 Airbnb</div>
+                      <div className="mockup-cal-event blue">14:00 Office</div>
+                      <div className="mockup-cal-event green">16:30 Kim</div>
+                    </div>
+                    <div className="mockup-cal-day">
+                      <div className="mockup-cal-day-header">Thu 17</div>
+                      <div className="mockup-cal-event purple">9:00 Deep Cln</div>
+                      <div className="mockup-cal-event green">12:00 Harris</div>
+                      <div className="mockup-cal-event blue">15:00 Retail</div>
+                    </div>
+                    <div className="mockup-cal-day">
+                      <div className="mockup-cal-day-header">Fri 18</div>
+                      <div className="mockup-cal-event green">9:00 Weekly</div>
+                      <div className="mockup-cal-event teal">11:00 Turnover</div>
+                      <div className="mockup-cal-event orange">14:00 New Lead</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -137,21 +288,60 @@ export default function ProductOverviewPage() {
                 Explore Staff Management <span>&rarr;</span>
               </a>
             </div>
-            <div className="story-visual">
-              <div className="story-visual-inner">
-                <div style={{ display: 'flex', gap: '12px' }}>
-                  <div style={{ flex: 1, background: 'var(--navy)', padding: '16px', borderRadius: '8px', textAlign: 'center' }}>
-                    <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.4)' }}>Active</div>
-                    <div style={{ fontSize: '28px', fontWeight: 800, color: 'var(--white)' }}>8</div>
+            <div className="story-visual" style={{ padding: '0', overflow: 'hidden', background: 'transparent', boxShadow: 'none', border: 'none' }}>
+              <div className="mockup-window" style={{ width: '100%' }}>
+                <div className="mockup-topbar">
+                  <div className="mockup-topbar-dot r"></div>
+                  <div className="mockup-topbar-dot y"></div>
+                  <div className="mockup-topbar-dot g"></div>
+                  <div className="mockup-topbar-url">app.spotlessapp.io/staff</div>
+                </div>
+                <div className="mockup-body">
+                  <div className="mockup-stat-row" style={{ gridTemplateColumns: 'repeat(3, 1fr)', marginBottom: '14px' }}>
+                    <div className="mockup-stat-card blue">
+                      <div className="mockup-stat-label">Active Staff</div>
+                      <div className="mockup-stat-value">8</div>
+                    </div>
+                    <div className="mockup-stat-card">
+                      <div className="mockup-stat-label">Jobs Today</div>
+                      <div className="mockup-stat-value">14</div>
+                    </div>
+                    <div className="mockup-stat-card teal">
+                      <div className="mockup-stat-label">On Time Rate</div>
+                      <div className="mockup-stat-value">97%</div>
+                    </div>
                   </div>
-                  <div style={{ flex: 1, background: 'var(--navy)', padding: '16px', borderRadius: '8px', textAlign: 'center' }}>
-                    <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.4)' }}>On Time</div>
-                    <div style={{ fontSize: '28px', fontWeight: 800, color: 'var(--green-accent)' }}>97%</div>
-                  </div>
-                  <div style={{ flex: 1, background: 'var(--navy)', padding: '16px', borderRadius: '8px', textAlign: 'center' }}>
-                    <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.4)' }}>Hours</div>
-                    <div style={{ fontSize: '28px', fontWeight: 800, color: 'var(--lime)' }}>142</div>
-                  </div>
+                  <table className="mockup-table">
+                    <thead>
+                      <tr><th>Staff</th><th>Status</th><th>Jobs</th><th>Hours</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                          <div className="mockup-avatar" style={{ background: '#3ECF8E' }}>S</div> Sarah M.
+                        </td>
+                        <td><span className="mockup-status-dot active"></span> On site</td>
+                        <td>4</td>
+                        <td>6.5h</td>
+                      </tr>
+                      <tr>
+                        <td style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                          <div className="mockup-avatar" style={{ background: '#5b8def' }}>J</div> James K.
+                        </td>
+                        <td><span className="mockup-status-dot away"></span> Travelling</td>
+                        <td>3</td>
+                        <td>4.0h</td>
+                      </tr>
+                      <tr>
+                        <td style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                          <div className="mockup-avatar" style={{ background: '#a78bfa' }}>L</div> Lucy P.
+                        </td>
+                        <td><span className="mockup-status-dot active"></span> On site</td>
+                        <td>5</td>
+                        <td>7.0h</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
@@ -175,17 +365,48 @@ export default function ProductOverviewPage() {
                 Explore Payments <span>&rarr;</span>
               </a>
             </div>
-            <div className="story-visual">
-              <div className="story-visual-inner">
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <div>
-                    <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.4)', fontWeight: 600 }}>THIS MONTH</div>
-                    <div style={{ fontSize: '32px', fontWeight: 800, color: 'var(--white)', marginTop: '4px' }}>&euro;12,840</div>
+            <div className="story-visual" style={{ padding: '0', overflow: 'hidden', background: 'transparent', boxShadow: 'none', border: 'none' }}>
+              <div className="mockup-window" style={{ width: '100%' }}>
+                <div className="mockup-topbar">
+                  <div className="mockup-topbar-dot r"></div>
+                  <div className="mockup-topbar-dot y"></div>
+                  <div className="mockup-topbar-dot g"></div>
+                  <div className="mockup-topbar-url">app.spotlessapp.io/invoices</div>
+                </div>
+                <div className="mockup-body">
+                  <div className="mockup-stat-row" style={{ gridTemplateColumns: 'repeat(3, 1fr)', marginBottom: '14px' }}>
+                    <div className="mockup-stat-card">
+                      <div className="mockup-stat-label">This Month</div>
+                      <div className="mockup-stat-value">&euro;12,840</div>
+                    </div>
+                    <div className="mockup-stat-card teal">
+                      <div className="mockup-stat-label">Collected</div>
+                      <div className="mockup-stat-value">98%</div>
+                    </div>
+                    <div className="mockup-stat-card orange">
+                      <div className="mockup-stat-label">Outstanding</div>
+                      <div className="mockup-stat-value">&euro;256</div>
+                    </div>
                   </div>
-                  <div style={{ textAlign: 'right' }}>
-                    <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.4)', fontWeight: 600 }}>COLLECTED</div>
-                    <div style={{ fontSize: '32px', fontWeight: 800, color: 'var(--green-accent)', marginTop: '4px' }}>98%</div>
-                  </div>
+                  <table className="mockup-table">
+                    <thead>
+                      <tr><th>Invoice</th><th>Customer</th><th>Amount</th><th>Status</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>#INV-0247</td><td>Johnson Family</td><td>&euro;85.00</td>
+                        <td><span className="mockup-badge green">Paid</span></td>
+                      </tr>
+                      <tr>
+                        <td>#INV-0248</td><td>Park View Office</td><td>&euro;220.00</td>
+                        <td><span className="mockup-badge green">Paid</span></td>
+                      </tr>
+                      <tr>
+                        <td>#INV-0249</td><td>Oak Street</td><td>&euro;150.00</td>
+                        <td><span className="mockup-badge orange">Pending</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
@@ -209,11 +430,44 @@ export default function ProductOverviewPage() {
                 Explore Finance Tools <span>&rarr;</span>
               </a>
             </div>
-            <div className="story-visual">
-              <div className="story-visual-inner" style={{ textAlign: 'center' }}>
-                <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.4)', fontWeight: 600 }}>ANNUAL REVENUE</div>
-                <div style={{ fontSize: '36px', fontWeight: 800, color: 'var(--white)', marginTop: '4px' }}>&euro;154,200</div>
-                <div style={{ fontSize: '14px', color: 'var(--green-accent)', fontWeight: 600, marginTop: '4px' }}>&#9650; 23% vs last year</div>
+            <div className="story-visual" style={{ padding: '0', overflow: 'hidden', background: 'transparent', boxShadow: 'none', border: 'none' }}>
+              <div className="mockup-window" style={{ width: '100%' }}>
+                <div className="mockup-topbar">
+                  <div className="mockup-topbar-dot r"></div>
+                  <div className="mockup-topbar-dot y"></div>
+                  <div className="mockup-topbar-dot g"></div>
+                  <div className="mockup-topbar-url">app.spotlessapp.io/finance</div>
+                </div>
+                <div className="mockup-body">
+                  <div className="mockup-stat-row" style={{ gridTemplateColumns: 'repeat(3, 1fr)', marginBottom: '14px' }}>
+                    <div className="mockup-stat-card blue">
+                      <div className="mockup-stat-label">Annual Revenue</div>
+                      <div className="mockup-stat-value">&euro;154,200</div>
+                      <div className="mockup-stat-change">&uarr; 23% vs last year</div>
+                    </div>
+                    <div className="mockup-stat-card">
+                      <div className="mockup-stat-label">Monthly Avg</div>
+                      <div className="mockup-stat-value">&euro;12,850</div>
+                      <div className="mockup-stat-change">&uarr; 12%</div>
+                    </div>
+                    <div className="mockup-stat-card purple">
+                      <div className="mockup-stat-label">Net Margin</div>
+                      <div className="mockup-stat-value">34%</div>
+                      <div className="mockup-stat-change">&uarr; 4pts</div>
+                    </div>
+                  </div>
+                  <div className="mockup-section-title">Recent Transactions</div>
+                  <table className="mockup-table">
+                    <thead>
+                      <tr><th>Description</th><th>Amount</th><th>Type</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Johnson &mdash; Standard Clean</td><td style={{ color: '#16a34a', fontWeight: 600 }}>+&euro;85</td><td><span className="mockup-badge green">Income</span></td></tr>
+                      <tr><td>Park View &mdash; Deep Clean</td><td style={{ color: '#16a34a', fontWeight: 600 }}>+&euro;220</td><td><span className="mockup-badge green">Income</span></td></tr>
+                      <tr><td>Stripe processing fee</td><td style={{ color: '#dc2626', fontWeight: 600 }}>-&euro;4.20</td><td><span className="mockup-badge gray">Fee</span></td></tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>
@@ -236,11 +490,51 @@ export default function ProductOverviewPage() {
                 Explore Referrals &amp; Reviews <span>&rarr;</span>
               </a>
             </div>
-            <div className="story-visual">
-              <div className="story-visual-inner" style={{ textAlign: 'center' }}>
-                <div style={{ fontSize: '40px', fontWeight: 800, color: 'var(--white)' }}>4.9<span style={{ fontSize: '20px', color: 'rgba(255,255,255,0.3)' }}>/5</span></div>
-                <div style={{ color: '#f59e0b', fontSize: '20px', letterSpacing: '3px', marginTop: '4px' }}>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <div style={{ fontSize: '13px', color: 'rgba(255,255,255,0.4)', marginTop: '8px' }}>247 reviews this quarter</div>
+            <div className="story-visual" style={{ padding: '0', overflow: 'hidden', background: 'transparent', boxShadow: 'none', border: 'none' }}>
+              <div className="mockup-window" style={{ width: '100%' }}>
+                <div className="mockup-topbar">
+                  <div className="mockup-topbar-dot r"></div>
+                  <div className="mockup-topbar-dot y"></div>
+                  <div className="mockup-topbar-dot g"></div>
+                  <div className="mockup-topbar-url">app.spotlessapp.io/reviews</div>
+                </div>
+                <div className="mockup-body">
+                  <div className="mockup-stat-row" style={{ gridTemplateColumns: 'repeat(3, 1fr)', marginBottom: '14px' }}>
+                    <div className="mockup-stat-card">
+                      <div className="mockup-stat-label">Avg Rating</div>
+                      <div className="mockup-stat-value">4.9 / 5</div>
+                    </div>
+                    <div className="mockup-stat-card teal">
+                      <div className="mockup-stat-label">This Quarter</div>
+                      <div className="mockup-stat-value">247</div>
+                      <div className="mockup-stat-change">reviews collected</div>
+                    </div>
+                    <div className="mockup-stat-card blue">
+                      <div className="mockup-stat-label">Referral Revenue</div>
+                      <div className="mockup-stat-value">&euro;3,420</div>
+                    </div>
+                  </div>
+                  <div className="mockup-review-card">
+                    <div className="mockup-review-header">
+                      <div className="mockup-review-author">
+                        <div className="mockup-avatar" style={{ background: '#3ECF8E' }}>R</div>
+                        <div className="mockup-review-name">Rachel K.</div>
+                      </div>
+                      <div className="mockup-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    </div>
+                    <div className="mockup-review-text">&ldquo;Absolutely spotless every time. The team is always on time and professional.&rdquo;</div>
+                  </div>
+                  <div className="mockup-review-card">
+                    <div className="mockup-review-header">
+                      <div className="mockup-review-author">
+                        <div className="mockup-avatar" style={{ background: '#5b8def' }}>M</div>
+                        <div className="mockup-review-name">Mark O.</div>
+                      </div>
+                      <div className="mockup-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    </div>
+                    <div className="mockup-review-text">&ldquo;Best cleaning service we&rsquo;ve used. Booking online was so easy.&rdquo;</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -263,15 +557,38 @@ export default function ProductOverviewPage() {
                 Explore Automations <span>&rarr;</span>
               </a>
             </div>
-            <div className="story-visual">
-              <div className="story-visual-inner">
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                  {['Job completed → Send invoice', 'Payment received → Request review', 'New booking → Assign nearest staff'].map((rule, i) => (
-                    <div key={i} style={{ background: 'var(--navy)', padding: '12px 16px', borderRadius: '8px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                      <span style={{ color: 'var(--lime)', fontWeight: 700 }}>&#9889;</span>
-                      <span style={{ color: 'rgba(255,255,255,0.7)', fontSize: '13px' }}>{rule}</span>
+            <div className="story-visual" style={{ padding: '0', overflow: 'hidden', background: 'transparent', boxShadow: 'none', border: 'none' }}>
+              <div className="mockup-window" style={{ width: '100%' }}>
+                <div className="mockup-topbar">
+                  <div className="mockup-topbar-dot r"></div>
+                  <div className="mockup-topbar-dot y"></div>
+                  <div className="mockup-topbar-dot g"></div>
+                  <div className="mockup-topbar-url">app.spotlessapp.io/automations</div>
+                </div>
+                <div className="mockup-body">
+                  <div className="mockup-section-title">Active Workflows</div>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0', flexWrap: 'wrap' }}>
+                      <div className="mockup-flow-node trigger">Job Completed</div>
+                      <div className="mockup-flow-arrow"></div>
+                      <div className="mockup-flow-node action">Send Invoice</div>
+                      <div style={{ marginLeft: '12px' }}><span className="mockup-badge green">Active</span></div>
                     </div>
-                  ))}
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0', flexWrap: 'wrap' }}>
+                      <div className="mockup-flow-node trigger">Payment Received</div>
+                      <div className="mockup-flow-arrow"></div>
+                      <div className="mockup-flow-node condition">Rating Check</div>
+                      <div className="mockup-flow-arrow"></div>
+                      <div className="mockup-flow-node action">Request Review</div>
+                      <div style={{ marginLeft: '12px' }}><span className="mockup-badge green">Active</span></div>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0', flexWrap: 'wrap' }}>
+                      <div className="mockup-flow-node trigger">New Booking</div>
+                      <div className="mockup-flow-arrow"></div>
+                      <div className="mockup-flow-node action">Assign Nearest Staff</div>
+                      <div style={{ marginLeft: '12px' }}><span className="mockup-badge green">Active</span></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -290,10 +607,10 @@ export default function ProductOverviewPage() {
             trial starts now &mdash; no credit card needed.
           </p>
           <div className="final-cta-actions animate-on-scroll">
-            <a href="#" className="btn-primary btn-primary-lg">
+            <a href="https://app.spotlessapp.io/register" className="btn-primary btn-primary-lg">
               Start Your Free Trial <span>&rarr;</span>
             </a>
-            <a href="#" className="btn-ghost">
+            <a href="/contact" className="btn-ghost">
               Book a Demo
             </a>
           </div>

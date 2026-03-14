@@ -1,15 +1,5 @@
 {
-  "buildCommand": "",
-  "outputDirectory": ".",
-  "framework": null,
-  "rewrites": [
-    { "source": "/residential", "destination": "/niches/residential.html" },
-    { "source": "/commercial", "destination": "/niches/commercial.html" },
-    { "source": "/airbnb", "destination": "/niches/airbnb.html" },
-    { "source": "/move-in-out", "destination": "/niches/move-in-out.html" },
-    { "source": "/deep-cleaning", "destination": "/niches/deep-cleaning.html" },
-    { "source": "/post-construction", "destination": "/niches/post-construction.html" }
-  ],
+  "framework": "nextjs",
   "headers": [
     {
       "source": "/(.*)",
@@ -20,13 +10,7 @@
       ]
     },
     {
-      "source": "/css/(.*)",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
-      ]
-    },
-    {
-      "source": "/js/(.*)",
+      "source": "/_next/static/(.*)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]

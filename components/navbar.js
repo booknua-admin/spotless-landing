@@ -6,8 +6,7 @@ export default function Navbar() {
       <nav className="navbar" id="navbar">
         <div className="container">
           <a href="/" className="nav-logo">
-            <div className="nav-logo-icon">&#10022;</div>
-            <span className="nav-logo-text">Spotless</span>
+            <span className="nav-logo-text">Spotless.</span>
           </a>
           <ul className="nav-links">
             <li className="nav-item has-mega-menu">
@@ -78,33 +77,116 @@ export default function Navbar() {
                 </div>
               </div>
             </li>
-            <li className="nav-item has-dropdown">
+            <li className="nav-item has-mega-menu">
               <button className="nav-link-btn" aria-expanded="false" aria-haspopup="true">
                 Solutions <span className="nav-chevron">&#9662;</span>
               </button>
-              <div className="nav-dropdown" role="menu">
-                <a href="/residential" role="menuitem">Residential Cleaning</a>
-                <a href="/commercial" role="menuitem">Commercial Cleaning</a>
-                <a href="/airbnb" role="menuitem">Airbnb Turnovers</a>
-                <a href="/move-in-out" role="menuitem">Move-In / Move-Out</a>
-                <a href="/deep-cleaning" role="menuitem">Deep Cleaning</a>
-                <a href="/post-construction" role="menuitem">Post-Construction</a>
+              <div className="mega-menu" role="menu">
+                <div className="container">
+                  <div className="mega-menu-inner">
+                    <div className="mega-menu-grid solutions-grid">
+                      <a href="/residential" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#127968;</div>
+                        <div>
+                          <div className="mega-menu-title">Residential Cleaning</div>
+                          <div className="mega-menu-desc">House &amp; apartment cleaning</div>
+                        </div>
+                      </a>
+                      <a href="/commercial" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#127970;</div>
+                        <div>
+                          <div className="mega-menu-title">Commercial Cleaning</div>
+                          <div className="mega-menu-desc">Office &amp; facility cleaning</div>
+                        </div>
+                      </a>
+                      <a href="/pressure-washing" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#128166;</div>
+                        <div>
+                          <div className="mega-menu-title">Pressure Washing</div>
+                          <div className="mega-menu-desc">Power washing services</div>
+                        </div>
+                      </a>
+                      <a href="/auto-detailing" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#128663;</div>
+                        <div>
+                          <div className="mega-menu-title">Auto Detailing</div>
+                          <div className="mega-menu-desc">Car detailing &amp; wash</div>
+                        </div>
+                      </a>
+                      <a href="/window-cleaning" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#128999;</div>
+                        <div>
+                          <div className="mega-menu-title">Window Cleaning</div>
+                          <div className="mega-menu-desc">Glass &amp; window services</div>
+                        </div>
+                      </a>
+                      <a href="/pool-cleaning" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#127946;</div>
+                        <div>
+                          <div className="mega-menu-title">Pool Cleaning</div>
+                          <div className="mega-menu-desc">Pool maintenance</div>
+                        </div>
+                      </a>
+                      <a href="/airbnb" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#9992;</div>
+                        <div>
+                          <div className="mega-menu-title">Airbnb Turnovers</div>
+                          <div className="mega-menu-desc">Short-term rental turnovers</div>
+                        </div>
+                      </a>
+                      <a href="/pest-control" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#128027;</div>
+                        <div>
+                          <div className="mega-menu-title">Pest Control</div>
+                          <div className="mega-menu-desc">Bug &amp; pest removal</div>
+                        </div>
+                      </a>
+                      <a href="/carpet-cleaning" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#129529;</div>
+                        <div>
+                          <div className="mega-menu-title">Carpet Cleaning</div>
+                          <div className="mega-menu-desc">Floor &amp; carpet care</div>
+                        </div>
+                      </a>
+                      <a href="/junk-removal" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#128465;</div>
+                        <div>
+                          <div className="mega-menu-title">Junk Removal</div>
+                          <div className="mega-menu-desc">Haul-away services</div>
+                        </div>
+                      </a>
+                      <a href="/soft-washing" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#129529;</div>
+                        <div>
+                          <div className="mega-menu-title">Soft Washing</div>
+                          <div className="mega-menu-desc">Gentle exterior cleaning</div>
+                        </div>
+                      </a>
+                      <a href="/move-in-out" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#128230;</div>
+                        <div>
+                          <div className="mega-menu-title">Move-In / Move-Out</div>
+                          <div className="mega-menu-desc">End-of-tenancy cleaning</div>
+                        </div>
+                      </a>
+                    </div>
+                    <div className="mega-menu-highlight">
+                      <div className="mega-menu-highlight-tag">Solutions</div>
+                      <h3>Built for your industry</h3>
+                      <p>Every feature tailored to how your specific business actually works.</p>
+                      <a href="/pricing" className="btn-primary">See Pricing &rarr;</a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </li>
-            <li><a href="/#pricing">Pricing</a></li>
-            <li className="nav-item has-dropdown">
-              <button className="nav-link-btn" aria-expanded="false" aria-haspopup="true">
-                Resources <span className="nav-chevron">&#9662;</span>
-              </button>
-              <div className="nav-dropdown" role="menu">
-                <a href="/#roi" role="menuitem">ROI Calculator</a>
-                <a href="/#faq" role="menuitem">FAQ</a>
-              </div>
-            </li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/tools">Free Tools</a></li>
           </ul>
           <div className="nav-cta">
-            <a href="#" className="btn-ghost">Log In</a>
-            <a href="/#cta" className="btn-primary">Start Free Trial</a>
+            <a href="https://app.spotlessapp.io/login" className="btn-ghost">Log In</a>
+            <a href="https://app.spotlessapp.io/register" className="btn-primary">Start Free Trial</a>
           </div>
           <button className="mobile-toggle" aria-label="Open menu">&#9776;</button>
         </div>
@@ -130,22 +212,23 @@ export default function Navbar() {
           <div className="mobile-accordion-panel">
             <a href="/residential">Residential Cleaning</a>
             <a href="/commercial">Commercial Cleaning</a>
+            <a href="/pressure-washing">Pressure Washing</a>
+            <a href="/auto-detailing">Auto Detailing</a>
+            <a href="/window-cleaning">Window Cleaning</a>
+            <a href="/pool-cleaning">Pool Cleaning</a>
             <a href="/airbnb">Airbnb Turnovers</a>
+            <a href="/pest-control">Pest Control</a>
+            <a href="/carpet-cleaning">Carpet Cleaning</a>
+            <a href="/junk-removal">Junk Removal</a>
+            <a href="/soft-washing">Soft Washing</a>
             <a href="/move-in-out">Move-In / Move-Out</a>
-            <a href="/deep-cleaning">Deep Cleaning</a>
-            <a href="/post-construction">Post-Construction</a>
           </div>
         </div>
-        <a href="/#pricing">Pricing</a>
-        <div className="mobile-accordion">
-          <button className="mobile-accordion-toggle">Resources <span className="mobile-accordion-chevron">&#9662;</span></button>
-          <div className="mobile-accordion-panel">
-            <a href="/#roi">ROI Calculator</a>
-            <a href="/#faq">FAQ</a>
-          </div>
-        </div>
-        <a href="#" className="btn-ghost">Log In</a>
-        <a href="/#cta" className="btn-primary">Start Free Trial</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/blog">Blog</a>
+        <a href="/tools">Free Tools</a>
+        <a href="https://app.spotlessapp.io/login" className="btn-ghost">Log In</a>
+        <a href="https://app.spotlessapp.io/register" className="btn-primary">Start Free Trial</a>
       </div>
     </>
   );
