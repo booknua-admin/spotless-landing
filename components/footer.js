@@ -32,12 +32,12 @@ export default function Footer() {
             <a href="/auto-detailing">Auto Detailing</a>
             <a href="/window-cleaning">Window Cleaning</a>
             <a href="/pool-cleaning">Pool Cleaning</a>
-            <a href="/landscaping">Landscaping</a>
+            <a href="/airbnb">Airbnb Turnovers</a>
             <a href="/pest-control">Pest Control</a>
             <a href="/carpet-cleaning">Carpet Cleaning</a>
             <a href="/junk-removal">Junk Removal</a>
             <a href="/soft-washing">Soft Washing</a>
-            <a href="/painting">Painting</a>
+            <a href="/move-in-out">Move-In / Move-Out</a>
           </div>
           <div className="footer-col">
             <h4>Company</h4>

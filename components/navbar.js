@@ -83,7 +83,7 @@ export default function Navbar() {
               </button>
               <div className="mega-menu" role="menu">
                 <div className="container">
-                  <div className="mega-menu-inner">
+                  <div className="mega-menu-inner solutions-grid">
                     <div className="mega-menu-grid">
                       <a href="/residential" className="mega-menu-item" role="menuitem">
                         <div className="mega-menu-icon">&#127968;</div>
@@ -127,11 +127,11 @@ export default function Navbar() {
                           <div className="mega-menu-desc">Pool maintenance</div>
                         </div>
                       </a>
-                      <a href="/landscaping" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#127793;</div>
+                      <a href="/airbnb" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#9992;</div>
                         <div>
-                          <div className="mega-menu-title">Landscaping</div>
-                          <div className="mega-menu-desc">Lawn &amp; garden care</div>
+                          <div className="mega-menu-title">Airbnb Turnovers</div>
+                          <div className="mega-menu-desc">Short-term rental turnovers</div>
                         </div>
                       </a>
                       <a href="/pest-control" className="mega-menu-item" role="menuitem">
@@ -162,11 +162,11 @@ export default function Navbar() {
                           <div className="mega-menu-desc">Gentle exterior cleaning</div>
                         </div>
                       </a>
-                      <a href="/painting" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#127912;</div>
+                      <a href="/move-in-out" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#128230;</div>
                         <div>
-                          <div className="mega-menu-title">Painting</div>
-                          <div className="mega-menu-desc">Interior &amp; exterior painting</div>
+                          <div className="mega-menu-title">Move-In / Move-Out</div>
+                          <div className="mega-menu-desc">End-of-tenancy cleaning</div>
                         </div>
                       </a>
                     </div>
@@ -209,12 +209,12 @@ export default function Navbar() {
             <a href="/auto-detailing">Auto Detailing</a>
             <a href="/window-cleaning">Window Cleaning</a>
             <a href="/pool-cleaning">Pool Cleaning</a>
-            <a href="/landscaping">Landscaping</a>
+            <a href="/airbnb">Airbnb Turnovers</a>
             <a href="/pest-control">Pest Control</a>
             <a href="/carpet-cleaning">Carpet Cleaning</a>
             <a href="/junk-removal">Junk Removal</a>
             <a href="/soft-washing">Soft Washing</a>
-            <a href="/painting">Painting</a>
+            <a href="/move-in-out">Move-In / Move-Out</a>
           </div>
         </div>
         <a href="/#pricing">Pricing</a>
