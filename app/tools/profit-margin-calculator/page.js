@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function ProfitMarginPage() {
   return (
-    <>
+    <div className="dark-page">
       <section className="product-hero">
         <div className="container">
           <div className="section-tag animate-on-scroll">Free Tool</div>
@@ -30,6 +30,6 @@ export default function ProfitMarginPage() {
       </section>
 
       <ProductCTA />
-    </>
+    </div>
   );
 }

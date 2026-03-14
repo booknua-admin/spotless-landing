@@ -13,7 +13,7 @@ export default function BlogPage() {
   const rest = posts.filter((p) => p.slug !== featured?.slug);
 
   return (
-    <>
+    <div className="dark-page">
       <section className="product-hero">
         <div className="container">
           <div className="section-tag animate-on-scroll">Blog</div>
@@ -74,6 +74,6 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

@@ -3221,6 +3221,15 @@ body {
    BLOG STYLES
    ============================================ */
 
+/* Dark wrapper for blog, tools, and embed pages */
+.dark-page {
+  background: var(--dark);
+  min-height: 100vh;
+}
+.dark-page .product-more-section {
+  background: var(--dark-light);
+}
+
 .blog-category-pills {
   display: flex;
   gap: 8px;

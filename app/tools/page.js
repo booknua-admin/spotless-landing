@@ -35,7 +35,7 @@ const tools = [
 
 export default function ToolsPage() {
   return (
-    <>
+    <div className="dark-page">
       <section className="product-hero">
         <div className="container">
           <div className="section-tag animate-on-scroll">Free Tools</div>
@@ -65,6 +65,6 @@ export default function ToolsPage() {
       </section>
 
       <ProductCTA />
-    </>
+    </div>
   );
 }

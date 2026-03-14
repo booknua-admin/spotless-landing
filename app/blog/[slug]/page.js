@@ -62,7 +62,7 @@ export default async function BlogPostPage({ params }) {
   const related = getRelatedPosts(params.slug, 3);
 
   return (
-    <>
+    <div className="dark-page">
       <article>
         <section className="product-hero" style={{ paddingBottom: '40px' }}>
           <div className="container" style={{ maxWidth: '800px' }}>
@@ -119,6 +119,6 @@ export default async function BlogPostPage({ params }) {
       )}
 
       <ProductCTA />
-    </>
+    </div>
   );
 }

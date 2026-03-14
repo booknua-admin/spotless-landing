@@ -37,7 +37,7 @@ export default function CategoryPage({ params }) {
   const posts = getPostsByCategory(category);
 
   return (
-    <>
+    <div className="dark-page">
       <section className="product-hero">
         <div className="container">
           <a href="/blog" className="blog-back-link animate-on-scroll">&larr; All articles</a>
@@ -81,6 +81,6 @@ export default function CategoryPage({ params }) {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

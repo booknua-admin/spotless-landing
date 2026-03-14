@@ -39,7 +39,7 @@ export default function EmbedPage() {
   }
 
   return (
-    <>
+    <div className="dark-page">
       <section className="product-hero">
         <div className="container">
           <div className="section-tag animate-on-scroll">Embed</div>
@@ -119,6 +119,6 @@ export default function EmbedPage() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
