@@ -45,6 +45,32 @@ const mdxComponents = {
       <table {...props} />
     </div>
   ),
+  InlineCTA: ({ title, description, href, label }) => (
+    <div className="blog-inline-cta">
+      <p className="blog-inline-cta-title">{title}</p>
+      <p className="blog-inline-cta-desc">{description}</p>
+      <a href={href} className="btn-primary">{label || 'Try It Free'} &rarr;</a>
+    </div>
+  ),
+  Callout: ({ type, title, children }) => (
+    <div className={`blog-callout${type === 'warning' ? ' blog-callout-warning' : type === 'info' ? ' blog-callout-info' : ''}`}>
+      {title && <p className="blog-callout-title">{title}</p>}
+      {children}
+    </div>
+  ),
+  StatRow: ({ children }) => <div className="blog-stat-row">{children}</div>,
+  Stat: ({ number, label }) => (
+    <div className="blog-stat-card">
+      <div className="blog-stat-number">{number}</div>
+      <div className="blog-stat-label">{label}</div>
+    </div>
+  ),
+  KeyTakeaway: ({ title, children }) => (
+    <div className="blog-key-takeaway">
+      <p className="blog-key-takeaway-title">{title || 'Key Takeaways'}</p>
+      {children}
+    </div>
+  ),
 };
 
 export default async function BlogPostPage({ params }) {
@@ -84,7 +110,9 @@ export default async function BlogPostPage({ params }) {
           </div>
         </section>
 
-        <section style={{ padding: '0 0 80px' }}>
+        <div className="blog-hero-divider" />
+
+        <section style={{ padding: '40px 0 80px' }}>
           <div className="container" style={{ maxWidth: '800px' }}>
             <div className="blog-prose">
               {content}

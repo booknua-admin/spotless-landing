@@ -3936,6 +3936,166 @@ body {
   background: var(--mint-hover);
 }
 
+/* ── Blog Visual Components ────────────────────────────── */
+
+/* Hero-to-body divider */
+.blog-hero-divider {
+  height: 2px;
+  max-width: 200px;
+  margin: 0 auto;
+  background: linear-gradient(90deg, transparent, rgba(62,207,142,0.4), transparent);
+}
+
+/* Callout / tip box */
+.blog-callout {
+  border-left: 4px solid var(--mint);
+  background: rgba(62,207,142,0.04);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 20px 24px;
+  margin: 32px 0;
+}
+.blog-callout-warning {
+  border-left-color: #f5a623;
+  background: rgba(245,166,35,0.04);
+}
+.blog-callout-info {
+  border-left-color: #5b9bf5;
+  background: rgba(91,155,245,0.04);
+}
+.blog-callout-title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.blog-callout p:last-child { margin-bottom: 0; }
+
+/* Stat row */
+.blog-stat-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 36px 0;
+}
+.blog-stat-card {
+  background: var(--dark-light);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-sm);
+  padding: 24px 20px;
+  text-align: center;
+}
+.blog-stat-number {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(28px, 3vw, 36px);
+  font-weight: 800;
+  color: var(--mint);
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+.blog-stat-label {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.4;
+}
+
+/* Inline CTA */
+.blog-inline-cta {
+  background: rgba(62,207,142,0.05);
+  border: 1px solid rgba(62,207,142,0.2);
+  border-radius: var(--radius);
+  padding: 32px;
+  text-align: center;
+  margin: 48px 0;
+}
+.blog-inline-cta-title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0 0 8px;
+}
+.blog-inline-cta-desc {
+  font-size: 15px;
+  color: rgba(255,255,255,0.6);
+  margin: 0 0 20px;
+}
+.blog-inline-cta .btn-primary {
+  display: inline-block;
+  padding: 12px 28px;
+  background: var(--mint);
+  color: var(--dark);
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.blog-inline-cta .btn-primary:hover {
+  background: var(--mint-hover);
+}
+
+/* Key takeaway box */
+.blog-key-takeaway {
+  background: var(--dark-light);
+  border-left: 4px solid var(--mint);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 24px 28px;
+  margin: 36px 0;
+}
+.blog-key-takeaway-title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--mint);
+  margin: 0 0 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.blog-key-takeaway ul {
+  margin: 0;
+  padding-left: 20px;
+}
+.blog-key-takeaway li {
+  margin-bottom: 8px;
+  color: rgba(255,255,255,0.85);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.blog-key-takeaway li::marker {
+  color: var(--mint);
+}
+
+/* Checklist */
+.blog-checklist {
+  list-style: none;
+  padding-left: 0;
+  margin: 28px 0;
+}
+.blog-checklist li {
+  position: relative;
+  padding-left: 28px;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  line-height: 1.6;
+}
+.blog-checklist li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.blog-checklist li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--mint);
+  font-weight: 700;
+}
+
 @media (max-width: 768px) {
   .blog-grid { grid-template-columns: 1fr; }
   .blog-featured-card { padding: 24px; }
@@ -3946,8 +4106,13 @@ body {
   .tool-input-row { grid-template-columns: 1fr; }
   .tool-gate-form { flex-direction: column; }
   .embed-gate-form { flex-direction: column; }
+  .blog-stat-row { grid-template-columns: 1fr; }
+  .blog-inline-cta { padding: 24px 20px; }
+  .blog-callout { padding: 16px 20px; }
+  .blog-key-takeaway { padding: 20px 24px; }
 }
 @media (max-width: 1024px) and (min-width: 769px) {
   .blog-grid { grid-template-columns: repeat(2, 1fr); }
   .tool-grid.grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .blog-stat-row { grid-template-columns: repeat(2, 1fr); }
 }
