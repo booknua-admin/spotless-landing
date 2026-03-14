@@ -82,7 +82,7 @@ export default function Navbar() {
                 Solutions <span className="nav-chevron">&#9662;</span>
               </button>
               <div className="mega-menu" role="menu">
-                <div className="container">
+                <div className="container-lg">
                   <div className="mega-menu-inner solutions-grid">
                     <div className="mega-menu-grid">
                       <a href="/residential" className="mega-menu-item" role="menuitem">
