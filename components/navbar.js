@@ -185,8 +185,8 @@ export default function Navbar() {
             <li><a href="/tools">Free Tools</a></li>
           </ul>
           <div className="nav-cta">
-            <a href="#" className="btn-ghost">Log In</a>
-            <a href="/#cta" className="btn-primary">Start Free Trial</a>
+            <a href="https://app.spotlessapp.io/login" className="btn-ghost">Log In</a>
+            <a href="https://app.spotlessapp.io/register" className="btn-primary">Start Free Trial</a>
           </div>
           <button className="mobile-toggle" aria-label="Open menu">&#9776;</button>
         </div>
@@ -227,8 +227,8 @@ export default function Navbar() {
         <a href="/pricing">Pricing</a>
         <a href="/blog">Blog</a>
         <a href="/tools">Free Tools</a>
-        <a href="#" className="btn-ghost">Log In</a>
-        <a href="/#cta" className="btn-primary">Start Free Trial</a>
+        <a href="https://app.spotlessapp.io/login" className="btn-ghost">Log In</a>
+        <a href="https://app.spotlessapp.io/register" className="btn-primary">Start Free Trial</a>
       </div>
     </>
   );

@@ -53,7 +53,7 @@ export default function PricingPage() {
                 <li><span className="pricing-check">&#10003;</span> Mobile app access</li>
                 <li><span className="pricing-check">&#10003;</span> Email support</li>
               </ul>
-              <a href="#" className="btn-primary dark">Start Free Trial</a>
+              <a href="https://app.spotlessapp.io/register" className="btn-primary dark">Start Free Trial</a>
             </div>
 
             {/* Growth */}
@@ -78,7 +78,7 @@ export default function PricingPage() {
                 <li><span className="pricing-check">&#10003;</span> Referral tracking</li>
                 <li><span className="pricing-check">&#10003;</span> Priority support</li>
               </ul>
-              <a href="#" className="btn-primary btn-primary-lg">Start Free Trial</a>
+              <a href="https://app.spotlessapp.io/register" className="btn-primary btn-primary-lg">Start Free Trial</a>
             </div>
 
             {/* Enterprise */}
@@ -101,7 +101,7 @@ export default function PricingPage() {
                 <li><span className="pricing-check">&#10003;</span> SLA guarantee</li>
                 <li><span className="pricing-check">&#10003;</span> Advanced reporting</li>
               </ul>
-              <a href="#" className="btn-primary dark">Start Free Trial</a>
+              <a href="https://app.spotlessapp.io/register" className="btn-primary dark">Start Free Trial</a>
             </div>
           </div>
         </div>

@@ -44,7 +44,6 @@ export default function Footer() {
             <a href="/blog">Blog</a>
             <a href="/tools">Free Tools</a>
             <a href="/tools/pricing-calculator">Pricing Calculator</a>
-            <a href="/tools/embed">Embed Widgets</a>
           </div>
           <div className="footer-col">
             <h4>Company</h4>
