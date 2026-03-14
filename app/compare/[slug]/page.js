@@ -116,7 +116,7 @@ export default function ComparisonPage({ params }) {
                 {comp.spotlessAdvantages.map((adv) => (
                   <li key={adv} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
                     <span style={{ color: 'var(--mint)', flexShrink: 0 }}>&#10003;</span>
-                    <span>{adv}</span>
+                    <span style={{ color: 'rgba(255,255,255,0.75)' }}>{adv}</span>
                   </li>
                 ))}
               </ul>
@@ -127,7 +127,7 @@ export default function ComparisonPage({ params }) {
                 {comp.limitations.map((lim) => (
                   <li key={lim} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
                     <span style={{ color: 'var(--text-lighter)', flexShrink: 0 }}>&mdash;</span>
-                    <span>{lim}</span>
+                    <span style={{ color: 'rgba(255,255,255,0.55)' }}>{lim}</span>
                   </li>
                 ))}
               </ul>
