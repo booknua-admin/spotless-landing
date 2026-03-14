@@ -22,7 +22,7 @@ export default function Footer() {
             <a href="/product/finance">Finance</a>
             <a href="/product/referrals-reviews">Referrals &amp; Reviews</a>
             <a href="/product/automations">Automations</a>
-            <a href="/#pricing">Pricing</a>
+            <a href="/pricing">Pricing</a>
           </div>
           <div className="footer-col">
             <h4>Solutions</h4>
@@ -41,10 +41,10 @@ export default function Footer() {
           </div>
           <div className="footer-col">
             <h4>Company</h4>
-            <a href="#">About</a>
+            <a href="/about">About</a>
             <a href="#">Blog</a>
-            <a href="#">Careers</a>
-            <a href="#">Contact</a>
+            <a href="/careers">Careers</a>
+            <a href="/contact">Contact</a>
           </div>
         </div>
         <div className="footer-bottom">

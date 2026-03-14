@@ -174,13 +174,13 @@ export default function Navbar() {
                       <div className="mega-menu-highlight-tag">Solutions</div>
                       <h3>Built for your industry</h3>
                       <p>Every feature tailored to how your specific business actually works.</p>
-                      <a href="/#pricing" className="btn-primary">See Pricing &rarr;</a>
+                      <a href="/pricing" className="btn-primary">See Pricing &rarr;</a>
                     </div>
                   </div>
                 </div>
               </div>
             </li>
-            <li><a href="/#pricing">Pricing</a></li>
+            <li><a href="/pricing">Pricing</a></li>
             <li><a href="/#roi">ROI Calculator</a></li>
           </ul>
           <div className="nav-cta">
@@ -223,7 +223,7 @@ export default function Navbar() {
             <a href="/move-in-out">Move-In / Move-Out</a>
           </div>
         </div>
-        <a href="/#pricing">Pricing</a>
+        <a href="/pricing">Pricing</a>
         <a href="/#roi">ROI Calculator</a>
         <a href="#" className="btn-ghost">Log In</a>
         <a href="/#cta" className="btn-primary">Start Free Trial</a>
