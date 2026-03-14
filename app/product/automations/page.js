@@ -11,85 +11,201 @@ export default function AutomationsPage() {
     <>
       <section className="product-hero">
         <div className="container">
-          <div className="product-hero-icon animate-on-scroll">&#9889;</div>
           <div className="section-tag animate-on-scroll">Automations</div>
-          <h1 className="animate-on-scroll">Set it once,<br />never think about it again</h1>
+          <h1 className="animate-on-scroll">Build it once.<br />Let it run forever.</h1>
           <p className="section-sub animate-on-scroll">
-            Build workflows that handle the repetitive stuff — confirmations, assignments, reminders,
-            follow-ups — so you can focus on growing the business.
+            Build workflows that handle the repetitive stuff &mdash; confirmations, assignments, reminders,
+            follow-ups &mdash; so you can focus on growing the business.
           </p>
-        </div>
-      </section>
 
-      <section className="product-feature-section">
-        <div className="container">
-          <div className="product-feature-grid animate-on-scroll">
-            <div className="product-feature-content">
-              <h3>Workflow Builder</h3>
-              <p>
-                Simple if-this-then-that rules. &ldquo;When a job is completed, send the invoice.
-                When payment is received, request a review. When a new booking comes in, assign the
-                nearest available staff.&rdquo; Build them in minutes, run them forever.
-              </p>
-            </div>
-            <div className="product-feature-visual">
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                {['Job completed → Send invoice', 'Payment received → Request review', 'New booking → Assign nearest staff', 'No-show → Alert manager'].map((rule, i) => (
-                  <div key={i} style={{ background: 'var(--navy)', padding: '12px 16px', borderRadius: '8px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                    <span style={{ color: 'var(--lime)', fontWeight: 700 }}>&#9889;</span>
-                    <span style={{ color: 'rgba(255,255,255,0.7)', fontSize: '13px' }}>{rule}</span>
+          {/* Hero mockup: Workflow builder */}
+          <div className="animate-on-scroll" style={{ marginTop: '48px', maxWidth: '860px', marginLeft: 'auto', marginRight: 'auto' }}>
+            <div className="mockup-window">
+              <div className="mockup-topbar">
+                <div className="mockup-topbar-dot r"></div>
+                <div className="mockup-topbar-dot y"></div>
+                <div className="mockup-topbar-dot g"></div>
+                <div className="mockup-topbar-url">app.spotlessapp.io/automations</div>
+              </div>
+              <div className="mockup-body">
+                <div className="mockup-main-header">
+                  <div className="mockup-main-title">Workflows</div>
+                  <div className="mockup-btn primary">+ New Workflow</div>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                  {/* Workflow 1 */}
+                  <div style={{ background: 'var(--white)', border: '1px solid var(--border)', borderRadius: '8px', padding: '14px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
+                      <div style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text)' }}>Post-Job Invoice &amp; Review</div>
+                      <span className="mockup-badge green">Active</span>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0', flexWrap: 'wrap' }}>
+                      <div className="mockup-flow-node trigger">Job Completed</div>
+                      <div className="mockup-flow-arrow"></div>
+                      <div className="mockup-flow-node action">Send Invoice</div>
+                      <div className="mockup-flow-arrow"></div>
+                      <div className="mockup-flow-node condition">Wait 24h</div>
+                      <div className="mockup-flow-arrow"></div>
+                      <div className="mockup-flow-node action">Request Review</div>
+                    </div>
                   </div>
-                ))}
+                  {/* Workflow 2 */}
+                  <div style={{ background: 'var(--white)', border: '1px solid var(--border)', borderRadius: '8px', padding: '14px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
+                      <div style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text)' }}>Smart Staff Assignment</div>
+                      <span className="mockup-badge green">Active</span>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0', flexWrap: 'wrap' }}>
+                      <div className="mockup-flow-node trigger">New Booking</div>
+                      <div className="mockup-flow-arrow"></div>
+                      <div className="mockup-flow-node condition">Check Availability</div>
+                      <div className="mockup-flow-arrow"></div>
+                      <div className="mockup-flow-node action">Assign Nearest</div>
+                    </div>
+                  </div>
+                  {/* Workflow 3 */}
+                  <div style={{ background: 'var(--white)', border: '1px solid var(--border)', borderRadius: '8px', padding: '14px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
+                      <div style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text)' }}>Overdue Payment Alert</div>
+                      <span className="mockup-badge green">Active</span>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0', flexWrap: 'wrap' }}>
+                      <div className="mockup-flow-node trigger">Invoice Overdue</div>
+                      <div className="mockup-flow-arrow"></div>
+                      <div className="mockup-flow-node action">Send Reminder</div>
+                      <div className="mockup-flow-arrow"></div>
+                      <div className="mockup-flow-node condition">Wait 3 days</div>
+                      <div className="mockup-flow-arrow"></div>
+                      <div className="mockup-flow-node action">Alert Manager</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Feature: Pricing Rules */}
       <section className="product-feature-section">
         <div className="container">
           <div className="product-feature-grid animate-on-scroll">
             <div className="product-feature-content">
-              <h3>Pricing Rules</h3>
+              <h3>Dynamic Pricing Rules</h3>
               <p>
                 Set dynamic pricing based on property size, service type, time of day, frequency,
                 or custom criteria. Weekends cost more? Deep cleans have a minimum? Loyalty
                 customers get 10% off? Set the rules and let Spotless calculate every quote.
               </p>
             </div>
-            <div className="product-feature-visual">
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                {[{ rule: 'Weekend surcharge', value: '+15%' }, { rule: 'Weekly discount', value: '-10%' }, { rule: 'Deep clean minimum', value: '€120' }].map((r, i) => (
-                  <div key={i} style={{ display: 'flex', justifyContent: 'space-between', padding: '10px 0', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
-                    <span style={{ color: 'rgba(255,255,255,0.6)', fontSize: '13px' }}>{r.rule}</span>
-                    <span style={{ color: 'var(--lime)', fontSize: '13px', fontWeight: 600 }}>{r.value}</span>
-                  </div>
-                ))}
+            <div className="product-feature-visual" style={{ padding: '0', overflow: 'hidden', background: 'transparent', boxShadow: 'none', border: 'none' }}>
+              <div className="mockup-window">
+                <div className="mockup-topbar">
+                  <div className="mockup-topbar-dot r"></div>
+                  <div className="mockup-topbar-dot y"></div>
+                  <div className="mockup-topbar-dot g"></div>
+                  <div className="mockup-topbar-url">app.spotlessapp.io/pricing-rules</div>
+                </div>
+                <div className="mockup-body">
+                  <table className="mockup-table">
+                    <thead>
+                      <tr><th>Rule Name</th><th>Condition</th><th>Adjustment</th><th>Status</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style={{ fontWeight: 600 }}>Weekend surcharge</td>
+                        <td>Saturday or Sunday</td>
+                        <td style={{ fontWeight: 600, color: 'var(--orange-accent)' }}>+15%</td>
+                        <td><span className="mockup-badge green">Active</span></td>
+                      </tr>
+                      <tr>
+                        <td style={{ fontWeight: 600 }}>Weekly loyalty discount</td>
+                        <td>Frequency = Weekly</td>
+                        <td style={{ fontWeight: 600, color: 'var(--mint)' }}>-10%</td>
+                        <td><span className="mockup-badge green">Active</span></td>
+                      </tr>
+                      <tr>
+                        <td style={{ fontWeight: 600 }}>Deep clean minimum</td>
+                        <td>Service = Deep Clean</td>
+                        <td style={{ fontWeight: 600 }}>Min &euro;120</td>
+                        <td><span className="mockup-badge green">Active</span></td>
+                      </tr>
+                      <tr>
+                        <td style={{ fontWeight: 600 }}>Large property premium</td>
+                        <td>Bedrooms &gt; 4</td>
+                        <td style={{ fontWeight: 600, color: 'var(--orange-accent)' }}>+&euro;25</td>
+                        <td><span className="mockup-badge green">Active</span></td>
+                      </tr>
+                      <tr>
+                        <td style={{ fontWeight: 600 }}>Referral discount</td>
+                        <td>Has referral code</td>
+                        <td style={{ fontWeight: 600, color: 'var(--mint)' }}>-15%</td>
+                        <td><span className="mockup-badge blue">Draft</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Feature: Alerts */}
       <section className="product-feature-section">
         <div className="container">
           <div className="product-feature-grid animate-on-scroll">
             <div className="product-feature-content">
-              <h3>Alerts &amp; Notifications</h3>
+              <h3>Smart Alerts &amp; Notifications</h3>
               <p>
-                Get notified about the things that matter — missed check-ins, overdue payments,
+                Get notified about the things that matter &mdash; missed check-ins, overdue payments,
                 cancelled jobs, or low review scores. Set up alerts for yourself, your managers, or
                 your whole team. Stay on top without micromanaging.
               </p>
             </div>
-            <div className="product-feature-visual">
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                {[{ text: 'Late check-in: Sarah M. — 42 Oak St', color: 'var(--orange-accent)' }, { text: 'Payment overdue: Johnson Family (3 days)', color: 'var(--red-accent)' }, { text: 'New 5-star review from Rachel K.', color: 'var(--green-accent)' }].map((alert, i) => (
-                  <div key={i} style={{ background: 'var(--navy)', padding: '10px 14px', borderRadius: '8px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                    <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: alert.color, flexShrink: 0 }}></span>
-                    <span style={{ color: 'rgba(255,255,255,0.7)', fontSize: '12px' }}>{alert.text}</span>
+            <div className="product-feature-visual" style={{ padding: '0', overflow: 'hidden', background: 'transparent', boxShadow: 'none', border: 'none' }}>
+              <div className="mockup-window">
+                <div className="mockup-topbar">
+                  <div className="mockup-topbar-dot r"></div>
+                  <div className="mockup-topbar-dot y"></div>
+                  <div className="mockup-topbar-dot g"></div>
+                  <div className="mockup-topbar-url">app.spotlessapp.io/alerts</div>
+                </div>
+                <div className="mockup-body">
+                  <div className="mockup-section-title">Recent Alerts</div>
+                  <div className="mockup-alert-card red">
+                    <div className="mockup-alert-dot"></div>
+                    <div style={{ flex: 1 }}>
+                      <div style={{ fontWeight: 600 }}>Payment overdue</div>
+                      <div style={{ fontSize: '11px', opacity: 0.7 }}>Johnson Family &mdash; &euro;85.00 (3 days overdue)</div>
+                    </div>
+                    <span className="mockup-badge red">Urgent</span>
                   </div>
-                ))}
+                  <div className="mockup-alert-card amber">
+                    <div className="mockup-alert-dot"></div>
+                    <div style={{ flex: 1 }}>
+                      <div style={{ fontWeight: 600 }}>Late check-in</div>
+                      <div style={{ fontSize: '11px', opacity: 0.7 }}>James K. &mdash; 42 Oak Street (15 min late)</div>
+                    </div>
+                    <span className="mockup-badge orange">Warning</span>
+                  </div>
+                  <div className="mockup-alert-card green">
+                    <div className="mockup-alert-dot"></div>
+                    <div style={{ flex: 1 }}>
+                      <div style={{ fontWeight: 600 }}>New 5-star review</div>
+                      <div style={{ fontSize: '11px', opacity: 0.7 }}>Rachel Kim left a 5-star review on Google</div>
+                    </div>
+                    <span className="mockup-badge green">Good</span>
+                  </div>
+                  <div className="mockup-alert-card blue">
+                    <div className="mockup-alert-dot"></div>
+                    <div style={{ flex: 1 }}>
+                      <div style={{ fontWeight: 600 }}>New booking request</div>
+                      <div style={{ fontSize: '11px', opacity: 0.7 }}>4 Bed Deep Clean &mdash; Maple Court area</div>
+                    </div>
+                    <span className="mockup-badge blue">Info</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -108,12 +224,12 @@ export default function AutomationsPage() {
             <div className="product-mini-card">
               <div className="product-mini-card-icon">&#128260;</div>
               <h4>Status Triggers</h4>
-              <p>Trigger actions when job status changes — confirmed, started, completed, cancelled.</p>
+              <p>Trigger actions when job status changes &mdash; confirmed, started, completed, cancelled.</p>
             </div>
             <div className="product-mini-card">
               <div className="product-mini-card-icon">&#128231;</div>
               <h4>Email Sequences</h4>
-              <p>Welcome emails, booking confirmations, follow-ups — all sent automatically.</p>
+              <p>Welcome emails, booking confirmations, follow-ups &mdash; all sent automatically.</p>
             </div>
             <div className="product-mini-card">
               <div className="product-mini-card-icon">&#128295;</div>

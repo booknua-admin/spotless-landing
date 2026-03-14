@@ -11,36 +11,86 @@ export default function ReferralsReviewsPage() {
     <>
       <section className="product-hero">
         <div className="container">
-          <div className="product-hero-icon animate-on-scroll">&#11088;</div>
           <div className="section-tag animate-on-scroll">Referrals &amp; Reviews</div>
-          <h1 className="animate-on-scroll">A 5-star reputation,<br />built on autopilot</h1>
+          <h1 className="animate-on-scroll">Your best marketing channel<br />is your last clean</h1>
           <p className="section-sub animate-on-scroll">
             Automatically collect reviews after every job, catch unhappy customers before they go
             public, and turn your best clients into your sales team.
           </p>
-        </div>
-      </section>
 
-      <section className="product-feature-section">
-        <div className="container">
-          <div className="product-feature-grid animate-on-scroll">
-            <div className="product-feature-content">
-              <h3>Review Collection</h3>
-              <p>
-                After every completed job, Spotless sends a friendly review request to the customer.
-                Timing is everything — we ask when the clean smell is still fresh. Average response
-                rate: 34%. That means hundreds of reviews you&rsquo;d never have gotten.
-              </p>
-            </div>
-            <div className="product-feature-visual" style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '40px', fontWeight: 800, color: 'var(--white)' }}>4.9<span style={{ fontSize: '20px', color: 'rgba(255,255,255,0.3)' }}>/5</span></div>
-              <div style={{ color: '#f59e0b', fontSize: '20px', letterSpacing: '3px', marginTop: '4px' }}>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <div style={{ fontSize: '13px', color: 'rgba(255,255,255,0.4)', marginTop: '8px' }}>247 reviews collected this quarter</div>
+          {/* Hero mockup: Review feed */}
+          <div className="animate-on-scroll" style={{ marginTop: '48px', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>
+            <div className="mockup-window">
+              <div className="mockup-topbar">
+                <div className="mockup-topbar-dot r"></div>
+                <div className="mockup-topbar-dot y"></div>
+                <div className="mockup-topbar-dot g"></div>
+                <div className="mockup-topbar-url">app.spotlessapp.io/reviews</div>
+              </div>
+              <div className="mockup-body">
+                <div className="mockup-stat-row" style={{ gridTemplateColumns: 'repeat(3, 1fr)', marginBottom: '16px' }}>
+                  <div className="mockup-stat-card">
+                    <div className="mockup-stat-label">Average Rating</div>
+                    <div className="mockup-stat-value">4.9 / 5</div>
+                    <div className="mockup-stars" style={{ marginTop: '4px' }}>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                  </div>
+                  <div className="mockup-stat-card teal">
+                    <div className="mockup-stat-label">This Quarter</div>
+                    <div className="mockup-stat-value">247</div>
+                    <div className="mockup-stat-change">reviews collected</div>
+                  </div>
+                  <div className="mockup-stat-card blue">
+                    <div className="mockup-stat-label">Response Rate</div>
+                    <div className="mockup-stat-value">34%</div>
+                    <div className="mockup-stat-change">&uarr; 8% vs last quarter</div>
+                  </div>
+                </div>
+                <div className="mockup-review-card">
+                  <div className="mockup-review-header">
+                    <div className="mockup-review-author">
+                      <div className="mockup-avatar" style={{ background: '#3ECF8E' }}>R</div>
+                      <div>
+                        <div className="mockup-review-name">Rachel Kim</div>
+                        <div className="mockup-review-date">2 hours ago</div>
+                      </div>
+                    </div>
+                    <div className="mockup-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                  </div>
+                  <div className="mockup-review-text">&ldquo;Absolutely spotless every time. The team is always on time, friendly, and thorough. Couldn&rsquo;t recommend more highly.&rdquo;</div>
+                </div>
+                <div className="mockup-review-card">
+                  <div className="mockup-review-header">
+                    <div className="mockup-review-author">
+                      <div className="mockup-avatar" style={{ background: '#5b8def' }}>M</div>
+                      <div>
+                        <div className="mockup-review-name">Mark O&rsquo;Brien</div>
+                        <div className="mockup-review-date">Yesterday</div>
+                      </div>
+                    </div>
+                    <div className="mockup-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                  </div>
+                  <div className="mockup-review-text">&ldquo;Best cleaning company we&rsquo;ve used in Dublin. The online booking was so easy and the price was exactly as quoted.&rdquo;</div>
+                </div>
+                <div className="mockup-review-card">
+                  <div className="mockup-review-header">
+                    <div className="mockup-review-author">
+                      <div className="mockup-avatar" style={{ background: '#a78bfa' }}>S</div>
+                      <div>
+                        <div className="mockup-review-name">Sarah Thompson</div>
+                        <div className="mockup-review-date">3 days ago</div>
+                      </div>
+                    </div>
+                    <div className="mockup-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+                  </div>
+                  <div className="mockup-review-text">&ldquo;Great clean overall. Would have been 5 stars but they ran slightly over time. Will definitely book again though.&rdquo;</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Feature: Referral Leaderboard */}
       <section className="product-feature-section">
         <div className="container">
           <div className="product-feature-grid animate-on-scroll">
@@ -48,48 +98,105 @@ export default function ReferralsReviewsPage() {
               <h3>Referral Program</h3>
               <p>
                 Give every customer a unique referral link. When their friend books, both get a
-                reward — a discount, a free add-on, or credit. Track who referred whom, how much
+                reward &mdash; a discount, a free add-on, or credit. Track who referred whom, how much
                 revenue each referrer generates, and watch word-of-mouth become your best channel.
               </p>
             </div>
-            <div className="product-feature-visual">
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                {[{ name: 'Sarah M.', referrals: 8, revenue: '€680' }, { name: 'Mark O.', referrals: 5, revenue: '€425' }, { name: 'Rachel K.', referrals: 3, revenue: '€255' }].map((ref, i) => (
-                  <div key={i} style={{ background: 'var(--navy)', padding: '12px 16px', borderRadius: '8px', display: 'flex', justifyContent: 'space-between' }}>
-                    <div>
-                      <div style={{ color: 'var(--white)', fontSize: '13px', fontWeight: 600 }}>{ref.name}</div>
-                      <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '11px' }}>{ref.referrals} referrals</div>
-                    </div>
-                    <span style={{ color: 'var(--lime)', fontSize: '13px', fontWeight: 600 }}>{ref.revenue}</span>
+            <div className="product-feature-visual" style={{ padding: '0', overflow: 'hidden', background: 'transparent', boxShadow: 'none', border: 'none' }}>
+              <div className="mockup-window">
+                <div className="mockup-topbar">
+                  <div className="mockup-topbar-dot r"></div>
+                  <div className="mockup-topbar-dot y"></div>
+                  <div className="mockup-topbar-dot g"></div>
+                  <div className="mockup-topbar-url">app.spotlessapp.io/referrals</div>
+                </div>
+                <div className="mockup-body">
+                  <div className="mockup-section-title">Referral Leaderboard</div>
+                  <div className="mockup-leaderboard-row">
+                    <div className="mockup-leaderboard-rank">1</div>
+                    <div className="mockup-avatar sm" style={{ background: '#3ECF8E' }}>S</div>
+                    <div className="mockup-leaderboard-name">Sarah Mitchell</div>
+                    <div className="mockup-leaderboard-count">8 referrals</div>
+                    <div className="mockup-leaderboard-value">&euro;680</div>
                   </div>
-                ))}
+                  <div className="mockup-leaderboard-row">
+                    <div className="mockup-leaderboard-rank">2</div>
+                    <div className="mockup-avatar sm" style={{ background: '#5b8def' }}>M</div>
+                    <div className="mockup-leaderboard-name">Mark O&rsquo;Brien</div>
+                    <div className="mockup-leaderboard-count">5 referrals</div>
+                    <div className="mockup-leaderboard-value">&euro;425</div>
+                  </div>
+                  <div className="mockup-leaderboard-row">
+                    <div className="mockup-leaderboard-rank">3</div>
+                    <div className="mockup-avatar sm" style={{ background: '#a78bfa' }}>R</div>
+                    <div className="mockup-leaderboard-name">Rachel Kim</div>
+                    <div className="mockup-leaderboard-count">3 referrals</div>
+                    <div className="mockup-leaderboard-value">&euro;255</div>
+                  </div>
+                  <div className="mockup-leaderboard-row">
+                    <div className="mockup-leaderboard-rank">4</div>
+                    <div className="mockup-avatar sm" style={{ background: '#f97316' }}>D</div>
+                    <div className="mockup-leaderboard-name">David Chen</div>
+                    <div className="mockup-leaderboard-count">2 referrals</div>
+                    <div className="mockup-leaderboard-value">&euro;170</div>
+                  </div>
+                  <div className="mockup-divider"></div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px' }}>
+                    <span style={{ color: 'var(--text-lighter)' }}>Total referral revenue this quarter</span>
+                    <span style={{ fontWeight: 700, color: 'var(--mint)' }}>&euro;3,420</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Feature: Smart routing */}
       <section className="product-feature-section">
         <div className="container">
           <div className="product-feature-grid animate-on-scroll">
             <div className="product-feature-content">
-              <h3>Google Reviews Funnel</h3>
+              <h3>Smart Review Routing</h3>
               <p>
                 Happy customers (4-5 stars) are directed straight to your Google Business listing to
                 leave a public review. Unhappy customers (1-3 stars) are routed to a private
                 feedback form so you can resolve the issue before it goes public.
               </p>
             </div>
-            <div className="product-feature-visual">
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', alignItems: 'center' }}>
-                <div style={{ display: 'flex', gap: '16px' }}>
-                  <div style={{ textAlign: 'center' }}>
-                    <div style={{ fontSize: '24px', fontWeight: 800, color: 'var(--green-accent)' }}>4-5 &#9733;</div>
-                    <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.5)', marginTop: '4px' }}>&rarr; Google</div>
-                  </div>
-                  <div style={{ textAlign: 'center' }}>
-                    <div style={{ fontSize: '24px', fontWeight: 800, color: 'var(--orange-accent)' }}>1-3 &#9733;</div>
-                    <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.5)', marginTop: '4px' }}>&rarr; Private</div>
+            <div className="product-feature-visual" style={{ padding: '0', overflow: 'hidden', background: 'transparent', boxShadow: 'none', border: 'none' }}>
+              <div className="mockup-window">
+                <div className="mockup-topbar">
+                  <div className="mockup-topbar-dot r"></div>
+                  <div className="mockup-topbar-dot y"></div>
+                  <div className="mockup-topbar-dot g"></div>
+                  <div className="mockup-topbar-url">app.spotlessapp.io/review-routing</div>
+                </div>
+                <div className="mockup-body" style={{ textAlign: 'center', padding: '28px' }}>
+                  <div className="mockup-section-title" style={{ textAlign: 'center' }}>How It Works</div>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', alignItems: 'center', marginTop: '12px' }}>
+                    {/* Step 1 */}
+                    <div className="mockup-flow-node trigger" style={{ padding: '12px 24px' }}>Customer rates their clean</div>
+                    <div style={{ width: '2px', height: '20px', background: 'var(--border)' }}></div>
+                    {/* Branch */}
+                    <div style={{ display: 'flex', gap: '40px', alignItems: 'flex-start' }}>
+                      <div style={{ textAlign: 'center' }}>
+                        <div className="mockup-flow-node action" style={{ padding: '10px 20px', marginBottom: '8px' }}>4-5 &#9733;</div>
+                        <div style={{ width: '2px', height: '16px', background: 'var(--border)', margin: '0 auto' }}></div>
+                        <div style={{ background: '#dcfce7', border: '1px solid #bbf7d0', borderRadius: '8px', padding: '10px 16px', marginTop: '8px' }}>
+                          <div style={{ fontSize: '11px', fontWeight: 700, color: '#166534' }}>&#10003; Google Review</div>
+                          <div style={{ fontSize: '10px', color: '#6b7280', marginTop: '2px' }}>Public 5-star review</div>
+                        </div>
+                      </div>
+                      <div style={{ textAlign: 'center' }}>
+                        <div className="mockup-flow-node condition" style={{ padding: '10px 20px', marginBottom: '8px' }}>1-3 &#9733;</div>
+                        <div style={{ width: '2px', height: '16px', background: 'var(--border)', margin: '0 auto' }}></div>
+                        <div style={{ background: '#fef3c7', border: '1px solid #fde68a', borderRadius: '8px', padding: '10px 16px', marginTop: '8px' }}>
+                          <div style={{ fontSize: '11px', fontWeight: 700, color: '#92400e' }}>&#128274; Private Feedback</div>
+                          <div style={{ fontSize: '10px', color: '#6b7280', marginTop: '2px' }}>Resolve before public</div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

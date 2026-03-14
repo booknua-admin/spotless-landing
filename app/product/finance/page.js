@@ -11,82 +11,163 @@ export default function FinancePage() {
     <>
       <section className="product-hero">
         <div className="container">
-          <div className="product-hero-icon animate-on-scroll">&#128200;</div>
           <div className="section-tag animate-on-scroll">Finance Tools</div>
-          <h1 className="animate-on-scroll">Know exactly where<br />your money goes</h1>
+          <h1 className="animate-on-scroll">Your numbers, finally<br />in one place</h1>
           <p className="section-sub animate-on-scroll">
             Revenue dashboards, transaction history, payout tracking, and export-ready reports.
             Everything your accountant wishes you&rsquo;d had from day one.
           </p>
-        </div>
-      </section>
 
-      <section className="product-feature-section">
-        <div className="container">
-          <div className="product-feature-grid animate-on-scroll">
-            <div className="product-feature-content">
-              <h3>Revenue Analytics</h3>
-              <p>
-                Real-time dashboards showing revenue by service type, by team, by time period. See
-                what&rsquo;s growing, what&rsquo;s declining, and where your most profitable work
-                comes from. Month-over-month comparisons at a glance.
-              </p>
-            </div>
-            <div className="product-feature-visual" style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.4)', fontWeight: 600 }}>THIS MONTH</div>
-              <div style={{ fontSize: '36px', fontWeight: 800, color: 'var(--white)', marginTop: '8px' }}>&euro;18,420</div>
-              <div style={{ fontSize: '14px', color: 'var(--green-accent)', fontWeight: 600, marginTop: '4px' }}>&#9650; 12% vs last month</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="product-feature-section">
-        <div className="container">
-          <div className="product-feature-grid animate-on-scroll">
-            <div className="product-feature-content">
-              <h3>Transactions</h3>
-              <p>
-                Every payment, refund, and fee in one searchable list. Filter by date, customer,
-                service type, or payment method. Click into any transaction for the full story —
-                which job, which staff member, which customer.
-              </p>
-            </div>
-            <div className="product-feature-visual">
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                {[{ desc: 'Johnson — Standard Clean', amount: '+€85', color: 'var(--green-accent)' }, { desc: 'Park View — Deep Clean', amount: '+€220', color: 'var(--green-accent)' }, { desc: 'Stripe Fee', amount: '-€4.20', color: 'var(--red-accent)' }].map((tx, i) => (
-                  <div key={i} style={{ display: 'flex', justifyContent: 'space-between', padding: '8px 0', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
-                    <span style={{ color: 'rgba(255,255,255,0.6)', fontSize: '13px' }}>{tx.desc}</span>
-                    <span style={{ color: tx.color, fontSize: '13px', fontWeight: 600 }}>{tx.amount}</span>
+          {/* Hero mockup: Revenue Dashboard */}
+          <div className="animate-on-scroll" style={{ marginTop: '48px', maxWidth: '860px', marginLeft: 'auto', marginRight: 'auto' }}>
+            <div className="mockup-window">
+              <div className="mockup-topbar">
+                <div className="mockup-topbar-dot r"></div>
+                <div className="mockup-topbar-dot y"></div>
+                <div className="mockup-topbar-dot g"></div>
+                <div className="mockup-topbar-url">app.spotlessapp.io/finance</div>
+              </div>
+              <div className="mockup-body">
+                <div className="mockup-stat-row" style={{ marginBottom: '16px' }}>
+                  <div className="mockup-stat-card blue">
+                    <div className="mockup-stat-label">Monthly Revenue</div>
+                    <div className="mockup-stat-value">&euro;18,420</div>
+                    <div className="mockup-stat-change">&uarr; 12% vs last month</div>
                   </div>
-                ))}
+                  <div className="mockup-stat-card teal">
+                    <div className="mockup-stat-label">Collected</div>
+                    <div className="mockup-stat-value">&euro;17,230</div>
+                    <div className="mockup-stat-change">93.5% rate</div>
+                  </div>
+                  <div className="mockup-stat-card orange">
+                    <div className="mockup-stat-label">Outstanding</div>
+                    <div className="mockup-stat-value">&euro;1,190</div>
+                    <div className="mockup-stat-change" style={{ color: 'var(--orange-accent)' }}>6 invoices</div>
+                  </div>
+                  <div className="mockup-stat-card purple">
+                    <div className="mockup-stat-label">Net Profit</div>
+                    <div className="mockup-stat-value">&euro;6,260</div>
+                    <div className="mockup-stat-change">&uarr; 34% margin</div>
+                  </div>
+                </div>
+                {/* Mini revenue chart approximation */}
+                <div style={{ background: 'var(--white)', border: '1px solid var(--border)', borderRadius: '8px', padding: '14px' }}>
+                  <div className="mockup-section-title">Revenue Trend (6 months)</div>
+                  <div style={{ display: 'flex', alignItems: 'flex-end', gap: '8px', height: '80px' }}>
+                    {[45, 52, 58, 65, 72, 82].map((h, i) => (
+                      <div key={i} style={{ flex: 1, background: i === 5 ? 'var(--mint)' : '#e5e7eb', borderRadius: '4px 4px 0 0', height: `${h}%`, transition: 'height 0.3s' }}></div>
+                    ))}
+                  </div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '6px' }}>
+                    {['Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar'].map((m, i) => (
+                      <div key={i} style={{ flex: 1, textAlign: 'center', fontSize: '9px', color: 'var(--text-lighter)' }}>{m}</div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Feature: Transactions */}
       <section className="product-feature-section">
         <div className="container">
           <div className="product-feature-grid animate-on-scroll">
             <div className="product-feature-content">
-              <h3>Payouts</h3>
+              <h3>Full Transaction History</h3>
+              <p>
+                Every payment, refund, and fee in one searchable list. Filter by date, customer,
+                service type, or payment method. Click into any transaction for the full story &mdash;
+                which job, which staff member, which customer.
+              </p>
+            </div>
+            <div className="product-feature-visual" style={{ padding: '0', overflow: 'hidden', background: 'transparent', boxShadow: 'none', border: 'none' }}>
+              <div className="mockup-window">
+                <div className="mockup-topbar">
+                  <div className="mockup-topbar-dot r"></div>
+                  <div className="mockup-topbar-dot y"></div>
+                  <div className="mockup-topbar-dot g"></div>
+                  <div className="mockup-topbar-url">app.spotlessapp.io/transactions</div>
+                </div>
+                <div className="mockup-body">
+                  <div className="mockup-main-header">
+                    <div style={{ display: 'flex', gap: '8px' }}>
+                      <div className="mockup-btn ghost">All</div>
+                      <div className="mockup-btn ghost">Income</div>
+                      <div className="mockup-btn ghost">Fees</div>
+                      <div className="mockup-btn ghost">Refunds</div>
+                    </div>
+                    <div className="mockup-btn outline">Export</div>
+                  </div>
+                  <table className="mockup-table">
+                    <thead>
+                      <tr><th>Date</th><th>Description</th><th>Amount</th><th>Type</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Mar 14</td><td>Johnson &mdash; Standard Clean</td><td style={{ color: '#16a34a', fontWeight: 600 }}>+&euro;85.00</td><td><span className="mockup-badge green">Income</span></td></tr>
+                      <tr><td>Mar 14</td><td>Stripe processing fee</td><td style={{ color: '#dc2626', fontWeight: 600 }}>-&euro;2.77</td><td><span className="mockup-badge gray">Fee</span></td></tr>
+                      <tr><td>Mar 13</td><td>Park View &mdash; Deep Clean</td><td style={{ color: '#16a34a', fontWeight: 600 }}>+&euro;220.00</td><td><span className="mockup-badge green">Income</span></td></tr>
+                      <tr><td>Mar 13</td><td>Stripe processing fee</td><td style={{ color: '#dc2626', fontWeight: 600 }}>-&euro;6.68</td><td><span className="mockup-badge gray">Fee</span></td></tr>
+                      <tr><td>Mar 12</td><td>Airbnb #3 &mdash; Turnover</td><td style={{ color: '#16a34a', fontWeight: 600 }}>+&euro;65.00</td><td><span className="mockup-badge green">Income</span></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Feature: Payouts */}
+      <section className="product-feature-section">
+        <div className="container">
+          <div className="product-feature-grid animate-on-scroll">
+            <div className="product-feature-content">
+              <h3>Payout Timeline</h3>
               <p>
                 Track when money hits your bank account. See pending payouts, completed transfers,
                 and upcoming amounts. Reconcile with your bank in seconds instead of hours.
               </p>
             </div>
-            <div className="product-feature-visual">
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                {[{ date: 'Mar 14', amount: '€2,840', status: 'Deposited' }, { date: 'Mar 16', amount: '€1,960', status: 'Pending' }].map((payout, i) => (
-                  <div key={i} style={{ background: 'var(--navy)', padding: '12px 16px', borderRadius: '8px', display: 'flex', justifyContent: 'space-between' }}>
-                    <div>
-                      <div style={{ color: 'var(--white)', fontSize: '13px', fontWeight: 600 }}>{payout.amount}</div>
-                      <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '11px' }}>{payout.date}</div>
-                    </div>
-                    <span style={{ color: payout.status === 'Deposited' ? 'var(--green-accent)' : 'var(--orange-accent)', fontSize: '12px', fontWeight: 600 }}>{payout.status}</span>
-                  </div>
-                ))}
+            <div className="product-feature-visual" style={{ padding: '0', overflow: 'hidden', background: 'transparent', boxShadow: 'none', border: 'none' }}>
+              <div className="mockup-window">
+                <div className="mockup-topbar">
+                  <div className="mockup-topbar-dot r"></div>
+                  <div className="mockup-topbar-dot y"></div>
+                  <div className="mockup-topbar-dot g"></div>
+                  <div className="mockup-topbar-url">app.spotlessapp.io/payouts</div>
+                </div>
+                <div className="mockup-body">
+                  <table className="mockup-table">
+                    <thead>
+                      <tr><th>Payout</th><th>Amount</th><th>Transactions</th><th>Status</th><th>Arrival</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>PO-0034</td>
+                        <td style={{ fontWeight: 700 }}>&euro;2,840.00</td>
+                        <td>14 payments</td>
+                        <td><span className="mockup-badge green">Deposited</span></td>
+                        <td>Mar 12</td>
+                      </tr>
+                      <tr>
+                        <td>PO-0035</td>
+                        <td style={{ fontWeight: 700 }}>&euro;1,960.00</td>
+                        <td>9 payments</td>
+                        <td><span className="mockup-badge orange">In transit</span></td>
+                        <td>Mar 15</td>
+                      </tr>
+                      <tr>
+                        <td>PO-0036</td>
+                        <td style={{ fontWeight: 700 }}>&euro;3,120.00</td>
+                        <td>16 payments</td>
+                        <td><span className="mockup-badge blue">Pending</span></td>
+                        <td>Mar 19</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>

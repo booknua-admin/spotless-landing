@@ -6,8 +6,7 @@ export default function Navbar() {
       <nav className="navbar" id="navbar">
         <div className="container">
           <a href="/" className="nav-logo">
-            <div className="nav-logo-icon">&#10022;</div>
-            <span className="nav-logo-text">Spotless</span>
+            <span className="nav-logo-text">Spotless.</span>
           </a>
           <ul className="nav-links">
             <li className="nav-item has-mega-menu">

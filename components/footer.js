@@ -5,8 +5,7 @@ export default function Footer() {
         <div className="footer-grid">
           <div>
             <a href="/" className="nav-logo" style={{ display: 'inline-flex' }}>
-              <div className="nav-logo-icon">&#10022;</div>
-              <span className="nav-logo-text">Spotless</span>
+              <span className="nav-logo-text">Spotless.</span>
             </a>
             <p className="footer-brand-text">
               The operating system for modern cleaning companies. Built by people who understand the

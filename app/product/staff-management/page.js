@@ -11,64 +11,128 @@ export default function StaffManagementPage() {
     <>
       <section className="product-hero">
         <div className="container">
-          <div className="product-hero-icon animate-on-scroll">&#128101;</div>
           <div className="section-tag animate-on-scroll">Staff Management</div>
           <h1 className="animate-on-scroll">Your team, sorted.<br />No group chat required.</h1>
           <p className="section-sub animate-on-scroll">
-            Assign jobs, track hours, manage shifts, and run payroll — all from one place. Your staff
+            Assign jobs, track hours, manage shifts, and run payroll &mdash; all from one place. Your staff
             see everything they need on their phone.
           </p>
-        </div>
-      </section>
 
-      <section className="product-feature-section">
-        <div className="container">
-          <div className="product-feature-grid animate-on-scroll">
-            <div className="product-feature-content">
-              <h3>Team Assignment</h3>
-              <p>
-                Assign jobs to individuals or teams with a click. See who&rsquo;s available, who&rsquo;s
-                nearby, and who has the right skills. Reassign on the fly when things change —
-                your team gets notified instantly on their mobile app.
-              </p>
-            </div>
-            <div className="product-feature-visual">
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                {[{ name: 'Sarah M.', jobs: 4, status: 'On site' }, { name: 'James K.', jobs: 3, status: 'Travelling' }, { name: 'Lucy P.', jobs: 5, status: 'Available' }].map((staff, i) => (
-                  <div key={i} style={{ background: 'var(--navy)', padding: '12px 16px', borderRadius: '8px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <div>
-                      <div style={{ color: 'var(--white)', fontSize: '13px', fontWeight: 600 }}>{staff.name}</div>
-                      <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '11px' }}>{staff.jobs} jobs today</div>
-                    </div>
-                    <span style={{ color: staff.status === 'Available' ? 'var(--lime)' : 'var(--green-accent)', fontSize: '12px', fontWeight: 600 }}>{staff.status}</span>
-                  </div>
-                ))}
+          {/* Hero mockup: Staff roster */}
+          <div className="animate-on-scroll" style={{ marginTop: '48px', maxWidth: '860px', marginLeft: 'auto', marginRight: 'auto' }}>
+            <div className="mockup-window">
+              <div className="mockup-topbar">
+                <div className="mockup-topbar-dot r"></div>
+                <div className="mockup-topbar-dot y"></div>
+                <div className="mockup-topbar-dot g"></div>
+                <div className="mockup-topbar-url">app.spotlessapp.io/staff</div>
+              </div>
+              <div className="mockup-body">
+                <div className="mockup-main-header">
+                  <div className="mockup-main-title">Staff Roster</div>
+                  <div className="mockup-btn primary">+ Add Staff</div>
+                </div>
+                <table className="mockup-table">
+                  <thead>
+                    <tr><th>Team Member</th><th>Status</th><th>Today&rsquo;s Jobs</th><th>Hours (Week)</th><th>Rating</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        <div className="mockup-avatar" style={{ background: '#3ECF8E' }}>S</div>
+                        <div><div style={{ fontWeight: 600 }}>Sarah Mitchell</div><div style={{ fontSize: '10px', color: 'var(--text-lighter)' }}>Senior Cleaner</div></div>
+                      </td>
+                      <td><span className="mockup-status-dot active"></span> On site</td>
+                      <td>4 / 4</td>
+                      <td>38h</td>
+                      <td><span className="mockup-stars" style={{ fontSize: '11px' }}>&#9733;&#9733;&#9733;&#9733;&#9733;</span></td>
+                    </tr>
+                    <tr>
+                      <td style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        <div className="mockup-avatar" style={{ background: '#5b8def' }}>J</div>
+                        <div><div style={{ fontWeight: 600 }}>James Kelly</div><div style={{ fontSize: '10px', color: 'var(--text-lighter)' }}>Cleaner</div></div>
+                      </td>
+                      <td><span className="mockup-status-dot away"></span> Travelling</td>
+                      <td>2 / 3</td>
+                      <td>32h</td>
+                      <td><span className="mockup-stars" style={{ fontSize: '11px' }}>&#9733;&#9733;&#9733;&#9733;&#9734;</span></td>
+                    </tr>
+                    <tr>
+                      <td style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        <div className="mockup-avatar" style={{ background: '#a78bfa' }}>L</div>
+                        <div><div style={{ fontWeight: 600 }}>Lucy Parker</div><div style={{ fontSize: '10px', color: 'var(--text-lighter)' }}>Cleaner</div></div>
+                      </td>
+                      <td><span className="mockup-status-dot active"></span> On site</td>
+                      <td>3 / 5</td>
+                      <td>40h</td>
+                      <td><span className="mockup-stars" style={{ fontSize: '11px' }}>&#9733;&#9733;&#9733;&#9733;&#9733;</span></td>
+                    </tr>
+                    <tr>
+                      <td style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        <div className="mockup-avatar" style={{ background: '#f97316' }}>D</div>
+                        <div><div style={{ fontWeight: 600 }}>Dan Murphy</div><div style={{ fontSize: '10px', color: 'var(--text-lighter)' }}>Part-time</div></div>
+                      </td>
+                      <td><span className="mockup-status-dot offline"></span> Off today</td>
+                      <td>&mdash;</td>
+                      <td>16h</td>
+                      <td><span className="mockup-stars" style={{ fontSize: '11px' }}>&#9733;&#9733;&#9733;&#9733;&#9733;</span></td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Feature: Time Tracking */}
       <section className="product-feature-section">
         <div className="container">
           <div className="product-feature-grid animate-on-scroll">
             <div className="product-feature-content">
-              <h3>Time Tracking</h3>
+              <h3>GPS-Verified Time Tracking</h3>
               <p>
                 Staff clock in and out from the mobile app. GPS-verified check-ins so you know
                 they&rsquo;re at the right location. Hours are tracked automatically and feed directly
-                into payroll — no timesheets, no disputes.
+                into payroll &mdash; no timesheets, no disputes.
               </p>
             </div>
-            <div className="product-feature-visual">
-              <div style={{ display: 'flex', gap: '12px' }}>
-                <div style={{ flex: 1, background: 'var(--navy)', padding: '16px', borderRadius: '8px', textAlign: 'center' }}>
-                  <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.4)' }}>This Week</div>
-                  <div style={{ fontSize: '28px', fontWeight: 800, color: 'var(--white)' }}>142<span style={{ fontSize: '14px', color: 'rgba(255,255,255,0.4)' }}>hrs</span></div>
+            <div className="product-feature-visual" style={{ padding: '0', overflow: 'hidden', background: 'transparent', boxShadow: 'none', border: 'none' }}>
+              <div className="mockup-window">
+                <div className="mockup-topbar">
+                  <div className="mockup-topbar-dot r"></div>
+                  <div className="mockup-topbar-dot y"></div>
+                  <div className="mockup-topbar-dot g"></div>
+                  <div className="mockup-topbar-url">app.spotlessapp.io/time-tracking</div>
                 </div>
-                <div style={{ flex: 1, background: 'var(--navy)', padding: '16px', borderRadius: '8px', textAlign: 'center' }}>
-                  <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.4)' }}>On Time</div>
-                  <div style={{ fontSize: '28px', fontWeight: 800, color: 'var(--green-accent)' }}>97%</div>
+                <div className="mockup-body">
+                  <div className="mockup-section-title">Today&rsquo;s Time Log &mdash; Sarah Mitchell</div>
+                  <table className="mockup-table">
+                    <thead>
+                      <tr><th>Job</th><th>Clock In</th><th>Clock Out</th><th>Duration</th><th>Verified</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Johnson Residence</td><td>8:55 AM</td><td>10:42 AM</td>
+                        <td style={{ fontWeight: 600 }}>1h 47m</td>
+                        <td><span className="mockup-badge green">GPS &#10003;</span></td>
+                      </tr>
+                      <tr>
+                        <td>42 Oak Street</td><td>11:10 AM</td><td>12:55 PM</td>
+                        <td style={{ fontWeight: 600 }}>1h 45m</td>
+                        <td><span className="mockup-badge green">GPS &#10003;</span></td>
+                      </tr>
+                      <tr>
+                        <td>Airbnb Turnover</td><td>1:30 PM</td><td>&mdash;</td>
+                        <td style={{ fontWeight: 600, color: 'var(--mint)' }}>In progress</td>
+                        <td><span className="mockup-badge green">GPS &#10003;</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '10px', gap: '16px', fontSize: '12px' }}>
+                    <span style={{ color: 'var(--text-lighter)' }}>Total today:</span>
+                    <span style={{ fontWeight: 700 }}>5h 22m+</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -76,28 +140,71 @@ export default function StaffManagementPage() {
         </div>
       </section>
 
+      {/* Feature: Payroll */}
       <section className="product-feature-section">
         <div className="container">
           <div className="product-feature-grid animate-on-scroll">
             <div className="product-feature-content">
-              <h3>Payroll</h3>
+              <h3>Payroll Summary</h3>
               <p>
                 Hours tracked, rates applied, payroll calculated. Export payroll reports for your
                 accountant or integrate with your payroll provider. See labour costs per job, per
                 team, or per week. No more Friday afternoon spreadsheet sessions.
               </p>
             </div>
-            <div className="product-feature-visual">
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                {[{ name: 'Sarah M.', hours: '38h', amount: '€570' }, { name: 'James K.', hours: '32h', amount: '€480' }, { name: 'Lucy P.', hours: '40h', amount: '€600' }].map((pay, i) => (
-                  <div key={i} style={{ display: 'flex', justifyContent: 'space-between', padding: '8px 0', borderBottom: i < 2 ? '1px solid rgba(255,255,255,0.08)' : 'none' }}>
-                    <span style={{ color: 'var(--white)', fontSize: '13px', fontWeight: 600 }}>{pay.name}</span>
-                    <div style={{ display: 'flex', gap: '16px' }}>
-                      <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '13px' }}>{pay.hours}</span>
-                      <span style={{ color: 'var(--lime)', fontSize: '13px', fontWeight: 600 }}>{pay.amount}</span>
-                    </div>
+            <div className="product-feature-visual" style={{ padding: '0', overflow: 'hidden', background: 'transparent', boxShadow: 'none', border: 'none' }}>
+              <div className="mockup-window">
+                <div className="mockup-topbar">
+                  <div className="mockup-topbar-dot r"></div>
+                  <div className="mockup-topbar-dot y"></div>
+                  <div className="mockup-topbar-dot g"></div>
+                  <div className="mockup-topbar-url">app.spotlessapp.io/payroll</div>
+                </div>
+                <div className="mockup-body">
+                  <div className="mockup-main-header">
+                    <div className="mockup-main-title">Payroll &mdash; Week of Mar 14</div>
+                    <div className="mockup-btn outline">Export CSV</div>
                   </div>
-                ))}
+                  <table className="mockup-table">
+                    <thead>
+                      <tr><th>Staff Member</th><th>Hours</th><th>Rate</th><th>Overtime</th><th>Total</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                          <div className="mockup-avatar sm" style={{ background: '#3ECF8E' }}>S</div> Sarah M.
+                        </td>
+                        <td>38h</td><td>&euro;15/hr</td><td>0h</td>
+                        <td style={{ fontWeight: 700 }}>&euro;570.00</td>
+                      </tr>
+                      <tr>
+                        <td style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                          <div className="mockup-avatar sm" style={{ background: '#5b8def' }}>J</div> James K.
+                        </td>
+                        <td>32h</td><td>&euro;15/hr</td><td>0h</td>
+                        <td style={{ fontWeight: 700 }}>&euro;480.00</td>
+                      </tr>
+                      <tr>
+                        <td style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                          <div className="mockup-avatar sm" style={{ background: '#a78bfa' }}>L</div> Lucy P.
+                        </td>
+                        <td>40h</td><td>&euro;15/hr</td><td>2h</td>
+                        <td style={{ fontWeight: 700 }}>&euro;630.00</td>
+                      </tr>
+                      <tr>
+                        <td style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                          <div className="mockup-avatar sm" style={{ background: '#f97316' }}>D</div> Dan M.
+                        </td>
+                        <td>16h</td><td>&euro;14/hr</td><td>0h</td>
+                        <td style={{ fontWeight: 700 }}>&euro;224.00</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div className="mockup-invoice-total">
+                    <span>Total Payroll</span>
+                    <span>&euro;1,904.00</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -111,7 +218,7 @@ export default function StaffManagementPage() {
             <div className="product-mini-card">
               <div className="product-mini-card-icon">&#128276;</div>
               <h4>Open Shifts</h4>
-              <p>Post open shifts and let available staff claim them — first come, first served.</p>
+              <p>Post open shifts and let available staff claim them &mdash; first come, first served.</p>
             </div>
             <div className="product-mini-card">
               <div className="product-mini-card-icon">&#128260;</div>
