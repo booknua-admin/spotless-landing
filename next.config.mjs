@@ -7,14 +7,21 @@ const nicheRedirects = fs.existsSync(nichesDir)
   ? fs
       .readdirSync(nichesDir)
       .filter((file) => file.endsWith('.html'))
-      .map((file) => {
+      .flatMap((file) => {
         const slug = file.replace(/\.html$/, '');
 
-        return {
-          source: `/niches/${slug}.html`,
-          destination: `/niches/${slug}`,
-          permanent: true,
-        };
+        return [
+          {
+            source: `/niches/${slug}.html`,
+            destination: `/${slug}`,
+            permanent: true,
+          },
+          {
+            source: `/niches/${slug}`,
+            destination: `/${slug}`,
+            permanent: true,
+          },
+        ];
       })
   : [];
 
