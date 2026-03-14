@@ -40,9 +40,15 @@ export default function Footer() {
             <a href="/move-in-out">Move-In / Move-Out</a>
           </div>
           <div className="footer-col">
+            <h4>Resources</h4>
+            <a href="/blog">Blog</a>
+            <a href="/tools">Free Tools</a>
+            <a href="/tools/pricing-calculator">Pricing Calculator</a>
+            <a href="/tools/embed">Embed Widgets</a>
+          </div>
+          <div className="footer-col">
             <h4>Company</h4>
             <a href="/about">About</a>
-            <a href="#">Blog</a>
             <a href="/careers">Careers</a>
             <a href="/contact">Contact</a>
           </div>

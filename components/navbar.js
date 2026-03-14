@@ -181,7 +181,8 @@ export default function Navbar() {
               </div>
             </li>
             <li><a href="/pricing">Pricing</a></li>
-            <li><a href="/#roi">ROI Calculator</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/tools">Free Tools</a></li>
           </ul>
           <div className="nav-cta">
             <a href="#" className="btn-ghost">Log In</a>
@@ -224,7 +225,8 @@ export default function Navbar() {
           </div>
         </div>
         <a href="/pricing">Pricing</a>
-        <a href="/#roi">ROI Calculator</a>
+        <a href="/blog">Blog</a>
+        <a href="/tools">Free Tools</a>
         <a href="#" className="btn-ghost">Log In</a>
         <a href="/#cta" className="btn-primary">Start Free Trial</a>
       </div>

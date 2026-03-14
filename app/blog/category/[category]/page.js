@@ -1,0 +1,86 @@
+import { notFound } from 'next/navigation';
+import { getAllCategories, getPostsByCategory } from '../../../../lib/blog';
+
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return getAllCategories().map((cat) => ({
+    category: cat.toLowerCase().replace(/\s+/g, '-'),
+  }));
+}
+
+export function generateMetadata({ params }) {
+  const category = getAllCategories().find(
+    (c) => c.toLowerCase().replace(/\s+/g, '-') === params.category,
+  );
+
+  if (!category) {
+    return {};
+  }
+
+  return {
+    title: `${category} — Spotless Blog`,
+    description: `Articles about ${category.toLowerCase()} for cleaning and service business owners.`,
+  };
+}
+
+export default function CategoryPage({ params }) {
+  const allCategories = getAllCategories();
+  const category = allCategories.find(
+    (c) => c.toLowerCase().replace(/\s+/g, '-') === params.category,
+  );
+
+  if (!category) {
+    notFound();
+  }
+
+  const posts = getPostsByCategory(category);
+
+  return (
+    <>
+      <section className="product-hero">
+        <div className="container">
+          <a href="/blog" className="blog-back-link animate-on-scroll">&larr; All articles</a>
+          <div className="section-tag animate-on-scroll">{category}</div>
+          <h1 className="animate-on-scroll">{category}</h1>
+          <p className="section-sub animate-on-scroll">
+            {posts.length} article{posts.length !== 1 ? 's' : ''} in this category.
+          </p>
+        </div>
+      </section>
+
+      <section style={{ padding: '60px 0 100px' }}>
+        <div className="container">
+          <div className="blog-category-pills animate-on-scroll">
+            <a href="/blog" className="blog-pill">All</a>
+            {allCategories.map((cat) => (
+              <a
+                key={cat}
+                href={`/blog/category/${cat.toLowerCase().replace(/\s+/g, '-')}`}
+                className={`blog-pill${cat === category ? ' active' : ''}`}
+              >
+                {cat}
+              </a>
+            ))}
+          </div>
+
+          <div className="blog-grid">
+            {posts.map((post) => (
+              <a key={post.slug} href={`/blog/${post.slug}`} className="blog-card animate-on-scroll">
+                <span className="blog-card-category">{post.category}</span>
+                <h3>{post.title}</h3>
+                <p>{post.description}</p>
+                <div className="blog-card-meta">
+                  <span>{post.date}</span>
+                  <span>&middot;</span>
+                  <span>{post.readTime}</span>
+                </div>
+                <span className="blog-card-link">Read article &rarr;</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
