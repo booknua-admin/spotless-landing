@@ -6,6 +6,6 @@ export default function robots() {
         allow: '/',
       },
     ],
-    sitemap: 'https://spotlessapp.io/sitemap.xml',
+    sitemap: 'https://www.spotlessapp.io/sitemap.xml',
   };
 }

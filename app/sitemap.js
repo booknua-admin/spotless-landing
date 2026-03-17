@@ -1,7 +1,7 @@
 import { getAllSlugs, getAllCategories, categorySlug } from '../lib/blog';
 import { getAllCompetitorSlugs } from '../lib/comparisons';
 
-const BASE_URL = 'https://spotlessapp.io';
+const BASE_URL = 'https://www.spotlessapp.io';
 
 export default function sitemap() {
   const blogSlugs = getAllSlugs();
