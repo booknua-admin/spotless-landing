@@ -1,6 +1,12 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import CurrencySelector from '../../../components/currency-selector';
+import EmailGate from '../../../components/email-gate';
+import ToolCTA from '../../../components/tool-cta';
+import StickyTrialBar from '../../../components/sticky-trial-bar';
+import { formatCurrency, getStoredCurrency } from '../../../lib/currency';
+import { triggerPrint } from '../../../lib/pdf-export';
 
 const BUSINESS_TYPES = [
   { value: 'residential', label: 'Residential Cleaning' },
@@ -60,6 +66,15 @@ const MARKETING_COSTS = {
 const SOFTWARE_COST = 50;
 const LEGAL_LICENSING = 500;
 
+const CHART_COLORS = {
+  Equipment: '#3ECF8E',
+  'Insurance (Annual)': '#36b5e0',
+  'Initial Supplies': '#9b59b6',
+  Vehicle: '#f39c12',
+  'Marketing (Launch)': '#e74c3c',
+  'Legal & Licensing': '#1abc9c',
+};
+
 export default function StartupCostCalculator() {
   const [form, setForm] = useState({
     businessType: 'residential',
@@ -69,15 +84,17 @@ export default function StartupCostCalculator() {
     marketing: 'low',
   });
   const [results, setResults] = useState(null);
-  const [gateEmail, setGateEmail] = useState('');
-  const [gateUnlocked, setGateUnlocked] = useState(false);
+  const [currency, setCurrency] = useState('USD');
+
+  useEffect(() => {
+    setCurrency(getStoredCurrency());
+  }, []);
 
   function handleChange(field, value) {
     setForm((prev) => ({ ...prev, [field]: value }));
-    setResults(null);
   }
 
-  function calculate() {
+  useEffect(() => {
     const equipment = EQUIPMENT_COSTS[form.businessType][form.equipmentLevel];
     const insurance = INSURANCE_COSTS[form.businessType];
     const suppliesMonthly = SUPPLY_COSTS_MONTHLY[form.teamSize];
@@ -132,11 +149,32 @@ export default function StartupCostCalculator() {
       softwareMonthly,
       teamWageMonthly,
     });
+  }, [form]);
+
+  // Build 6-month projection data
+  function buildProjection() {
+    if (!results) return [];
+    const months = [];
+    let cumulative = -results.totalStartup;
+    for (let i = 1; i <= 6; i++) {
+      const profit = results.monthlyRevenue - results.totalMonthly;
+      cumulative += profit;
+      months.push({
+        month: i,
+        revenue: results.monthlyRevenue,
+        costs: results.totalMonthly,
+        profit,
+        cumulative,
+      });
+    }
+    return months;
   }
 
   return (
     <>
       <div className="tool-form">
+        <CurrencySelector onChange={(code) => setCurrency(code)} />
+
         <div className="tool-input-group">
           <label>Business Type</label>
           <select
@@ -203,112 +241,182 @@ export default function StartupCostCalculator() {
             </select>
           </div>
         </div>
-
-        <button className="tool-calculate-btn" onClick={calculate}>
-          Calculate Costs
-        </button>
       </div>
 
       {results && (
         <>
-          <div className="tool-results">
+          <div className="tool-results tool-results-animated">
             <div className="tool-results-title">Estimated Costs</div>
             <div className="tool-result-row">
               <span className="tool-result-label">Total Startup Cost</span>
               <span className="tool-result-value highlight">
-                &euro;{results.totalStartup.toLocaleString()}
+                {formatCurrency(results.totalStartup, currency)}
               </span>
             </div>
             <div className="tool-result-row">
               <span className="tool-result-label">Monthly Operating Cost</span>
               <span className="tool-result-value">
-                &euro;{results.totalMonthly.toLocaleString()}/mo
+                {formatCurrency(results.totalMonthly, currency)}/mo
               </span>
             </div>
           </div>
 
-          <div className={gateUnlocked ? '' : 'tool-gated'} style={{ marginTop: '24px' }}>
-            <div className={gateUnlocked ? '' : 'tool-gated-blur'}>
-              <div className="tool-results">
-                <div className="tool-results-title">Itemized Startup Breakdown</div>
-                {results.itemizedBreakdown.map((item) => (
-                  <div className="tool-result-row" key={item.label}>
-                    <span className="tool-result-label">{item.label}</span>
-                    <span className="tool-result-value">
-                      &euro;{item.cost.toLocaleString()}
-                    </span>
-                  </div>
-                ))}
-              </div>
-              <div className="tool-results" style={{ marginTop: '16px' }}>
-                <div className="tool-results-title">Monthly Breakdown</div>
-                <div className="tool-result-row">
-                  <span className="tool-result-label">Supplies</span>
-                  <span className="tool-result-value">&euro;{results.suppliesMonthly}/mo</span>
-                </div>
-                <div className="tool-result-row">
-                  <span className="tool-result-label">Marketing</span>
-                  <span className="tool-result-value">&euro;{results.marketingMonthly}/mo</span>
-                </div>
-                <div className="tool-result-row">
-                  <span className="tool-result-label">Software</span>
-                  <span className="tool-result-value">&euro;{results.softwareMonthly}/mo</span>
-                </div>
-                {results.teamWageMonthly > 0 && (
-                  <div className="tool-result-row">
-                    <span className="tool-result-label">Staff Wages</span>
-                    <span className="tool-result-value">
-                      &euro;{results.teamWageMonthly.toLocaleString()}/mo
-                    </span>
-                  </div>
-                )}
-              </div>
-              <div className="tool-results" style={{ marginTop: '16px' }}>
-                <div className="tool-results-title">Break-Even Analysis</div>
-                <div className="tool-result-row">
-                  <span className="tool-result-label">Est. Monthly Revenue</span>
-                  <span className="tool-result-value">
-                    &euro;{results.monthlyRevenue.toLocaleString()}
-                  </span>
-                </div>
-                <div className="tool-result-row">
-                  <span className="tool-result-label">Est. Monthly Profit</span>
-                  <span className="tool-result-value">
-                    &euro;{results.monthlyProfit.toLocaleString()}
-                  </span>
-                </div>
-                <div className="tool-result-row">
-                  <span className="tool-result-label">Months to Break Even</span>
-                  <span className="tool-result-value highlight">
-                    {results.monthsToBreakEven} months
-                  </span>
-                </div>
-              </div>
+          <div className="tool-results tool-results-animated" style={{ marginTop: '16px' }}>
+            <div className="tool-results-title">Startup Cost Breakdown</div>
+            <div
+              className="tool-chart-bar"
+              style={{
+                display: 'flex',
+                height: '32px',
+                borderRadius: '6px',
+                overflow: 'hidden',
+                marginBottom: '12px',
+              }}
+            >
+              {results.itemizedBreakdown
+                .filter((item) => item.cost > 0)
+                .map((item) => {
+                  const pct = (item.cost / results.totalStartup) * 100;
+                  return (
+                    <div
+                      key={item.label}
+                      title={`${item.label}: ${formatCurrency(item.cost, currency)}`}
+                      style={{
+                        width: `${pct}%`,
+                        backgroundColor: CHART_COLORS[item.label] || '#ccc',
+                        minWidth: pct > 0 ? '2px' : '0',
+                      }}
+                    />
+                  );
+                })}
             </div>
-            {!gateUnlocked && (
-              <div className="tool-gate-overlay">
-                <h4>Unlock Full Breakdown</h4>
-                <p>Enter your email to see the itemized cost breakdown, monthly operating details, and break-even analysis.</p>
-                <div className="tool-gate-form">
-                  <input
-                    type="email"
-                    placeholder="you@company.com"
-                    value={gateEmail}
-                    onChange={(e) => setGateEmail(e.target.value)}
-                  />
-                  <button onClick={() => { if (gateEmail && gateEmail.includes('@')) setGateUnlocked(true); }}>Unlock</button>
-                </div>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px 16px', marginBottom: '16px' }}>
+              {results.itemizedBreakdown
+                .filter((item) => item.cost > 0)
+                .map((item) => (
+                  <span key={item.label} style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '13px' }}>
+                    <span
+                      style={{
+                        display: 'inline-block',
+                        width: '10px',
+                        height: '10px',
+                        borderRadius: '2px',
+                        backgroundColor: CHART_COLORS[item.label] || '#ccc',
+                      }}
+                    />
+                    {item.label}
+                  </span>
+                ))}
+            </div>
+            {results.itemizedBreakdown.map((item) => (
+              <div className="tool-result-row" key={item.label}>
+                <span className="tool-result-label">{item.label}</span>
+                <span className="tool-result-value">
+                  {formatCurrency(item.cost, currency)}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          <div className="tool-results tool-results-animated" style={{ marginTop: '16px' }}>
+            <div className="tool-results-title">Monthly Breakdown</div>
+            <div className="tool-result-row">
+              <span className="tool-result-label">Supplies</span>
+              <span className="tool-result-value">{formatCurrency(results.suppliesMonthly, currency)}/mo</span>
+            </div>
+            <div className="tool-result-row">
+              <span className="tool-result-label">Marketing</span>
+              <span className="tool-result-value">{formatCurrency(results.marketingMonthly, currency)}/mo</span>
+            </div>
+            <div className="tool-result-row">
+              <span className="tool-result-label">Software</span>
+              <span className="tool-result-value">{formatCurrency(results.softwareMonthly, currency)}/mo</span>
+            </div>
+            {results.teamWageMonthly > 0 && (
+              <div className="tool-result-row">
+                <span className="tool-result-label">Staff Wages</span>
+                <span className="tool-result-value">
+                  {formatCurrency(results.teamWageMonthly, currency)}/mo
+                </span>
               </div>
             )}
           </div>
 
-          <div style={{ textAlign: 'center', marginTop: '32px' }}>
-            <a href="/product/custom-forms" className="btn-primary">
-              Manage your business with Spotless <span>&rarr;</span>
-            </a>
+          <div className="tool-results tool-results-animated" style={{ marginTop: '16px' }}>
+            <div className="tool-results-title">Break-Even Analysis</div>
+            <div className="tool-result-row">
+              <span className="tool-result-label">Est. Monthly Revenue</span>
+              <span className="tool-result-value">
+                {formatCurrency(results.monthlyRevenue, currency)}
+              </span>
+            </div>
+            <div className="tool-result-row">
+              <span className="tool-result-label">Est. Monthly Profit</span>
+              <span className="tool-result-value">
+                {formatCurrency(results.monthlyProfit, currency)}
+              </span>
+            </div>
+            <div className="tool-result-row">
+              <span className="tool-result-label">Months to Break Even</span>
+              <span className="tool-result-value highlight">
+                {results.monthsToBreakEven} months
+              </span>
+            </div>
           </div>
+
+          <div className="tool-results tool-results-animated" style={{ marginTop: '16px' }}>
+            <div className="tool-results-title">6-Month Projection</div>
+            <div style={{ overflowX: 'auto' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px' }}>
+                <thead>
+                  <tr style={{ borderBottom: '2px solid var(--border, #e0e0e0)' }}>
+                    <th style={{ textAlign: 'left', padding: '8px 12px' }}>Month</th>
+                    <th style={{ textAlign: 'right', padding: '8px 12px' }}>Revenue</th>
+                    <th style={{ textAlign: 'right', padding: '8px 12px' }}>Costs</th>
+                    <th style={{ textAlign: 'right', padding: '8px 12px' }}>Profit</th>
+                    <th style={{ textAlign: 'right', padding: '8px 12px' }}>Cumulative P&amp;L</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {buildProjection().map((row) => (
+                    <tr key={row.month} style={{ borderBottom: '1px solid var(--border, #eee)' }}>
+                      <td style={{ padding: '8px 12px' }}>{row.month}</td>
+                      <td style={{ textAlign: 'right', padding: '8px 12px' }}>
+                        {formatCurrency(row.revenue, currency)}
+                      </td>
+                      <td style={{ textAlign: 'right', padding: '8px 12px' }}>
+                        {formatCurrency(row.costs, currency)}
+                      </td>
+                      <td style={{ textAlign: 'right', padding: '8px 12px', color: row.profit >= 0 ? 'var(--mint, #3ECF8E)' : '#e74c3c' }}>
+                        {formatCurrency(row.profit, currency)}
+                      </td>
+                      <td style={{ textAlign: 'right', padding: '8px 12px', fontWeight: 600, color: row.cumulative >= 0 ? 'var(--mint, #3ECF8E)' : '#e74c3c' }}>
+                        {formatCurrency(row.cumulative, currency)}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div style={{ textAlign: 'center', marginTop: '24px' }}>
+            <EmailGate toolName="startup-cost-calculator">
+              <button className="btn-secondary" onClick={triggerPrint}>
+                Download PDF
+              </button>
+            </EmailGate>
+          </div>
+
+          <ToolCTA
+            headline="Manage your business finances with Spotless"
+            description="Track startup costs, monthly expenses, and revenue all in one place. Start your 14-day free trial."
+            featureLink="/product/reporting"
+          />
         </>
       )}
+
+      <StickyTrialBar />
     </>
   );
 }

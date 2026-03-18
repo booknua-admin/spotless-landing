@@ -1,6 +1,12 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import CurrencySelector from '../../../components/currency-selector';
+import EmailGate from '../../../components/email-gate';
+import ToolCTA from '../../../components/tool-cta';
+import StickyTrialBar from '../../../components/sticky-trial-bar';
+import { formatCurrency, getStoredCurrency } from '../../../lib/currency';
+import { triggerPrint } from '../../../lib/pdf-export';
 
 export default function ProfitMarginCalculator() {
   const [form, setForm] = useState({
@@ -16,15 +22,13 @@ export default function ProfitMarginCalculator() {
     overhead: 200,
   });
   const [results, setResults] = useState(null);
-  const [gateEmail, setGateEmail] = useState('');
-  const [gateUnlocked, setGateUnlocked] = useState(false);
+  const [currency, setCurrency] = useState('USD');
 
-  function handleChange(field, value) {
-    setForm((prev) => ({ ...prev, [field]: Number(value) }));
-    setResults(null);
-  }
+  useEffect(() => {
+    setCurrency(getStoredCurrency());
+  }, []);
 
-  function calculate() {
+  useEffect(() => {
     const labourPerJob = form.hourlyRate * form.hoursPerJob * form.staff;
     const totalVariableCosts = (labourPerJob + form.suppliesCost) * form.jobs;
     const totalFixedCosts = form.fuel + form.insurance + form.software + form.overhead;
@@ -49,24 +53,78 @@ export default function ProfitMarginCalculator() {
       totalFixedCosts: Math.round(totalFixedCosts),
       breakEvenJobs,
     });
+  }, [form]);
+
+  function handleChange(field, value) {
+    setForm((prev) => ({ ...prev, [field]: Number(value) }));
+  }
+
+  function getMarginColor(margin) {
+    const n = Number(margin);
+    if (n < 8) return '#ff6b6b';
+    if (n <= 15) return '#ffc107';
+    return '#3ECF8E';
+  }
+
+  function getHealthLabel(margin) {
+    const n = Number(margin);
+    if (n < 8) return { label: 'Needs attention', className: 'danger' };
+    if (n <= 15) return { label: 'Below average', className: 'warning' };
+    return { label: 'Healthy', className: 'healthy' };
+  }
+
+  function computeWhatIfTips() {
+    if (!results) return [];
+    const tips = [];
+    const netMarginNum = Number(results.netMargin);
+
+    // Tip 1: Increase prices by 10%
+    const newRevenue10 = form.revenue * 1.1;
+    const labourPerJob = form.hourlyRate * form.hoursPerJob * form.staff;
+    const totalVariableCosts = (labourPerJob + form.suppliesCost) * form.jobs;
+    const totalFixedCosts = form.fuel + form.insurance + form.software + form.overhead;
+    const totalCosts = totalVariableCosts + totalFixedCosts;
+    const newNetMargin10 = newRevenue10 > 0 ? ((newRevenue10 - totalCosts) / newRevenue10) * 100 : 0;
+    tips.push(`Increase prices by 10% → new net margin: ${newNetMargin10.toFixed(1)}%`);
+
+    // Tip 2: Reduce supply costs by 20%
+    const reducedSupplies = form.suppliesCost * 0.8;
+    const savedPerMonth = (form.suppliesCost - reducedSupplies) * form.jobs;
+    tips.push(`Reduce supply costs by 20% → save ${formatCurrency(Math.round(savedPerMonth), currency)}/month`);
+
+    // Tip 3: Add 5 more jobs per month
+    const newJobs = form.jobs + 5;
+    const newRevenuePerJob = form.jobs > 0 ? form.revenue / form.jobs : 0;
+    const newTotalRevenue = newRevenuePerJob * newJobs;
+    const newTotalVariable = (labourPerJob + form.suppliesCost) * newJobs;
+    const newTotalCosts = newTotalVariable + totalFixedCosts;
+    const newNetProfit = newTotalRevenue - newTotalCosts;
+    const newNetMarginJobs = newTotalRevenue > 0 ? ((newNetProfit / newTotalRevenue) * 100).toFixed(1) : '0.0';
+    tips.push(`Add 5 more jobs/month → new net margin: ${newNetMarginJobs}%`);
+
+    return tips;
   }
 
   const fields = [
-    { key: 'revenue', label: 'Monthly Revenue (\u20ac)', hint: 'Total monthly income before expenses' },
+    { key: 'revenue', label: 'Monthly Revenue', hint: 'Total monthly income before expenses' },
     { key: 'jobs', label: 'Jobs Per Month' },
-    { key: 'hourlyRate', label: 'Staff Hourly Rate (\u20ac)' },
+    { key: 'hourlyRate', label: 'Staff Hourly Rate' },
     { key: 'hoursPerJob', label: 'Average Hours Per Job' },
     { key: 'staff', label: 'Number of Staff' },
-    { key: 'suppliesCost', label: 'Supplies Cost Per Job (\u20ac)' },
-    { key: 'fuel', label: 'Monthly Fuel / Transport (\u20ac)' },
-    { key: 'insurance', label: 'Monthly Insurance (\u20ac)' },
-    { key: 'software', label: 'Monthly Software / Tools (\u20ac)' },
-    { key: 'overhead', label: 'Other Monthly Overhead (\u20ac)' },
+    { key: 'suppliesCost', label: 'Supplies Cost Per Job' },
+    { key: 'fuel', label: 'Monthly Fuel / Transport' },
+    { key: 'insurance', label: 'Monthly Insurance' },
+    { key: 'software', label: 'Monthly Software / Tools' },
+    { key: 'overhead', label: 'Other Monthly Overhead' },
   ];
+
+  const health = results ? getHealthLabel(results.netMargin) : null;
 
   return (
     <>
       <div className="tool-form">
+        <CurrencySelector onChange={(code) => setCurrency(code)} />
+
         {fields.map(({ key, label, hint }, i) => {
           /* group pairs into rows */
           const isEven = i % 2 === 0;
@@ -101,15 +159,11 @@ export default function ProfitMarginCalculator() {
             </div>
           );
         })}
-
-        <button className="tool-calculate-btn" onClick={calculate}>
-          Calculate Margins
-        </button>
       </div>
 
       {results && (
         <>
-          <div className="tool-results">
+          <div className="tool-results tool-results-animated">
             <div className="tool-results-title">Your Margins</div>
             <div className="tool-result-row">
               <span className="tool-result-label">Gross Margin</span>
@@ -117,72 +171,138 @@ export default function ProfitMarginCalculator() {
             </div>
             <div className="tool-result-row">
               <span className="tool-result-label">Net Margin</span>
-              <span className="tool-result-value highlight">{results.netMargin}%</span>
+              <span className="tool-result-value highlight">
+                {results.netMargin}%
+                <span className={`tool-health-badge ${health.className}`}>{health.label}</span>
+              </span>
             </div>
             <div className="tool-result-row">
               <span className="tool-result-label">Revenue Per Job</span>
-              <span className="tool-result-value">&euro;{results.revenuePerJob}</span>
+              <span className="tool-result-value">{formatCurrency(results.revenuePerJob, currency)}</span>
             </div>
             <div className="tool-result-row">
               <span className="tool-result-label">Cost Per Job</span>
-              <span className="tool-result-value">&euro;{results.costPerJob}</span>
+              <span className="tool-result-value">{formatCurrency(results.costPerJob, currency)}</span>
             </div>
           </div>
 
-          <div className={gateUnlocked ? '' : 'tool-gated'} style={{ marginTop: '24px' }}>
-            <div className={gateUnlocked ? '' : 'tool-gated-blur'}>
-              <div className="tool-results">
-                <div className="tool-results-title">Detailed Analysis</div>
-                <div className="tool-result-row">
-                  <span className="tool-result-label">Industry Benchmark (Healthy Net Margin)</span>
-                  <span className="tool-result-value">15 &ndash; 25%</span>
-                </div>
-                <div className="tool-result-row">
-                  <span className="tool-result-label">Your Status</span>
-                  <span className="tool-result-value">
-                    {Number(results.netMargin) >= 15 ? 'Healthy' : Number(results.netMargin) >= 8 ? 'Below average' : 'Needs attention'}
-                  </span>
-                </div>
-                <div className="tool-result-row">
-                  <span className="tool-result-label">Monthly Net Profit</span>
-                  <span className="tool-result-value">&euro;{results.netProfit}</span>
-                </div>
-                <div className="tool-result-row">
-                  <span className="tool-result-label">Labour Cost Per Job</span>
-                  <span className="tool-result-value">&euro;{results.labourPerJob}</span>
-                </div>
-                <div className="tool-result-row">
-                  <span className="tool-result-label">Total Variable Costs</span>
-                  <span className="tool-result-value">&euro;{results.totalVariableCosts}</span>
-                </div>
-                <div className="tool-result-row">
-                  <span className="tool-result-label">Total Fixed Costs</span>
-                  <span className="tool-result-value">&euro;{results.totalFixedCosts}</span>
-                </div>
-                <div className="tool-result-row">
-                  <span className="tool-result-label">Break-Even Jobs Needed</span>
-                  <span className="tool-result-value">{results.breakEvenJobs} jobs/month</span>
-                </div>
-              </div>
-            </div>
-            {!gateUnlocked && (
-              <div className="tool-gate-overlay">
-                <h4>Unlock Detailed Analysis</h4>
-                <p>Enter your email to see industry benchmarks, recommendations, and your break-even point.</p>
-                <div className="tool-gate-form">
-                  <input
-                    type="email"
-                    placeholder="you@company.com"
-                    value={gateEmail}
-                    onChange={(e) => setGateEmail(e.target.value)}
-                  />
-                  <button onClick={() => { if (gateEmail && gateEmail.includes('@')) setGateUnlocked(true); }}>Unlock</button>
-                </div>
-              </div>
-            )}
+          {/* Margin Gauge */}
+          <div className="tool-gauge" style={{ marginTop: '24px' }}>
+            <div
+              className="tool-gauge-fill"
+              style={{
+                width: Math.min(100, Math.max(0, Number(results.netMargin))) + '%',
+                backgroundColor: getMarginColor(results.netMargin),
+              }}
+            />
           </div>
+          <div className="tool-gauge-labels">
+            <span>0%</span>
+            <span>15%</span>
+            <span>30%+</span>
+          </div>
+
+          {/* Cost Breakdown Chart */}
+          <div className="tool-results tool-results-animated" style={{ marginTop: '24px' }}>
+            <div className="tool-results-title">Cost Breakdown</div>
+            <div className="tool-chart-bar">
+              {results.totalCosts > 0 && (
+                <>
+                  <div
+                    style={{
+                      width: ((results.labourPerJob * form.jobs) / results.totalCosts * 100) + '%',
+                      backgroundColor: '#3ECF8E',
+                    }}
+                    title={`Labour: ${formatCurrency(results.labourPerJob * form.jobs, currency)}`}
+                  />
+                  <div
+                    style={{
+                      width: ((form.suppliesCost * form.jobs) / results.totalCosts * 100) + '%',
+                      backgroundColor: '#36b5e0',
+                    }}
+                    title={`Variable (supplies): ${formatCurrency(form.suppliesCost * form.jobs, currency)}`}
+                  />
+                  <div
+                    style={{
+                      width: (results.totalFixedCosts / results.totalCosts * 100) + '%',
+                      backgroundColor: '#9b59b6',
+                    }}
+                    title={`Fixed: ${formatCurrency(results.totalFixedCosts, currency)}`}
+                  />
+                </>
+              )}
+            </div>
+            <div style={{ display: 'flex', gap: '16px', marginTop: '8px', fontSize: '13px' }}>
+              <span><span style={{ color: '#3ECF8E' }}>&bull;</span> Labour</span>
+              <span><span style={{ color: '#36b5e0' }}>&bull;</span> Variable</span>
+              <span><span style={{ color: '#9b59b6' }}>&bull;</span> Fixed</span>
+            </div>
+          </div>
+
+          {/* Detailed Analysis - fully ungated */}
+          <div className="tool-results tool-results-animated" style={{ marginTop: '24px' }}>
+            <div className="tool-results-title">Detailed Analysis</div>
+            <div className="tool-result-row">
+              <span className="tool-result-label">Industry Benchmark (Healthy Net Margin)</span>
+              <span className="tool-result-value">15 &ndash; 25%</span>
+            </div>
+            <div className="tool-result-row">
+              <span className="tool-result-label">Your Status</span>
+              <span className="tool-result-value">
+                {Number(results.netMargin) >= 15 ? 'Healthy' : Number(results.netMargin) >= 8 ? 'Below average' : 'Needs attention'}
+              </span>
+            </div>
+            <div className="tool-result-row">
+              <span className="tool-result-label">Monthly Net Profit</span>
+              <span className="tool-result-value">{formatCurrency(results.netProfit, currency)}</span>
+            </div>
+            <div className="tool-result-row">
+              <span className="tool-result-label">Labour Cost Per Job</span>
+              <span className="tool-result-value">{formatCurrency(results.labourPerJob, currency)}</span>
+            </div>
+            <div className="tool-result-row">
+              <span className="tool-result-label">Total Variable Costs</span>
+              <span className="tool-result-value">{formatCurrency(results.totalVariableCosts, currency)}</span>
+            </div>
+            <div className="tool-result-row">
+              <span className="tool-result-label">Total Fixed Costs</span>
+              <span className="tool-result-value">{formatCurrency(results.totalFixedCosts, currency)}</span>
+            </div>
+            <div className="tool-result-row">
+              <span className="tool-result-label">Break-Even Jobs Needed</span>
+              <span className="tool-result-value">{results.breakEvenJobs} jobs/month</span>
+            </div>
+          </div>
+
+          {/* What-If Tips */}
+          <div className="tool-whatif" style={{ marginTop: '24px' }}>
+            <div className="tool-results-title">What-If Scenarios</div>
+            <ul>
+              {computeWhatIfTips().map((tip, i) => (
+                <li key={i}>{tip}</li>
+              ))}
+            </ul>
+          </div>
+
+          {/* PDF Export behind EmailGate */}
+          <div style={{ marginTop: '24px' }}>
+            <EmailGate toolName="profit-margin-calculator">
+              <button className="tool-calculate-btn" onClick={triggerPrint}>
+                Download PDF
+              </button>
+            </EmailGate>
+          </div>
+
+          {/* ToolCTA */}
+          <ToolCTA
+            headline="Track your margins in real-time with Spotless"
+            description="See your profit margins update live as you complete jobs. Spotless tracks revenue, costs, and margins automatically."
+            featureLink="/product/reporting"
+          />
         </>
       )}
+
+      <StickyTrialBar />
     </>
   );
 }

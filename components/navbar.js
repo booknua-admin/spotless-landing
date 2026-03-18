@@ -298,7 +298,83 @@ export default function Navbar() {
             </li>
             <li><a href="/pricing">Pricing</a></li>
             <li><a href="/blog">Blog</a></li>
-            <li><a href="/tools">Free Tools</a></li>
+            <li className="nav-item has-mega-menu">
+              <button className="nav-link-btn" aria-expanded="false" aria-haspopup="true">
+                Free Tools <span className="nav-chevron">&#9662;</span>
+              </button>
+              <div className="mega-menu" role="menu">
+                <div className="container">
+                  <div className="mega-menu-inner">
+                    <div className="mega-menu-grid tools-grid">
+                      <div className="mega-menu-category-label">Document Generators</div>
+                      <a href="/tools/invoice-generator" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#128196;</div>
+                        <div>
+                          <div className="mega-menu-title">Invoice Generator</div>
+                          <div className="mega-menu-desc">Professional invoices with line items &amp; tax</div>
+                        </div>
+                      </a>
+                      <a href="/tools/proposal-generator" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#128203;</div>
+                        <div>
+                          <div className="mega-menu-title">Proposal Generator</div>
+                          <div className="mega-menu-desc">Cleaning proposals with scope &amp; pricing</div>
+                        </div>
+                      </a>
+                      <a href="/tools/contract-generator" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#128220;</div>
+                        <div>
+                          <div className="mega-menu-title">Contract Generator</div>
+                          <div className="mega-menu-desc">Service contracts with legal clauses</div>
+                        </div>
+                      </a>
+                      <a href="/tools/timesheet-calculator" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#9202;</div>
+                        <div>
+                          <div className="mega-menu-title">Timesheet Calculator</div>
+                          <div className="mega-menu-desc">Employee hours, overtime &amp; pay</div>
+                        </div>
+                      </a>
+                      <div className="mega-menu-category-label">Business Calculators</div>
+                      <a href="/tools/pricing-calculator" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#128176;</div>
+                        <div>
+                          <div className="mega-menu-title">Pricing Calculator</div>
+                          <div className="mega-menu-desc">Job pricing by size, rooms &amp; service type</div>
+                        </div>
+                      </a>
+                      <a href="/tools/profit-margin-calculator" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#128200;</div>
+                        <div>
+                          <div className="mega-menu-title">Profit Margin Calculator</div>
+                          <div className="mega-menu-desc">Margins, costs &amp; what-if scenarios</div>
+                        </div>
+                      </a>
+                      <a href="/tools/cleaning-time-estimator" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#9201;</div>
+                        <div>
+                          <div className="mega-menu-title">Cleaning Time Estimator</div>
+                          <div className="mega-menu-desc">Job duration with room breakdowns</div>
+                        </div>
+                      </a>
+                      <a href="/tools/startup-cost-calculator" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#127793;</div>
+                        <div>
+                          <div className="mega-menu-title">Startup Cost Calculator</div>
+                          <div className="mega-menu-desc">Equipment, licensing &amp; 6-month projection</div>
+                        </div>
+                      </a>
+                    </div>
+                    <div className="mega-menu-highlight">
+                      <div className="mega-menu-highlight-tag">Free Tools</div>
+                      <h3>No signup required</h3>
+                      <p>Professional calculators and document generators — your data never leaves your browser.</p>
+                      <a href="/tools" className="btn-primary">View All Tools &rarr;</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
           </ul>
           <div className="nav-cta">
             <a href="https://app.spotlessapp.io/login" className="btn-ghost">Log In</a>
@@ -342,7 +418,20 @@ export default function Navbar() {
         </div>
         <a href="/pricing">Pricing</a>
         <a href="/blog">Blog</a>
-        <a href="/tools">Free Tools</a>
+        <div className="mobile-accordion">
+          <button className="mobile-accordion-toggle">Free Tools <span className="mobile-accordion-chevron">&#9662;</span></button>
+          <div className="mobile-accordion-panel">
+            <a href="/tools">All Free Tools</a>
+            <a href="/tools/invoice-generator">Invoice Generator</a>
+            <a href="/tools/proposal-generator">Proposal Generator</a>
+            <a href="/tools/contract-generator">Contract Generator</a>
+            <a href="/tools/timesheet-calculator">Timesheet Calculator</a>
+            <a href="/tools/pricing-calculator">Pricing Calculator</a>
+            <a href="/tools/profit-margin-calculator">Profit Margin Calculator</a>
+            <a href="/tools/cleaning-time-estimator">Cleaning Time Estimator</a>
+            <a href="/tools/startup-cost-calculator">Startup Cost Calculator</a>
+          </div>
+        </div>
         <a href="https://app.spotlessapp.io/login" className="btn-ghost">Log In</a>
         <a href="https://app.spotlessapp.io/register" className="btn-primary">Start Free Trial</a>
       </div>
