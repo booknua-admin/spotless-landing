@@ -37,7 +37,9 @@ export default function EmailGate({ toolName, onUnlocked, children }) {
   return (
     <>
       <div onClick={handleClick} style={{ cursor: 'pointer' }}>
-        {children}
+        <div style={{ pointerEvents: 'none' }}>
+          {children}
+        </div>
       </div>
       {showForm && (
         <div className="email-gate-modal">
