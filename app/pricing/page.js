@@ -1,7 +1,7 @@
 import ProductCTA from '../../components/product-cta';
 import JsonLd from '../../components/json-ld';
 import { getPageSeo, SITE_URL } from '../../lib/seo';
-import { faqPageSchema, breadcrumbSchema } from '../../lib/schema';
+import { faqPageSchema, breadcrumbSchema, softwareApplicationSchema } from '../../lib/schema';
 
 const seo = getPageSeo('/pricing');
 
@@ -415,6 +415,7 @@ export default function PricingPage() {
       {/* CTA */}
       <ProductCTA />
 
+      <JsonLd data={softwareApplicationSchema()} />
       <JsonLd data={faqPageSchema(FAQ_ITEMS)} />
       <JsonLd data={breadcrumbSchema([
         { name: 'Home', url: SITE_URL },

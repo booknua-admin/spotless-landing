@@ -7,11 +7,19 @@ import '../css/styles.css';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 
-export const metadata = siteUrl
-  ? {
-      metadataBase: new URL(siteUrl),
-    }
-  : {};
+export const metadata = {
+  ...(siteUrl ? { metadataBase: new URL(siteUrl) } : {}),
+  robots: {
+    index: true,
+    follow: true,
+    'max-snippet': 150,
+    'max-image-preview': 'large',
+    'max-video-preview': -1,
+  },
+  verification: {
+    google: 'hgUKqmwwDC1QvSuG__X5t0IQ6io6zHNeyMJnDsuPjQM',
+  },
+};
 
 export default function RootLayout({ children }) {
   return (
