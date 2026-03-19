@@ -1,5 +1,10 @@
-import ProposalGenerator from './proposal-generator';
+import dynamic from 'next/dynamic';
 import ProductCTA from '../../../components/product-cta';
+
+const ProposalGenerator = dynamic(() => import('./proposal-generator'), {
+  loading: () => <div style={{ minHeight: '600px' }} />,
+  ssr: false,
+});
 
 export const metadata = {
   title: 'Free Cleaning Proposal Generator — Spotless',

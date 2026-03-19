@@ -1,5 +1,10 @@
-import NameGenerator from './name-generator';
+import dynamic from 'next/dynamic';
 import ProductCTA from '../../../components/product-cta';
+
+const NameGenerator = dynamic(() => import('./name-generator'), {
+  loading: () => <div style={{ minHeight: '600px' }} />,
+  ssr: false,
+});
 
 export const metadata = {
   title: 'Free Cleaning Business Name Generator | Spotless',

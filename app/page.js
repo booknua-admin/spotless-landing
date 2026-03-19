@@ -1,3 +1,4 @@
+import '../css/home.css';
 import LegacyContent from '../components/legacy-content';
 import JsonLd from '../components/json-ld';
 import { buildMetadata, getHomePage } from '../lib/legacy-pages';

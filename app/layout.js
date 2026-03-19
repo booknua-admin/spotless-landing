@@ -3,7 +3,10 @@ import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import JsonLd from '../components/json-ld';
 import { organizationSchema } from '../lib/schema';
-import '../css/styles.css';
+import '../css/base.css';
+import '../css/navbar.css';
+import '../css/mega-menu.css';
+import '../css/footer.css';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 

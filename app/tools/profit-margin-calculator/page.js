@@ -1,5 +1,10 @@
-import ProfitMarginCalculator from './calculator';
+import dynamic from 'next/dynamic';
 import ProductCTA from '../../../components/product-cta';
+
+const ProfitMarginCalculator = dynamic(() => import('./calculator'), {
+  loading: () => <div style={{ minHeight: '600px' }} />,
+  ssr: false,
+});
 
 export const metadata = {
   title: 'Profit Margin Calculator — Spotless',

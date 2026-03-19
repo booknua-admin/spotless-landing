@@ -53,6 +53,13 @@ export default function Navbar() {
       handlers.push({ item, btn, onEnter, onLeave, onClick });
     });
 
+    // Navbar scroll class
+    const onScroll = () => {
+      nav.classList.toggle('scrolled', window.scrollY > 50);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
     // Close on click outside
     const onDocClick = (e) => {
       if (!e.target.closest('.nav-item')) {
@@ -114,6 +121,7 @@ export default function Navbar() {
       });
       document.removeEventListener('click', onDocClick);
       document.removeEventListener('keydown', onEscape);
+      window.removeEventListener('scroll', onScroll);
     };
   }, []);
 

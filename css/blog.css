@@ -1,0 +1,278 @@
+/* ============================================
+   BLOG STYLES
+   ============================================ */
+
+.blog-category-pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.blog-pill {
+  padding: 8px 18px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--text-lighter);
+  background: var(--dark-light);
+  border: 1px solid var(--border-color);
+  transition: all 0.2s;
+}
+.blog-pill:hover, .blog-pill.active {
+  color: var(--mint);
+  border-color: rgba(62,207,142,0.3);
+  background: rgba(62,207,142,0.1);
+}
+
+.blog-featured-card {
+  display: block;
+  background: var(--dark-light);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 40px;
+  margin-bottom: 40px;
+  text-decoration: none;
+  transition: border-color 0.3s, transform 0.3s;
+  border-top: 3px solid var(--mint);
+}
+.blog-featured-card:hover {
+  border-color: rgba(62,207,142,0.4);
+  transform: translateY(-2px);
+}
+.blog-featured-card h2 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 800;
+  color: var(--white);
+  margin: 12px 0;
+  line-height: 1.25;
+}
+.blog-featured-card p {
+  color: rgba(255,255,255,0.65);
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0 0 16px;
+}
+.blog-featured-content .blog-card-link {
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--dark-light);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 28px;
+  text-decoration: none;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.blog-card:hover {
+  border-color: rgba(62,207,142,0.4);
+  transform: translateY(-2px);
+}
+.blog-card h3 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--white);
+  margin: 10px 0;
+  line-height: 1.3;
+}
+.blog-card p {
+  color: rgba(255,255,255,0.6);
+  font-size: 14px;
+  line-height: 1.65;
+  flex: 1;
+  margin: 0 0 8px;
+}
+
+.blog-card-category {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--mint);
+  background: rgba(62,207,142,0.1);
+  border: 1px solid rgba(62,207,142,0.2);
+}
+
+.blog-card-meta {
+  display: flex;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+  margin-top: 14px;
+}
+
+.blog-card-link {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--mint);
+  margin-top: 16px;
+}
+
+.blog-back-link {
+  display: inline-block;
+  font-size: 13px;
+  color: var(--mint);
+  text-decoration: none;
+  margin-bottom: 24px;
+}
+.blog-back-link:hover { text-decoration: underline; }
+
+.blog-post-meta {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.5);
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+/* Blog prose */
+.blog-prose {
+  color: rgba(255,255,255,0.88);
+  font-size: 18px;
+  line-height: 1.85;
+  letter-spacing: -0.01em;
+}
+.blog-prose h1 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: 800;
+  color: var(--white);
+  margin: 56px 0 20px;
+  line-height: 1.2;
+}
+.blog-prose h2 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: 800;
+  color: var(--white);
+  margin: 56px 0 20px;
+  line-height: 1.25;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.blog-prose h2:first-child { border-top: none; padding-top: 0; margin-top: 0; }
+.blog-prose h3 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(18px, 2.5vw, 22px);
+  font-weight: 700;
+  color: var(--white);
+  margin: 40px 0 14px;
+  line-height: 1.3;
+}
+.blog-prose p {
+  margin: 0 0 24px;
+  color: rgba(255,255,255,0.85);
+}
+.blog-prose a {
+  color: var(--mint);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(62,207,142,0.4);
+  transition: text-decoration-color 0.2s;
+}
+.blog-prose a:hover {
+  color: var(--mint-hover);
+  text-decoration-color: var(--mint-hover);
+}
+.blog-prose ul, .blog-prose ol {
+  margin: 0 0 28px;
+  padding-left: 28px;
+}
+.blog-prose li {
+  margin-bottom: 12px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.85);
+}
+.blog-prose li::marker {
+  color: var(--mint);
+}
+.blog-prose strong {
+  color: var(--white);
+  font-weight: 700;
+}
+.blog-prose blockquote,
+.blog-prose .blog-blockquote {
+  border-left: 3px solid var(--mint);
+  padding: 20px 28px;
+  margin: 32px 0;
+  background: rgba(62,207,142,0.06);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-style: italic;
+  color: rgba(255,255,255,0.75);
+  font-size: 17px;
+  line-height: 1.7;
+}
+.blog-prose blockquote p:last-child { margin-bottom: 0; }
+.blog-prose .blog-table-wrap {
+  overflow-x: auto;
+  margin: 32px 0;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-sm);
+}
+.blog-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+.blog-prose th {
+  text-align: left;
+  padding: 14px 18px;
+  font-weight: 700;
+  color: var(--white);
+  background: rgba(255,255,255,0.04);
+  border-bottom: 2px solid rgba(255,255,255,0.1);
+  font-size: 14px;
+  white-space: nowrap;
+}
+.blog-prose td {
+  padding: 12px 18px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.75);
+}
+.blog-prose tr:last-child td { border-bottom: none; }
+.blog-prose code {
+  background: rgba(255,255,255,0.08);
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 15px;
+  color: var(--mint);
+}
+.blog-prose pre {
+  background: rgba(0,0,0,0.4);
+  padding: 24px;
+  border-radius: var(--radius-sm);
+  overflow-x: auto;
+  margin: 32px 0;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.blog-prose pre code {
+  background: none;
+  padding: 0;
+  color: rgba(255,255,255,0.8);
+}
+.blog-prose hr {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin: 48px 0;
+}
+.blog-prose img {
+  max-width: 100%;
+  border-radius: var(--radius-sm);
+  margin: 32px 0;
+}
+

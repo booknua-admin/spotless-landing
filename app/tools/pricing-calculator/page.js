@@ -1,5 +1,10 @@
-import PricingCalculator from './calculator';
+import dynamic from 'next/dynamic';
 import ProductCTA from '../../../components/product-cta';
+
+const PricingCalculator = dynamic(() => import('./calculator'), {
+  loading: () => <div style={{ minHeight: '600px' }} />,
+  ssr: false,
+});
 
 export const metadata = {
   title: 'Cleaning Pricing Calculator — Spotless',

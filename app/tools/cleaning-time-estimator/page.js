@@ -1,5 +1,10 @@
-import TimeEstimator from './calculator';
+import dynamic from 'next/dynamic';
 import ProductCTA from '../../../components/product-cta';
+
+const TimeEstimator = dynamic(() => import('./calculator'), {
+  loading: () => <div style={{ minHeight: '600px' }} />,
+  ssr: false,
+});
 
 export const metadata = {
   title: 'Cleaning Time Estimator — Spotless',

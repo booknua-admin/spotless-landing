@@ -1,5 +1,10 @@
-import InvoiceGenerator from './invoice-generator';
+import dynamic from 'next/dynamic';
 import ProductCTA from '../../../components/product-cta';
+
+const InvoiceGenerator = dynamic(() => import('./invoice-generator'), {
+  loading: () => <div style={{ minHeight: '600px' }} />,
+  ssr: false,
+});
 
 export const metadata = {
   title: 'Free Cleaning Invoice Generator — Spotless',

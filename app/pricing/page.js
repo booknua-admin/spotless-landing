@@ -1,3 +1,4 @@
+import '../../css/home.css';
 import ProductCTA from '../../components/product-cta';
 import JsonLd from '../../components/json-ld';
 import { getPageSeo, SITE_URL } from '../../lib/seo';
