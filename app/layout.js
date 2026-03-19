@@ -16,6 +16,9 @@ export const metadata = {
     'max-image-preview': 'large',
     'max-video-preview': -1,
   },
+  verification: {
+    google: 'hgUKqmwwDC1QvSuG__X5t0IQ6io6zHNeyMJnDsuPjQM',
+  },
 };
 
 export default function RootLayout({ children }) {
