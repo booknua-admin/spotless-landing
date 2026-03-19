@@ -39,6 +39,15 @@ const calculators = [
   },
 ];
 
+const creativeTools = [
+  {
+    icon: '\u{1F4A1}',
+    title: 'Business Name Generator',
+    description: 'Generate unique, brandable cleaning business names filtered by niche and style.',
+    href: '/tools/name-generator',
+  },
+];
+
 const generators = [
   {
     icon: '\u{1F9FE}',
@@ -95,6 +104,23 @@ export default function ToolsPage() {
             </div>
             <div className="tool-grid grid-3">
               {generators.map((tool) => (
+                <a key={tool.href} href={tool.href} className="tool-card">
+                  <div className="tool-card-icon">{tool.icon}</div>
+                  <h3>{tool.title}</h3>
+                  <p>{tool.description}</p>
+                  <div className="tool-card-link">Use tool &rarr;</div>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div className="tool-category animate-on-scroll">
+            <div className="tool-category-header">
+              <h2 className="tool-category-title">Creative Tools</h2>
+              <p className="tool-category-desc">Planning and branding tools to help you launch and grow your cleaning business.</p>
+            </div>
+            <div className="tool-grid grid-3">
+              {creativeTools.map((tool) => (
                 <a key={tool.href} href={tool.href} className="tool-card">
                   <div className="tool-card-icon">{tool.icon}</div>
                   <h3>{tool.title}</h3>

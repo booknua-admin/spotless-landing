@@ -49,6 +49,7 @@ export default function sitemap() {
   const toolPages = [
     'pricing-calculator', 'profit-margin-calculator',
     'cleaning-time-estimator', 'startup-cost-calculator',
+    'name-generator',
   ].map((slug) => ({
     url: `${BASE_URL}/tools/${slug}`,
     lastModified: BUILD_DATE,
