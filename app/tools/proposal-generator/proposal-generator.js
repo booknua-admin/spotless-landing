@@ -250,7 +250,7 @@ export default function ProposalGenerator() {
             <div className="invoice-doc">
               <div className="invoice-doc-header">
                 <div className="invoice-doc-brand">
-                  {logo && <img src={logo} alt="Logo" className="invoice-doc-logo" />}
+                  {logo && <img src={logo} alt="Logo" className="invoice-doc-logo" width={120} height={60} />}
                   <div>
                     <div className="invoice-doc-company">{form.companyName || 'Your Company Name'}</div>
                     {form.companyTagline && (

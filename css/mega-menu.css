@@ -1,0 +1,223 @@
+/* ============================================================
+   MEGA MENU & DROPDOWNS
+   ============================================================ */
+
+.nav-link-btn {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.75);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s;
+}
+
+.nav-link-btn:hover { color: var(--mint); }
+
+.nav-chevron {
+  font-size: 10px;
+  transition: transform 0.2s;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item.active > .nav-link-btn { color: var(--mint); }
+.nav-item.active > .nav-link-btn .nav-chevron { transform: rotate(180deg); }
+
+/* Mega Menu Panel */
+.mega-menu {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  background: rgba(28, 28, 46, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(62, 207, 142, 0.15);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  padding: 32px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: all 0.25s ease;
+  z-index: 998;
+  content-visibility: hidden;
+}
+
+.navbar.scrolled ~ .mega-menu,
+.navbar.scrolled .mega-menu {
+  top: 56px;
+}
+
+.nav-item.active .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  content-visibility: visible;
+}
+
+.mega-menu-inner {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 40px;
+}
+
+.mega-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+.mega-menu-grid.solutions-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+.mega-menu-grid.tools-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+.mega-menu-category-label {
+  grid-column: 1 / -1;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.35);
+  padding: 8px 16px 0;
+  margin-top: 4px;
+}
+.mega-menu-category-label:first-child {
+  margin-top: 0;
+}
+
+.mega-menu-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.mega-menu-item:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+.mega-menu-icon {
+  font-size: 24px;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.mega-menu-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+.mega-menu-desc {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.4;
+}
+
+.mega-menu-highlight {
+  background: rgba(62, 207, 142, 0.06);
+  border: 1px solid rgba(62, 207, 142, 0.15);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mega-menu-highlight-tag {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--mint);
+}
+
+.mega-menu-highlight h3 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.3;
+}
+
+.mega-menu-highlight p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.5;
+}
+
+.mega-menu-highlight .btn-primary {
+  align-self: flex-start;
+  margin-top: 4px;
+}
+
+/* Mobile Accordion */
+.mobile-accordion {
+  width: 100%;
+  max-width: 300px;
+}
+
+.mobile-accordion-toggle {
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.mobile-accordion-toggle:hover { color: var(--mint); }
+
+.mobile-accordion-chevron {
+  font-size: 12px;
+  transition: transform 0.2s;
+}
+
+.mobile-accordion.open .mobile-accordion-chevron {
+  transform: rotate(180deg);
+}
+
+.mobile-accordion-panel {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-top: 16px;
+}
+
+.mobile-accordion.open .mobile-accordion-panel {
+  display: flex;
+}
+
+.mobile-accordion-panel a {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  color: rgba(255,255,255,0.6) !important;
+}
+
+.mobile-accordion-panel a:hover {
+  color: var(--mint) !important;
+}
+

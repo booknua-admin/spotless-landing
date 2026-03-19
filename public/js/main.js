@@ -4,32 +4,18 @@
    ============================================================ */
 
 function initPage() {
-  initNavbar();
   initScrollAnimations();
   initFAQ();
   initPricingToggle();
   initROICalculator();
-  initMobileMenu();
   initSmoothScroll();
+  initAnimationPause();
 }
 
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initPage);
 } else {
   initPage();
-}
-
-/* ============ NAVBAR ============ */
-function initNavbar() {
-  const navbar = document.getElementById('navbar');
-  if (!navbar) return;
-
-  let lastScroll = 0;
-  window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    navbar.classList.toggle('scrolled', scrollY > 50);
-    lastScroll = scrollY;
-  }, { passive: true });
 }
 
 /* ============ SCROLL ANIMATIONS ============ */
@@ -157,34 +143,6 @@ function initROICalculator() {
   calcROI();
 }
 
-/* ============ MOBILE MENU ============ */
-function initMobileMenu() {
-  const toggle = document.querySelector('.mobile-toggle');
-  const menu = document.querySelector('.mobile-menu');
-  const close = document.querySelector('.mobile-menu-close');
-
-  if (!toggle || !menu) return;
-
-  toggle.addEventListener('click', () => {
-    menu.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  });
-
-  if (close) {
-    close.addEventListener('click', () => {
-      menu.classList.remove('active');
-      document.body.style.overflow = '';
-    });
-  }
-
-  menu.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      menu.classList.remove('active');
-      document.body.style.overflow = '';
-    });
-  });
-}
-
 /* ============ SMOOTH SCROLL ============ */
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -200,5 +158,22 @@ function initSmoothScroll() {
         window.scrollTo({ top: pos, behavior: 'smooth' });
       }
     });
+  });
+}
+
+/* ============ ANIMATION PAUSE ============ */
+function initAnimationPause() {
+  var animated = document.querySelectorAll('.hero-float-card, .hero-actions .btn-primary, .logo-marquee');
+  if (!animated.length) return;
+
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      e.target.style.animationPlayState = e.isIntersecting ? 'running' : 'paused';
+    });
+  }, { threshold: 0 });
+
+  animated.forEach(function(el) {
+    el.style.animationPlayState = 'paused';
+    obs.observe(el);
   });
 }

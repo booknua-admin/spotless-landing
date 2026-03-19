@@ -1,3 +1,5 @@
+import '../../css/home.css';
+import '../../css/niche.css';
 import { notFound } from 'next/navigation';
 import LegacyContent from '../../components/legacy-content';
 import JsonLd from '../../components/json-ld';

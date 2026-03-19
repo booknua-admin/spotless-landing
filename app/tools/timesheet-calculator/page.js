@@ -1,5 +1,10 @@
-import TimesheetCalculator from './timesheet-calculator';
+import dynamic from 'next/dynamic';
 import ProductCTA from '../../../components/product-cta';
+
+const TimesheetCalculator = dynamic(() => import('./timesheet-calculator'), {
+  loading: () => <div style={{ minHeight: '600px' }} />,
+  ssr: false,
+});
 
 export const metadata = {
   title: 'Free Timesheet Calculator — Spotless',

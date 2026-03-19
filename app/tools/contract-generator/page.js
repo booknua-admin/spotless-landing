@@ -1,5 +1,10 @@
-import ContractGenerator from './contract-generator';
+import dynamic from 'next/dynamic';
 import ProductCTA from '../../../components/product-cta';
+
+const ContractGenerator = dynamic(() => import('./contract-generator'), {
+  loading: () => <div style={{ minHeight: '600px' }} />,
+  ssr: false,
+});
 
 export const metadata = {
   title: 'Free Cleaning Contract Generator — Spotless',

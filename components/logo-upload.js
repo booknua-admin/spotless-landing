@@ -22,7 +22,7 @@ export default function LogoUpload({ logo, onLogoChange }) {
     <div className="logo-upload">
       {logo ? (
         <div className="logo-upload-preview">
-          <img src={logo} alt="Company logo" />
+          <img src={logo} alt="Company logo" width={120} height={60} style={{ objectFit: 'contain' }} loading="lazy" />
           <button type="button" className="logo-upload-remove" onClick={() => onLogoChange(null)}>Remove</button>
         </div>
       ) : (

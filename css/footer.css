@@ -1,0 +1,69 @@
+/* ============ FOOTER ============ */
+.footer {
+  padding: 64px 0 32px;
+  background: #11142b;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+.footer-brand-text {
+  font-size: 14px;
+  color: rgba(255,255,255,0.4);
+  line-height: 1.7;
+  margin-top: 16px;
+  max-width: 300px;
+}
+
+.footer-col h4 {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 20px;
+}
+
+.footer-col a {
+  display: block;
+  font-size: 14px;
+  color: rgba(255,255,255,0.4);
+  text-decoration: none;
+  padding: 6px 0;
+  transition: color 0.2s;
+}
+
+.footer-col a:hover { color: var(--mint); }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-copy {
+  font-size: 13px;
+  color: rgba(255,255,255,0.3);
+}
+
+.footer-legal {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-legal a {
+  font-size: 13px;
+  color: rgba(255,255,255,0.3);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-legal a:hover { color: var(--mint); }
+
