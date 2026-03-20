@@ -327,6 +327,11 @@ body {
   background: var(--dark-light);
 }
 
+/* ============ RESPONSIVE ============ */
+@media (max-width: 480px) {
+  .container { padding: 0 16px; }
+}
+
 /* ============ REDUCED MOTION ============ */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

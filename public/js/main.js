@@ -11,6 +11,7 @@ function initPage() {
   initSmoothScroll();
   initAnimationPause();
 }
+window.initPage = initPage;
 
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initPage);

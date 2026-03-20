@@ -276,3 +276,20 @@
   margin: 32px 0;
 }
 
+@media (max-width: 768px) {
+  .blog-grid { grid-template-columns: 1fr; }
+  .blog-featured-card { padding: 24px; }
+  .blog-prose { font-size: 16px; }
+  .blog-prose h2 { margin: 40px 0 16px; }
+  .blog-prose h3 { margin: 32px 0 12px; }
+  .blog-stat-row { grid-template-columns: 1fr; }
+  .blog-inline-cta { padding: 24px 20px; }
+  .blog-callout { padding: 16px 20px; }
+  .blog-key-takeaway { padding: 20px 24px; }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .blog-grid { grid-template-columns: repeat(2, 1fr); }
+  .blog-stat-row { grid-template-columns: repeat(2, 1fr); }
+}
+

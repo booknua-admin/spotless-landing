@@ -1,6 +1,7 @@
 import Script from 'next/script';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
+import PageInit from '../components/page-init';
 import JsonLd from '../components/json-ld';
 import { organizationSchema } from '../lib/schema';
 import '../css/base.css';
@@ -41,6 +42,7 @@ export default function RootLayout({ children }) {
         <Footer />
         <JsonLd data={organizationSchema()} />
         <Script src="/js/main.js" strategy="afterInteractive" />
+        <PageInit />
       </body>
     </html>
   );

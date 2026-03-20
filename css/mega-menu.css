@@ -221,3 +221,8 @@
   color: var(--mint) !important;
 }
 
+@media (max-width: 1024px) {
+  .mega-menu-inner { grid-template-columns: 1fr; }
+  .mega-menu-highlight { display: none; }
+}
+
