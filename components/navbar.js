@@ -91,15 +91,21 @@ export default function Navbar() {
 
     if (mobileToggle && mobileMenu) {
       mobileToggle.addEventListener('click', () => {
-        mobileMenu.classList.add('open');
+        mobileMenu.classList.add('active');
         document.body.style.overflow = 'hidden';
       });
       if (mobileClose) {
         mobileClose.addEventListener('click', () => {
-          mobileMenu.classList.remove('open');
+          mobileMenu.classList.remove('active');
           document.body.style.overflow = '';
         });
       }
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      });
     }
 
     // Mobile accordion
