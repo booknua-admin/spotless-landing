@@ -18,7 +18,7 @@
   display: flex;
   flex-direction: column;
   background: var(--dark-light);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 32px;
   text-decoration: none;
@@ -59,7 +59,7 @@
 
 .tool-form {
   background: var(--dark-light);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 32px;
 }
@@ -84,7 +84,7 @@
   width: 100%;
   padding: 12px 14px;
   background: rgba(255,255,255,0.05);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   color: var(--white);
   font-size: 14px;
@@ -115,7 +115,7 @@
   padding: 8px 14px;
   border-radius: var(--radius-xs);
   background: rgba(255,255,255,0.04);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border);
   font-size: 13px;
   color: rgba(255,255,255,0.7);
   cursor: pointer;
@@ -147,7 +147,7 @@
 .tool-results {
   margin-top: 32px;
   background: var(--dark-light);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 32px;
 }
@@ -224,7 +224,7 @@
   flex: 1;
   padding: 10px 14px;
   background: rgba(255,255,255,0.08);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   color: var(--white);
   font-size: 14px;
@@ -298,7 +298,7 @@
 .tool-btn-secondary {
   padding: 8px 16px;
   background: rgba(255,255,255,0.06);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   color: rgba(255,255,255,0.7);
   font-size: 13px;
@@ -643,7 +643,7 @@
 }
 .email-gate-modal-content {
   background: var(--dark-light);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 40px;
   max-width: 440px;
@@ -685,7 +685,7 @@
   flex: 1;
   padding: 12px 14px;
   background: rgba(255,255,255,0.08);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   color: var(--white);
   font-size: 14px;
@@ -756,7 +756,7 @@
   right: 0;
   z-index: 900;
   background: var(--dark-light);
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid var(--border);
   padding: 14px 0;
   animation: slideUpBar 0.4s ease-out;
 }

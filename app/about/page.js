@@ -1,3 +1,5 @@
+import '../../css/product.css';
+import '../../css/mockups.css';
 import ProductCTA from '../../components/product-cta';
 
 export const metadata = {

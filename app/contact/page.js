@@ -1,3 +1,5 @@
+import '../../css/product.css';
+
 export const metadata = {
   title: 'Contact — Spotless',
   description:
