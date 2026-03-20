@@ -136,7 +136,7 @@ export default function Navbar() {
       <nav className="navbar" id="navbar" ref={navRef}>
         <div className="container">
           <a href="/" className="nav-logo">
-            <span className="nav-logo-text">Spotless.</span>
+            <span className="nav-logo-text">Spotless<span className="nav-logo-dot">.</span></span>
           </a>
           <ul className="nav-links">
             <li className="nav-item has-mega-menu">

@@ -43,6 +43,10 @@
   letter-spacing: -0.5px;
 }
 
+.nav-logo-dot {
+  color: var(--mint);
+}
+
 .nav-links {
   display: flex;
   align-items: center;
