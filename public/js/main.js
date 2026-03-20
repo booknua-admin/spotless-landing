@@ -164,7 +164,7 @@ function initSmoothScroll() {
 
 /* ============ ANIMATION PAUSE ============ */
 function initAnimationPause() {
-  var animated = document.querySelectorAll('.hero-float-card, .hero-actions .btn-primary, .logo-marquee');
+  var animated = document.querySelectorAll('.hero-float-card, .hero-actions .btn-primary');
   if (!animated.length) return;
 
   var obs = new IntersectionObserver(function(entries) {
