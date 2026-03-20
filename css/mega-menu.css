@@ -21,7 +21,7 @@
 
 .nav-chevron {
   font-size: 10px;
-  transition: transform 0.2s;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .nav-item {
@@ -46,9 +46,11 @@
   opacity: 0;
   visibility: hidden;
   transform: translateY(-8px);
-  transition: all 0.25s ease;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.3s;
+  will-change: opacity, transform;
   z-index: 998;
-  content-visibility: hidden;
 }
 
 .navbar.scrolled ~ .mega-menu,
@@ -60,7 +62,6 @@
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
-  content-visibility: visible;
 }
 
 .mega-menu-inner {
@@ -101,7 +102,7 @@
   padding: 14px 16px;
   border-radius: var(--radius-sm);
   text-decoration: none;
-  transition: background 0.2s;
+  transition: background 0.15s ease-out;
 }
 
 .mega-menu-item:hover {
