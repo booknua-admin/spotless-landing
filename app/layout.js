@@ -3,6 +3,7 @@ import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import PageInit from '../components/page-init';
 import JsonLd from '../components/json-ld';
+import CookieConsent from '../components/cookie-consent';
 import { organizationSchema } from '../lib/schema';
 import '../css/base.css';
 import '../css/navbar.css';
@@ -35,18 +36,6 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Bricolage+Grotesque:wght@700;800&display=swap"
           rel="stylesheet"
         />
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-4Y76CN3S7Q"
-          strategy="afterInteractive"
-        />
-        <Script id="gtag-init" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-4Y76CN3S7Q');
-          `}
-        </Script>
       </head>
       <body>
         <Navbar />
@@ -55,6 +44,7 @@ export default function RootLayout({ children }) {
         <JsonLd data={organizationSchema()} />
         <Script src="/js/main.js" strategy="afterInteractive" />
         <PageInit />
+        <CookieConsent />
       </body>
     </html>
   );
