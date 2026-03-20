@@ -114,3 +114,10 @@
   cursor: pointer;
 }
 
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-cta .btn-ghost { display: none; }
+  .mobile-toggle { display: block; }
+  .mega-menu { display: none; }
+}
+

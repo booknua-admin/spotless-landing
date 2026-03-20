@@ -988,4 +988,23 @@
   color: var(--text-light);
 }
 
+@media (max-width: 768px) {
+  .pricing-grid { grid-template-columns: 1fr; max-width: 420px; }
+  .pain-grid { grid-template-columns: 1fr; }
+  .feature-mini-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .hero h1 { font-size: 36px; }
+  .hero-float-card { display: none; }
+  .hero-actions { flex-direction: column; }
+  .final-cta-actions { flex-direction: column; }
+  .solution-grid { grid-template-columns: 1fr; }
+  .signup-form-row { flex-direction: column; }
+  .roi-result-value { font-size: 48px; }
+  .roi-breakdown { grid-template-columns: 1fr; }
+}
 
+@media (max-width: 480px) {
+  .hero { padding: 100px 0 60px; }
+  .stats-grid { grid-template-columns: 1fr; }
+  .stat-number { font-size: 42px; }
+}

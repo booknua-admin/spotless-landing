@@ -13,6 +13,12 @@ function initPage() {
 }
 window.initPage = initPage;
 
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initPage);
+} else {
+  initPage();
+}
+
 /* ============ SCROLL ANIMATIONS ============ */
 function initScrollAnimations() {
   const observer = new IntersectionObserver((entries) => {
