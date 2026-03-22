@@ -59,9 +59,9 @@ const mdxComponents = {
   ),
   InlineCTA: ({ title, description, href, label }) => (
     <div className="blog-inline-cta">
-      <p className="blog-inline-cta-title">{title}</p>
-      <p className="blog-inline-cta-desc">{description}</p>
-      <a href={href} className="btn-primary">{label || 'Try It Free'} &rarr;</a>
+      <p className="blog-inline-cta-title">{title || 'Ready to streamline your cleaning business?'}</p>
+      <p className="blog-inline-cta-desc">{description || 'Spotless helps cleaning companies schedule jobs, collect payments, and manage their team — all in one platform. Start your free trial today.'}</p>
+      <a href={href || 'https://app.spotlessapp.io/register'} className="btn-primary">{label || 'Try It Free'} &rarr;</a>
     </div>
   ),
   Callout: ({ type, title, children }) => (
