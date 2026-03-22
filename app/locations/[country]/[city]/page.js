@@ -121,7 +121,7 @@ export default function LocationPage({ params }) {
         }}
       />
 
-      <section className="niche-hero" style={{ textAlign: 'center', padding: '80px 24px 60px' }}>
+      <section className="niche-hero" style={{ textAlign: 'center', padding: '80px 24px 60px', minHeight: 'auto' }}>
         <div className="container">
           <p className="section-tag" style={{ color: 'var(--primary)', fontWeight: 600, marginBottom: '12px' }}>
             Cleaning Software in {location.city}
@@ -129,7 +129,7 @@ export default function LocationPage({ params }) {
           <h1>
             The #1 Cleaning Business Software in {location.city}, {countryName}
           </h1>
-          <p className="niche-subtitle" style={{ fontSize: '1.15rem', maxWidth: '680px', margin: '20px auto 0', color: 'var(--text-secondary)' }}>
+          <p className="niche-hero-sub" style={{ fontSize: '1.15rem', maxWidth: '680px', margin: '20px auto 0' }}>
             Join cleaning companies across {location.city} who use Spotless to schedule jobs,
             collect payments, manage staff, and grow their business — all from one platform.
             {location.population > 200000
