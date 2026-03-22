@@ -12,9 +12,10 @@ export default function sitemap() {
   const categories = getAllCategories();
   const competitorSlugs = getAllCompetitorSlugs();
 
-  // Try to load locations and alternatives (may not exist yet during build)
+  // Try to load locations, alternatives, and glossary (may not exist yet during build)
   let locationEntries = [];
   let alternativeSlugs = [];
+  let glossaryTermSlugs = [];
   try {
     const { getAllLocations } = require('../lib/locations');
     locationEntries = getAllLocations();
@@ -26,6 +27,12 @@ export default function sitemap() {
     alternativeSlugs = getAllAlternativeSlugs();
   } catch {
     // alternatives not yet created
+  }
+  try {
+    const { getAllTermSlugs } = require('../lib/glossary');
+    glossaryTermSlugs = getAllTermSlugs();
+  } catch {
+    // glossary not yet created
   }
 
   const staticPages = [
@@ -39,6 +46,7 @@ export default function sitemap() {
     { url: `${BASE_URL}/blog`, lastModified: BUILD_DATE, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${BASE_URL}/tools`, lastModified: BUILD_DATE, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/locations`, lastModified: BUILD_DATE, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/glossary`, lastModified: BUILD_DATE, changeFrequency: 'monthly', priority: 0.6 },
   ];
 
   const productPages = [
@@ -68,6 +76,8 @@ export default function sitemap() {
     'cleaning-time-estimator', 'startup-cost-calculator',
     'name-generator', 'invoice-generator', 'proposal-generator',
     'contract-generator', 'timesheet-calculator',
+    'roi-calculator', 'employee-cost-calculator',
+    'quote-calculator', 'checklist-generator',
   ].map((slug) => ({
     url: `${BASE_URL}/tools/${slug}`,
     lastModified: BUILD_DATE,
@@ -111,6 +121,13 @@ export default function sitemap() {
     priority: 0.6,
   }));
 
+  const glossaryPages = glossaryTermSlugs.map((slug) => ({
+    url: `${BASE_URL}/glossary/${slug}`,
+    lastModified: BUILD_DATE,
+    changeFrequency: 'monthly',
+    priority: 0.5,
+  }));
+
   return [
     ...staticPages,
     ...productPages,
@@ -121,5 +138,6 @@ export default function sitemap() {
     ...blogPages,
     ...categoryPages,
     ...locationPages,
+    ...glossaryPages,
   ];
 }

@@ -60,6 +60,7 @@ export default function Footer() {
             <a href="/compare/zenmaid">Spotless vs ZenMaid</a>
             <a href="/compare/housecall-pro">Spotless vs Housecall Pro</a>
             <a href="/compare/best-cleaning-software">Best Cleaning Software</a>
+            <a href="/glossary">Industry Glossary</a>
             <a href="/locations">Locations</a>
             <a href="/locations/ireland/dublin">Dublin</a>
             <a href="/locations/uk/london">London</a>

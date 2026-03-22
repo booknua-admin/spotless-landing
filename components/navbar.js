@@ -349,6 +349,13 @@ export default function Navbar() {
                           <div className="mega-menu-desc">Employee hours, overtime &amp; pay</div>
                         </div>
                       </a>
+                      <a href="/tools/checklist-generator" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#9989;</div>
+                        <div>
+                          <div className="mega-menu-title">Checklist Generator</div>
+                          <div className="mega-menu-desc">Custom cleaning checklists to print</div>
+                        </div>
+                      </a>
                       <div className="mega-menu-category-label">Business Calculators</div>
                       <a href="/tools/pricing-calculator" className="mega-menu-item" role="menuitem">
                         <div className="mega-menu-icon">&#128176;</div>
@@ -376,6 +383,27 @@ export default function Navbar() {
                         <div>
                           <div className="mega-menu-title">Startup Cost Calculator</div>
                           <div className="mega-menu-desc">Equipment, licensing &amp; 6-month projection</div>
+                        </div>
+                      </a>
+                      <a href="/tools/roi-calculator" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#128200;</div>
+                        <div>
+                          <div className="mega-menu-title">Software ROI Calculator</div>
+                          <div className="mega-menu-desc">Calculate your cleaning software savings</div>
+                        </div>
+                      </a>
+                      <a href="/tools/employee-cost-calculator" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#129489;</div>
+                        <div>
+                          <div className="mega-menu-title">Employee Cost Calculator</div>
+                          <div className="mega-menu-desc">True cost per cleaner with margins</div>
+                        </div>
+                      </a>
+                      <a href="/tools/quote-calculator" className="mega-menu-item" role="menuitem">
+                        <div className="mega-menu-icon">&#128221;</div>
+                        <div>
+                          <div className="mega-menu-title">Quote Calculator</div>
+                          <div className="mega-menu-desc">Instant cleaning quotes by property</div>
                         </div>
                       </a>
                     </div>
@@ -432,6 +460,7 @@ export default function Navbar() {
         </div>
         <a href="/pricing">Pricing</a>
         <a href="/blog">Blog</a>
+        <a href="/locations">Locations</a>
         <div className="mobile-accordion">
           <button className="mobile-accordion-toggle">Free Tools <span className="mobile-accordion-chevron">&#9662;</span></button>
           <div className="mobile-accordion-panel">
@@ -444,6 +473,10 @@ export default function Navbar() {
             <a href="/tools/profit-margin-calculator">Profit Margin Calculator</a>
             <a href="/tools/cleaning-time-estimator">Cleaning Time Estimator</a>
             <a href="/tools/startup-cost-calculator">Startup Cost Calculator</a>
+            <a href="/tools/roi-calculator">Software ROI Calculator</a>
+            <a href="/tools/employee-cost-calculator">Employee Cost Calculator</a>
+            <a href="/tools/quote-calculator">Quote Calculator</a>
+            <a href="/tools/checklist-generator">Checklist Generator</a>
           </div>
         </div>
         <a href="https://app.spotlessapp.io/login" className="btn-ghost">Log In</a>
