@@ -45,10 +45,10 @@
   padding: 32px 0;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-8px);
-  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-              visibility 0.3s;
+  transform: translateY(-12px) scale(0.98);
+  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.25s;
   will-change: opacity, transform;
   z-index: 998;
 }
@@ -61,7 +61,7 @@
 .nav-item.active .mega-menu {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
 .mega-menu-inner {
@@ -100,40 +100,50 @@
   align-items: flex-start;
   gap: 14px;
   padding: 14px 16px;
-  border-radius: var(--radius-sm);
+  border-radius: 12px;
   text-decoration: none;
-  transition: background 0.15s ease-out;
+  transition: all 0.2s ease;
 }
 
 .mega-menu-item:hover {
-  background: rgba(255,255,255,0.05);
+  background: rgba(62,207,142,0.06);
 }
 
-.mega-menu-icon {
-  font-size: 24px;
-  line-height: 1;
+.mega-menu-item-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.04);
+  font-size: 18px;
   flex-shrink: 0;
-  margin-top: 2px;
+  transition: background 0.2s;
 }
 
-.mega-menu-title {
+.mega-menu-item:hover .mega-menu-item-icon {
+  background: rgba(62,207,142,0.1);
+}
+
+.mega-menu-item-title {
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--white);
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
-.mega-menu-desc {
-  font-size: 13px;
-  color: rgba(255,255,255,0.5);
+.mega-menu-item-desc {
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
   line-height: 1.4;
 }
 
 .mega-menu-highlight {
-  background: rgba(62, 207, 142, 0.06);
-  border: 1px solid rgba(62, 207, 142, 0.15);
-  border-radius: var(--radius);
-  padding: 28px 24px;
+  background: rgba(62,207,142,0.04);
+  border: 1px solid rgba(62,207,142,0.1);
+  border-radius: 16px;
+  padding: 28px;
   display: flex;
   flex-direction: column;
   gap: 12px;

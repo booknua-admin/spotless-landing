@@ -148,52 +148,52 @@ export default function Navbar() {
                   <div className="mega-menu-inner">
                     <div className="mega-menu-grid">
                       <a href="/product/scheduling" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#128197;</div>
+                        <div className="mega-menu-item-icon">&#128197;</div>
                         <div>
-                          <div className="mega-menu-title">Scheduling &amp; Jobs</div>
-                          <div className="mega-menu-desc">Drag-and-drop calendar, recurring jobs, pipeline</div>
+                          <div className="mega-menu-item-title">Scheduling &amp; Jobs</div>
+                          <div className="mega-menu-item-desc">Drag-and-drop calendar</div>
                         </div>
                       </a>
                       <a href="/product/custom-forms" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#128221;</div>
+                        <div className="mega-menu-item-icon">&#128221;</div>
                         <div>
-                          <div className="mega-menu-title">Custom Forms</div>
-                          <div className="mega-menu-desc">Embeddable booking &amp; quote request forms</div>
+                          <div className="mega-menu-item-title">Custom Forms</div>
+                          <div className="mega-menu-item-desc">Online booking &amp; enquiries</div>
                         </div>
                       </a>
                       <a href="/product/payments" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#128179;</div>
+                        <div className="mega-menu-item-icon">&#128179;</div>
                         <div>
-                          <div className="mega-menu-title">Payments &amp; Invoicing</div>
-                          <div className="mega-menu-desc">Cards, auto-invoicing, recurring billing</div>
+                          <div className="mega-menu-item-title">Payments &amp; Invoicing</div>
+                          <div className="mega-menu-item-desc">Invoicing &amp; card payments</div>
                         </div>
                       </a>
                       <a href="/product/staff-management" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#128101;</div>
+                        <div className="mega-menu-item-icon">&#128101;</div>
                         <div>
-                          <div className="mega-menu-title">Staff Management</div>
-                          <div className="mega-menu-desc">Teams, shifts, time tracking, payroll</div>
+                          <div className="mega-menu-item-title">Staff Management</div>
+                          <div className="mega-menu-item-desc">Teams, shifts &amp; availability</div>
                         </div>
                       </a>
                       <a href="/product/finance" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#128200;</div>
+                        <div className="mega-menu-item-icon">&#128200;</div>
                         <div>
-                          <div className="mega-menu-title">Finance Tools</div>
-                          <div className="mega-menu-desc">Revenue analytics, transactions, payouts</div>
+                          <div className="mega-menu-item-title">Finance Tools</div>
+                          <div className="mega-menu-item-desc">Revenue tracking &amp; reports</div>
                         </div>
                       </a>
                       <a href="/product/referrals-reviews" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#11088;</div>
+                        <div className="mega-menu-item-icon">&#11088;</div>
                         <div>
-                          <div className="mega-menu-title">Referrals &amp; Reviews</div>
-                          <div className="mega-menu-desc">Review collection, referrals, discounts</div>
+                          <div className="mega-menu-item-title">Referrals &amp; Reviews</div>
+                          <div className="mega-menu-item-desc">Automated review requests</div>
                         </div>
                       </a>
                       <a href="/product/automations" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#9889;</div>
+                        <div className="mega-menu-item-icon">&#9889;</div>
                         <div>
-                          <div className="mega-menu-title">Automations</div>
-                          <div className="mega-menu-desc">Workflows, pricing rules, alerts</div>
+                          <div className="mega-menu-item-title">Automations</div>
+                          <div className="mega-menu-item-desc">Workflows on autopilot</div>
                         </div>
                       </a>
                     </div>
@@ -216,87 +216,87 @@ export default function Navbar() {
                   <div className="mega-menu-inner">
                     <div className="mega-menu-grid solutions-grid">
                       <a href="/residential" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#127968;</div>
+                        <div className="mega-menu-item-icon">&#127968;</div>
                         <div>
-                          <div className="mega-menu-title">Residential Cleaning</div>
-                          <div className="mega-menu-desc">House &amp; apartment cleaning</div>
+                          <div className="mega-menu-item-title">Residential Cleaning</div>
+                          <div className="mega-menu-item-desc">House &amp; apartment cleaning</div>
                         </div>
                       </a>
                       <a href="/commercial" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#127970;</div>
+                        <div className="mega-menu-item-icon">&#127970;</div>
                         <div>
-                          <div className="mega-menu-title">Commercial Cleaning</div>
-                          <div className="mega-menu-desc">Office &amp; facility cleaning</div>
+                          <div className="mega-menu-item-title">Commercial Cleaning</div>
+                          <div className="mega-menu-item-desc">Office &amp; facility cleaning</div>
                         </div>
                       </a>
                       <a href="/pressure-washing" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#128166;</div>
+                        <div className="mega-menu-item-icon">&#128166;</div>
                         <div>
-                          <div className="mega-menu-title">Pressure Washing</div>
-                          <div className="mega-menu-desc">Power washing services</div>
+                          <div className="mega-menu-item-title">Pressure Washing</div>
+                          <div className="mega-menu-item-desc">Power washing services</div>
                         </div>
                       </a>
                       <a href="/auto-detailing" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#128663;</div>
+                        <div className="mega-menu-item-icon">&#128663;</div>
                         <div>
-                          <div className="mega-menu-title">Auto Detailing</div>
-                          <div className="mega-menu-desc">Car detailing &amp; wash</div>
+                          <div className="mega-menu-item-title">Auto Detailing</div>
+                          <div className="mega-menu-item-desc">Car detailing &amp; wash</div>
                         </div>
                       </a>
                       <a href="/window-cleaning" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#128999;</div>
+                        <div className="mega-menu-item-icon">&#128999;</div>
                         <div>
-                          <div className="mega-menu-title">Window Cleaning</div>
-                          <div className="mega-menu-desc">Glass &amp; window services</div>
+                          <div className="mega-menu-item-title">Window Cleaning</div>
+                          <div className="mega-menu-item-desc">Glass &amp; window services</div>
                         </div>
                       </a>
                       <a href="/pool-cleaning" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#127946;</div>
+                        <div className="mega-menu-item-icon">&#127946;</div>
                         <div>
-                          <div className="mega-menu-title">Pool Cleaning</div>
-                          <div className="mega-menu-desc">Pool maintenance</div>
+                          <div className="mega-menu-item-title">Pool Cleaning</div>
+                          <div className="mega-menu-item-desc">Pool maintenance</div>
                         </div>
                       </a>
                       <a href="/airbnb" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#9992;</div>
+                        <div className="mega-menu-item-icon">&#9992;</div>
                         <div>
-                          <div className="mega-menu-title">Airbnb Turnovers</div>
-                          <div className="mega-menu-desc">Short-term rental turnovers</div>
+                          <div className="mega-menu-item-title">Airbnb Turnovers</div>
+                          <div className="mega-menu-item-desc">Short-term rental turnovers</div>
                         </div>
                       </a>
                       <a href="/pest-control" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#128027;</div>
+                        <div className="mega-menu-item-icon">&#128027;</div>
                         <div>
-                          <div className="mega-menu-title">Pest Control</div>
-                          <div className="mega-menu-desc">Bug &amp; pest removal</div>
+                          <div className="mega-menu-item-title">Pest Control</div>
+                          <div className="mega-menu-item-desc">Bug &amp; pest removal</div>
                         </div>
                       </a>
                       <a href="/carpet-cleaning" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#129529;</div>
+                        <div className="mega-menu-item-icon">&#129529;</div>
                         <div>
-                          <div className="mega-menu-title">Carpet Cleaning</div>
-                          <div className="mega-menu-desc">Floor &amp; carpet care</div>
+                          <div className="mega-menu-item-title">Carpet Cleaning</div>
+                          <div className="mega-menu-item-desc">Floor &amp; carpet care</div>
                         </div>
                       </a>
                       <a href="/junk-removal" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#128465;</div>
+                        <div className="mega-menu-item-icon">&#128465;</div>
                         <div>
-                          <div className="mega-menu-title">Junk Removal</div>
-                          <div className="mega-menu-desc">Haul-away services</div>
+                          <div className="mega-menu-item-title">Junk Removal</div>
+                          <div className="mega-menu-item-desc">Haul-away services</div>
                         </div>
                       </a>
                       <a href="/soft-washing" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#129529;</div>
+                        <div className="mega-menu-item-icon">&#129529;</div>
                         <div>
-                          <div className="mega-menu-title">Soft Washing</div>
-                          <div className="mega-menu-desc">Gentle exterior cleaning</div>
+                          <div className="mega-menu-item-title">Soft Washing</div>
+                          <div className="mega-menu-item-desc">Gentle exterior cleaning</div>
                         </div>
                       </a>
                       <a href="/move-in-out" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#128230;</div>
+                        <div className="mega-menu-item-icon">&#128230;</div>
                         <div>
-                          <div className="mega-menu-title">Move-In / Move-Out</div>
-                          <div className="mega-menu-desc">End-of-tenancy cleaning</div>
+                          <div className="mega-menu-item-title">Move-In / Move-Out</div>
+                          <div className="mega-menu-item-desc">End-of-tenancy cleaning</div>
                         </div>
                       </a>
                     </div>
@@ -322,88 +322,88 @@ export default function Navbar() {
                     <div className="mega-menu-grid tools-grid">
                       <div className="mega-menu-category-label">Document Generators</div>
                       <a href="/tools/invoice-generator" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#128196;</div>
+                        <div className="mega-menu-item-icon">&#128196;</div>
                         <div>
-                          <div className="mega-menu-title">Invoice Generator</div>
-                          <div className="mega-menu-desc">Professional invoices with line items &amp; tax</div>
+                          <div className="mega-menu-item-title">Invoice Generator</div>
+                          <div className="mega-menu-item-desc">Professional invoices with line items &amp; tax</div>
                         </div>
                       </a>
                       <a href="/tools/proposal-generator" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#128203;</div>
+                        <div className="mega-menu-item-icon">&#128203;</div>
                         <div>
-                          <div className="mega-menu-title">Proposal Generator</div>
-                          <div className="mega-menu-desc">Cleaning proposals with scope &amp; pricing</div>
+                          <div className="mega-menu-item-title">Proposal Generator</div>
+                          <div className="mega-menu-item-desc">Cleaning proposals with scope &amp; pricing</div>
                         </div>
                       </a>
                       <a href="/tools/contract-generator" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#128220;</div>
+                        <div className="mega-menu-item-icon">&#128220;</div>
                         <div>
-                          <div className="mega-menu-title">Contract Generator</div>
-                          <div className="mega-menu-desc">Service contracts with legal clauses</div>
+                          <div className="mega-menu-item-title">Contract Generator</div>
+                          <div className="mega-menu-item-desc">Service contracts with legal clauses</div>
                         </div>
                       </a>
                       <a href="/tools/timesheet-calculator" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#9202;</div>
+                        <div className="mega-menu-item-icon">&#9202;</div>
                         <div>
-                          <div className="mega-menu-title">Timesheet Calculator</div>
-                          <div className="mega-menu-desc">Employee hours, overtime &amp; pay</div>
+                          <div className="mega-menu-item-title">Timesheet Calculator</div>
+                          <div className="mega-menu-item-desc">Employee hours, overtime &amp; pay</div>
                         </div>
                       </a>
                       <a href="/tools/checklist-generator" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#9989;</div>
+                        <div className="mega-menu-item-icon">&#9989;</div>
                         <div>
-                          <div className="mega-menu-title">Checklist Generator</div>
-                          <div className="mega-menu-desc">Custom cleaning checklists to print</div>
+                          <div className="mega-menu-item-title">Checklist Generator</div>
+                          <div className="mega-menu-item-desc">Custom cleaning checklists to print</div>
                         </div>
                       </a>
                       <div className="mega-menu-category-label">Business Calculators</div>
                       <a href="/tools/pricing-calculator" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#128176;</div>
+                        <div className="mega-menu-item-icon">&#128176;</div>
                         <div>
-                          <div className="mega-menu-title">Pricing Calculator</div>
-                          <div className="mega-menu-desc">Job pricing by size, rooms &amp; service type</div>
+                          <div className="mega-menu-item-title">Pricing Calculator</div>
+                          <div className="mega-menu-item-desc">Job pricing by size, rooms &amp; service type</div>
                         </div>
                       </a>
                       <a href="/tools/profit-margin-calculator" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#128200;</div>
+                        <div className="mega-menu-item-icon">&#128200;</div>
                         <div>
-                          <div className="mega-menu-title">Profit Margin Calculator</div>
-                          <div className="mega-menu-desc">Margins, costs &amp; what-if scenarios</div>
+                          <div className="mega-menu-item-title">Profit Margin Calculator</div>
+                          <div className="mega-menu-item-desc">Margins, costs &amp; what-if scenarios</div>
                         </div>
                       </a>
                       <a href="/tools/cleaning-time-estimator" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#9201;</div>
+                        <div className="mega-menu-item-icon">&#9201;</div>
                         <div>
-                          <div className="mega-menu-title">Cleaning Time Estimator</div>
-                          <div className="mega-menu-desc">Job duration with room breakdowns</div>
+                          <div className="mega-menu-item-title">Cleaning Time Estimator</div>
+                          <div className="mega-menu-item-desc">Job duration with room breakdowns</div>
                         </div>
                       </a>
                       <a href="/tools/startup-cost-calculator" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#127793;</div>
+                        <div className="mega-menu-item-icon">&#127793;</div>
                         <div>
-                          <div className="mega-menu-title">Startup Cost Calculator</div>
-                          <div className="mega-menu-desc">Equipment, licensing &amp; 6-month projection</div>
+                          <div className="mega-menu-item-title">Startup Cost Calculator</div>
+                          <div className="mega-menu-item-desc">Equipment, licensing &amp; 6-month projection</div>
                         </div>
                       </a>
                       <a href="/tools/roi-calculator" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#128200;</div>
+                        <div className="mega-menu-item-icon">&#128200;</div>
                         <div>
-                          <div className="mega-menu-title">Software ROI Calculator</div>
-                          <div className="mega-menu-desc">Calculate your cleaning software savings</div>
+                          <div className="mega-menu-item-title">Software ROI Calculator</div>
+                          <div className="mega-menu-item-desc">Calculate your cleaning software savings</div>
                         </div>
                       </a>
                       <a href="/tools/employee-cost-calculator" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#129489;</div>
+                        <div className="mega-menu-item-icon">&#129489;</div>
                         <div>
-                          <div className="mega-menu-title">Employee Cost Calculator</div>
-                          <div className="mega-menu-desc">True cost per cleaner with margins</div>
+                          <div className="mega-menu-item-title">Employee Cost Calculator</div>
+                          <div className="mega-menu-item-desc">True cost per cleaner with margins</div>
                         </div>
                       </a>
                       <a href="/tools/quote-calculator" className="mega-menu-item" role="menuitem">
-                        <div className="mega-menu-icon">&#128221;</div>
+                        <div className="mega-menu-item-icon">&#128221;</div>
                         <div>
-                          <div className="mega-menu-title">Quote Calculator</div>
-                          <div className="mega-menu-desc">Instant cleaning quotes by property</div>
+                          <div className="mega-menu-item-title">Quote Calculator</div>
+                          <div className="mega-menu-item-desc">Instant cleaning quotes by property</div>
                         </div>
                       </a>
                     </div>

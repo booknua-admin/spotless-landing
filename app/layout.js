@@ -4,7 +4,7 @@ import Footer from '../components/footer';
 import PageInit from '../components/page-init';
 import JsonLd from '../components/json-ld';
 import CookieConsent from '../components/cookie-consent';
-import { organizationSchema } from '../lib/schema';
+import { organizationSchema, websiteSchema } from '../lib/schema';
 import '../css/base.css';
 import '../css/navbar.css';
 import '../css/mega-menu.css';
@@ -42,6 +42,7 @@ export default function RootLayout({ children }) {
         {children}
         <Footer />
         <JsonLd data={organizationSchema()} />
+        <JsonLd data={websiteSchema()} />
         <Script src="/js/main.js" strategy="afterInteractive" />
         <PageInit />
         <CookieConsent />

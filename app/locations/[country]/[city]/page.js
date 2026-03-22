@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import { getAllLocationParams, getLocation, getCountryName, getCurrencyForCountry } from '../../../../lib/locations';
 import { SITE_URL } from '../../../../lib/seo';
 import JsonLd from '../../../../components/json-ld';
-import { breadcrumbSchema, softwareApplicationSchema } from '../../../../lib/schema';
+import { breadcrumbSchema, softwareApplicationSchema, localBusinessSchema } from '../../../../lib/schema';
 
 export function generateStaticParams() {
   return getAllLocationParams();
@@ -109,6 +109,11 @@ export default function LocationPage({ params }) {
     <>
       <JsonLd data={breadcrumbSchema(breadcrumbs)} />
       <JsonLd data={softwareApplicationSchema()} />
+      <JsonLd data={localBusinessSchema({
+        city: location.city,
+        country: countryName,
+        description: `The #1 cleaning business software for companies in ${location.city}, ${countryName}. Scheduling, invoicing, staff management, and online booking.`,
+      })} />
       <JsonLd
         data={{
           '@context': 'https://schema.org',

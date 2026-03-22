@@ -64,18 +64,25 @@ export default function CategoryPage({ params }) {
             ))}
           </div>
 
+          {/* Section header */}
+          <div className="blog-section-header">
+            <h2>{category}</h2>
+            <span>{posts.length} articles</span>
+          </div>
+
           <div className="blog-grid">
             {posts.map((post) => (
               <a key={post.slug} href={`/blog/${post.slug}`} className="blog-card animate-on-scroll">
                 <span className="blog-card-category">{post.category}</span>
                 <h3>{post.title}</h3>
-                <p>{post.description}</p>
-                <div className="blog-card-meta">
-                  <span>{post.date}</span>
-                  <span>&middot;</span>
+                <span className="blog-card-description">{post.description}</span>
+                <div className="blog-card-footer">
+                  <span className="blog-card-author">
+                    <span className="blog-card-avatar">ST</span>
+                    <span>{post.author}</span>
+                  </span>
                   <span>{post.readTime}</span>
                 </div>
-                <span className="blog-card-link">Read article &rarr;</span>
               </a>
             ))}
           </div>

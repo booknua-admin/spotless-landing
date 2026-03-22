@@ -13,6 +13,7 @@ function initPage() {
   initMegaMenu();
   initMobileAccordion();
   initSmoothScroll();
+  initAnimationPause();
 }
 
 if (document.readyState === 'loading') {
@@ -45,7 +46,7 @@ function initScrollAnimations() {
     });
   }, {
     threshold: 0.1,
-    rootMargin: '0px 0px -40px 0px'
+    rootMargin: '0px 0px -60px 0px'
   });
 
   document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
@@ -284,5 +285,22 @@ function initSmoothScroll() {
         window.scrollTo({ top: pos, behavior: 'smooth' });
       }
     });
+  });
+}
+
+/* ============ ANIMATION PAUSE ============ */
+function initAnimationPause() {
+  var animated = document.querySelectorAll('.hero-float-card, .hero-actions .btn-primary, .logo-marquee');
+  if (!animated.length) return;
+
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      e.target.style.animationPlayState = e.isIntersecting ? 'running' : 'paused';
+    });
+  }, { threshold: 0 });
+
+  animated.forEach(function(el) {
+    el.style.animationPlayState = 'paused';
+    obs.observe(el);
   });
 }

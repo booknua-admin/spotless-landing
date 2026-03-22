@@ -79,42 +79,38 @@ function CompetitorPage({ comp }) {
             Feature comparison
           </h2>
           <div className="animate-on-scroll" style={{ maxWidth: '800px', margin: '0 auto' }}>
-            <div className="mockup-window">
-              <div className="mockup-topbar">
-                <div className="mockup-topbar-dot r"></div>
-                <div className="mockup-topbar-dot y"></div>
-                <div className="mockup-topbar-dot g"></div>
-                <div className="mockup-topbar-url">Spotless vs {comp.name}</div>
-              </div>
-              <div className="mockup-body" style={{ padding: '0' }}>
-                <table className="mockup-table" style={{ fontSize: '14px' }}>
-                  <thead>
-                    <tr>
-                      <th style={{ width: '50%' }}>Feature</th>
-                      <th style={{ textAlign: 'center' }}>Spotless</th>
-                      <th style={{ textAlign: 'center' }}>{comp.name}</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {featureEntries.map(([key, val]) => (
-                      <tr key={key}>
-                        <td>{FEATURE_LABELS[key] || key}</td>
-                        <td style={{ textAlign: 'center', color: val.spotless ? 'var(--green-accent)' : 'var(--text-lighter)' }}>
+            <div className="compare-table-wrap">
+              <table className="compare-table">
+                <thead>
+                  <tr>
+                    <th>Feature</th>
+                    <th className="spotless-col">Spotless</th>
+                    <th>{comp.name}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {featureEntries.map(([key, val]) => (
+                    <tr key={key}>
+                      <td>{FEATURE_LABELS[key] || key}</td>
+                      <td className="spotless-col">
+                        <span className={`compare-check ${val.spotless ? 'yes' : 'no'}`}>
                           {val.spotless ? '\u2713' : '\u2014'}
-                        </td>
-                        <td style={{ textAlign: 'center', color: val.competitor ? 'var(--green-accent)' : 'var(--text-lighter)' }}>
+                        </span>
+                      </td>
+                      <td>
+                        <span className={`compare-check ${val.competitor ? 'yes' : 'no'}`}>
                           {val.competitor ? '\u2713' : '\u2014'}
-                        </td>
-                      </tr>
-                    ))}
-                    <tr>
-                      <td style={{ fontWeight: 600 }}>Starting price</td>
-                      <td style={{ textAlign: 'center', fontWeight: 600 }}>Free</td>
-                      <td style={{ textAlign: 'center' }}>{comp.pricing}</td>
+                        </span>
+                      </td>
                     </tr>
-                  </tbody>
-                </table>
-              </div>
+                  ))}
+                  <tr>
+                    <td>Starting price</td>
+                    <td className="spotless-col" style={{ fontWeight: 600, color: 'var(--mint)' }}>Free</td>
+                    <td style={{ color: 'rgba(255,255,255,0.5)' }}>{comp.pricing}</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
@@ -122,25 +118,25 @@ function CompetitorPage({ comp }) {
 
       {/* Why Switch Section */}
       <section className="product-feature-section" style={{ padding: '0 0 80px' }}>
-        <div className="container">
-          <div className="product-feature-grid animate-on-scroll">
-            <div className="product-feature-content">
-              <h3>Why cleaning companies switch from {comp.name} to Spotless</h3>
-              <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+        <div className="container" style={{ maxWidth: '800px' }}>
+          <div className="compare-cards-grid animate-on-scroll">
+            <div className="compare-card">
+              <h3 style={{ color: 'var(--mint)' }}>Why companies switch to Spotless</h3>
+              <ul>
                 {comp.spotlessAdvantages.map((adv) => (
-                  <li key={adv} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
-                    <span style={{ color: 'var(--mint)', flexShrink: 0 }}>&#10003;</span>
-                    <span style={{ color: 'rgba(255,255,255,0.75)' }}>{adv}</span>
+                  <li key={adv}>
+                    <span className="icon-check">{'\u2713'}</span>
+                    <span style={{ color: 'rgba(255,255,255,0.8)' }}>{adv}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="product-feature-content">
-              <h3>{comp.name} limitations</h3>
-              <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <div className="compare-card">
+              <h3 style={{ color: 'rgba(255,255,255,0.6)' }}>{comp.name} limitations</h3>
+              <ul>
                 {comp.limitations.map((lim) => (
-                  <li key={lim} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
-                    <span style={{ color: 'var(--text-lighter)', flexShrink: 0 }}>&mdash;</span>
+                  <li key={lim}>
+                    <span className="icon-warn">{'\u2014'}</span>
                     <span style={{ color: 'rgba(255,255,255,0.55)' }}>{lim}</span>
                   </li>
                 ))}
