@@ -60,7 +60,7 @@ export default function TimeEstimator() {
     setForm((prev) => ({ ...prev, [field]: value }));
   }
 
-  useEffect(() => {
+  function calculate() {
     const property = PROPERTY_TYPES.find((p) => p.value === form.propertyType);
     const condition = CONDITIONS.find((c) => c.value === form.condition);
     const team = TEAM_SIZES.find((t) => t.value === form.teamSize);
@@ -103,7 +103,7 @@ export default function TimeEstimator() {
       suggestedPrice,
       suggestedRate,
     });
-  }, [form]);
+  }
 
   return (
     <>
@@ -175,6 +175,10 @@ export default function TimeEstimator() {
           </select>
         </div>
       </div>
+
+      <button className="tool-calculate-btn" onClick={calculate}>
+        Calculate
+      </button>
 
       {results && (
         <>

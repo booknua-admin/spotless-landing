@@ -37,6 +37,24 @@ const calculators = [
     description: 'Find out what it costs to start your cleaning business with a 6-month projection.',
     href: '/tools/startup-cost-calculator',
   },
+  {
+    icon: '\u{1F4C8}',
+    title: 'Software ROI Calculator',
+    description: 'Calculate how much time and money cleaning software saves your business each month.',
+    href: '/tools/roi-calculator',
+  },
+  {
+    icon: '\u{1F9D1}\u{200D}\u{1F4BC}',
+    title: 'Employee Cost Calculator',
+    description: 'Find the true cost per cleaner including wages, taxes, insurance, equipment, and more.',
+    href: '/tools/employee-cost-calculator',
+  },
+  {
+    icon: '\u{1F4DD}',
+    title: 'Cleaning Quote Calculator',
+    description: 'Generate instant cleaning quotes based on property size, rooms, service type, and add-ons.',
+    href: '/tools/quote-calculator',
+  },
 ];
 
 const creativeTools = [
@@ -45,6 +63,12 @@ const creativeTools = [
     title: 'Business Name Generator',
     description: 'Generate unique, brandable cleaning business names filtered by niche and style.',
     href: '/tools/name-generator',
+  },
+  {
+    icon: '\u{2705}',
+    title: 'Checklist Generator',
+    description: 'Create custom cleaning checklists for any service type. Choose a template, customise, and print.',
+    href: '/tools/checklist-generator',
   },
 ];
 

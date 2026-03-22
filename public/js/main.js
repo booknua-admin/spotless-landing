@@ -4,19 +4,35 @@
    ============================================================ */
 
 function initPage() {
+  initNavbar();
   initScrollAnimations();
   initFAQ();
   initPricingToggle();
   initROICalculator();
+  initMobileMenu();
+  initMegaMenu();
+  initMobileAccordion();
   initSmoothScroll();
   initAnimationPause();
 }
-window.initPage = initPage;
 
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initPage);
 } else {
   initPage();
+}
+
+/* ============ NAVBAR ============ */
+function initNavbar() {
+  const navbar = document.getElementById('navbar');
+  if (!navbar) return;
+
+  let lastScroll = 0;
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    navbar.classList.toggle('scrolled', scrollY > 50);
+    lastScroll = scrollY;
+  }, { passive: true });
 }
 
 /* ============ SCROLL ANIMATIONS ============ */
@@ -30,7 +46,7 @@ function initScrollAnimations() {
     });
   }, {
     threshold: 0.1,
-    rootMargin: '0px 0px -40px 0px'
+    rootMargin: '0px 0px -60px 0px'
   });
 
   document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
@@ -142,6 +158,116 @@ function initROICalculator() {
 
   // Initial calculation
   calcROI();
+}
+
+/* ============ MOBILE MENU ============ */
+function initMobileMenu() {
+  const toggle = document.querySelector('.mobile-toggle');
+  const menu = document.querySelector('.mobile-menu');
+  const close = document.querySelector('.mobile-menu-close');
+
+  if (!toggle || !menu) return;
+
+  toggle.addEventListener('click', () => {
+    menu.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  });
+
+  if (close) {
+    close.addEventListener('click', () => {
+      menu.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  }
+
+  menu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      menu.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  });
+}
+
+/* ============ MEGA MENU ============ */
+function initMegaMenu() {
+  const navItems = document.querySelectorAll('.nav-item.has-mega-menu, .nav-item.has-dropdown');
+  if (!navItems.length) return;
+
+  let hoverTimeout;
+
+  navItems.forEach(item => {
+    const btn = item.querySelector('.nav-link-btn');
+
+    item.addEventListener('mouseenter', () => {
+      clearTimeout(hoverTimeout);
+      // Close other open items
+      navItems.forEach(other => {
+        if (other !== item) other.classList.remove('active');
+      });
+      item.classList.add('active');
+      if (btn) btn.setAttribute('aria-expanded', 'true');
+    });
+
+    item.addEventListener('mouseleave', () => {
+      hoverTimeout = setTimeout(() => {
+        item.classList.remove('active');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      }, 150);
+    });
+
+    // Keyboard support
+    if (btn) {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const isOpen = item.classList.contains('active');
+        navItems.forEach(other => other.classList.remove('active'));
+        if (!isOpen) {
+          item.classList.add('active');
+          btn.setAttribute('aria-expanded', 'true');
+        } else {
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+  });
+
+  // Close on click outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav-item')) {
+      navItems.forEach(item => {
+        item.classList.remove('active');
+        const btn = item.querySelector('.nav-link-btn');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      navItems.forEach(item => {
+        item.classList.remove('active');
+        const btn = item.querySelector('.nav-link-btn');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+}
+
+/* ============ MOBILE ACCORDION ============ */
+function initMobileAccordion() {
+  document.querySelectorAll('.mobile-accordion-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const accordion = btn.parentElement;
+      const wasOpen = accordion.classList.contains('open');
+
+      // Close all
+      document.querySelectorAll('.mobile-accordion').forEach(a => a.classList.remove('open'));
+
+      // Toggle current
+      if (!wasOpen) accordion.classList.add('open');
+    });
+  });
 }
 
 /* ============ SMOOTH SCROLL ============ */
