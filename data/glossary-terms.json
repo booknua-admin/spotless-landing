@@ -1,227 +1,896 @@
 [
   {
-    "term": "COSHH",
-    "slug": "coshh",
-    "definition": "Control of Substances Hazardous to Health — UK regulations that require cleaning businesses to assess and control exposure to hazardous chemicals. Compliance is mandatory for any company using industrial cleaning products, solvents, or disinfectants. Proper COSHH documentation protects both staff and clients while avoiding costly fines.",
-    "category": "Compliance",
-    "relatedTerms": ["ppe", "risk-assessment"],
-    "relatedPosts": ["service-business-insurance-ireland-uk", "hire-train-retain-cleaning-staff"],
-    "relatedPages": ["/commercial"]
-  },
-  {
-    "term": "SLA",
-    "slug": "sla",
-    "definition": "A Service Level Agreement is a formal contract between a cleaning company and a client that defines expected service standards, response times, and penalties for non-compliance. SLAs are especially common in commercial cleaning where consistency and accountability are critical. They typically cover cleaning frequency, quality benchmarks, and issue-resolution timelines.",
-    "category": "Operations",
-    "relatedTerms": ["scope-of-work", "walk-through"],
-    "relatedPosts": ["commercial-cleaning-contracts-guide", "how-to-price-commercial-cleaning"],
-    "relatedPages": ["/commercial", "/product"]
-  },
-  {
-    "term": "Churn Rate",
-    "slug": "churn-rate",
-    "definition": "The percentage of clients who cancel or do not renew their cleaning services over a given period. A high churn rate signals problems with service quality, pricing, or customer communication. Tracking churn helps cleaning businesses identify retention issues early and protect recurring revenue.",
-    "category": "Metrics",
-    "relatedTerms": ["customer-lifetime-value", "recurring-revenue"],
-    "relatedPosts": ["cleaning-business-customer-retention", "how-to-grow-cleaning-business"],
-    "relatedPages": ["/product/finance"]
-  },
-  {
-    "term": "Gross Margin",
-    "slug": "gross-margin",
-    "definition": "The percentage of revenue remaining after subtracting direct costs such as labour, cleaning supplies, and travel expenses. For cleaning businesses, a healthy gross margin typically falls between 40% and 60%. Monitoring gross margin per job or client helps owners identify unprofitable work before it drains resources.",
-    "category": "Finance",
-    "relatedTerms": ["net-margin", "average-job-value"],
-    "relatedPosts": ["cleaning-business-profit-margins", "how-to-price-cleaning-services"],
-    "relatedPages": ["/product/finance", "/tools/profit-margin-calculator"]
-  },
-  {
-    "term": "Net Margin",
-    "slug": "net-margin",
-    "definition": "The percentage of revenue that remains as profit after all expenses are deducted, including overheads, marketing, insurance, and administrative costs. Net margin gives cleaning business owners the clearest picture of true profitability. Most successful cleaning companies target a net margin of 10% to 20%.",
-    "category": "Finance",
-    "relatedTerms": ["gross-margin", "recurring-revenue"],
-    "relatedPosts": ["cleaning-business-profit-margins", "cleaning-business-plan-template"],
-    "relatedPages": ["/product/finance", "/tools/profit-margin-calculator"]
-  },
-  {
-    "term": "Recurring Revenue",
-    "slug": "recurring-revenue",
-    "definition": "Predictable income generated from repeat clients on regular cleaning schedules, such as weekly or fortnightly services. Recurring revenue is the backbone of a sustainable cleaning business because it reduces reliance on constantly finding new clients. Building a strong base of recurring work stabilises cash flow and increases company valuation.",
-    "category": "Finance",
-    "relatedTerms": ["customer-lifetime-value", "churn-rate"],
-    "relatedPosts": ["cleaning-business-customer-retention", "how-to-grow-cleaning-business"],
-    "relatedPages": ["/product/finance", "/residential"]
-  },
-  {
-    "term": "Customer Lifetime Value",
-    "slug": "customer-lifetime-value",
-    "definition": "The total revenue a cleaning business can expect from a single client over the entire duration of the relationship. CLV helps owners understand how much they can afford to spend on acquiring new clients while remaining profitable. A higher CLV often results from strong retention, upselling additional services, and consistent quality.",
-    "category": "Metrics",
-    "relatedTerms": ["churn-rate", "recurring-revenue", "upsell"],
-    "relatedPosts": ["cleaning-business-customer-retention", "cleaning-business-marketing-plan"],
-    "relatedPages": ["/product/finance"]
-  },
-  {
-    "term": "Close Rate",
-    "slug": "close-rate",
-    "definition": "The percentage of cleaning quotes or estimates that convert into confirmed, paying jobs. A strong close rate for residential cleaning typically ranges from 40% to 60%, while commercial contracts may be lower due to longer decision cycles. Improving close rate involves faster follow-ups, competitive pricing, and professional presentations.",
-    "category": "Sales",
-    "relatedTerms": ["bid-rate", "average-job-value"],
-    "relatedPosts": ["cleaning-estimates-that-win-jobs", "how-to-get-cleaning-clients"],
-    "relatedPages": ["/product/custom-forms", "/product"]
-  },
-  {
     "term": "Average Job Value",
     "slug": "average-job-value",
     "definition": "The mean revenue earned per cleaning job, calculated by dividing total revenue by the number of completed jobs. Tracking AJV helps owners understand pricing effectiveness and identify opportunities to increase revenue per visit. Cleaning businesses can raise their AJV through upselling, add-on services, and premium pricing tiers.",
     "category": "Metrics",
-    "relatedTerms": ["gross-margin", "upsell", "close-rate"],
-    "relatedPosts": ["how-to-price-cleaning-services", "cleaning-business-profit-margins"],
-    "relatedPages": ["/product/finance", "/tools/pricing-calculator"]
+    "relatedTerms": [
+      "gross-margin",
+      "upsell",
+      "close-rate"
+    ],
+    "relatedPosts": [
+      "how-to-price-cleaning-services",
+      "cleaning-business-profit-margins"
+    ],
+    "relatedPages": [
+      "/product/finance",
+      "/tools/pricing-calculator"
+    ]
   },
   {
-    "term": "Turnover Rate",
-    "slug": "turnover-rate",
-    "definition": "The rate at which employees leave a cleaning company over a given period, typically expressed as an annual percentage. The cleaning industry often experiences turnover rates above 100%, making retention a critical operational challenge. Reducing turnover through better pay, training, and working conditions directly improves service quality and profitability.",
-    "category": "HR",
-    "relatedTerms": ["kpi", "scope-of-work"],
-    "relatedPosts": ["hire-train-retain-cleaning-staff", "how-to-start-cleaning-business"],
-    "relatedPages": ["/product/staff-management"]
-  },
-  {
-    "term": "Deep Clean",
-    "slug": "deep-clean",
-    "definition": "A thorough, intensive cleaning service that goes beyond routine maintenance to address built-up grime, hard-to-reach areas, and neglected surfaces. Deep cleans are typically one-off or periodic services charged at a premium compared to regular cleans. They often serve as an entry point for converting new clients into recurring service agreements.",
-    "category": "Services",
-    "relatedTerms": ["regular-clean", "one-off-clean", "end-of-tenancy-clean"],
-    "relatedPosts": ["how-to-price-cleaning-services", "how-to-get-cleaning-clients"],
-    "relatedPages": ["/residential", "/commercial"]
-  },
-  {
-    "term": "Regular Clean",
-    "slug": "regular-clean",
-    "definition": "A routine, recurring cleaning service performed on a set schedule — typically weekly, fortnightly, or monthly. Regular cleans form the foundation of most cleaning businesses because they generate consistent, predictable revenue. The scope usually covers standard maintenance tasks like vacuuming, mopping, dusting, and bathroom sanitisation.",
-    "category": "Services",
-    "relatedTerms": ["deep-clean", "recurring-revenue", "scope-of-work"],
-    "relatedPosts": ["how-to-price-cleaning-services", "cleaning-business-scheduling-guide"],
-    "relatedPages": ["/residential", "/product/scheduling"]
-  },
-  {
-    "term": "End of Tenancy Clean",
-    "slug": "end-of-tenancy-clean",
-    "definition": "A comprehensive cleaning service performed when a tenant moves out of a rented property, designed to restore it to move-in condition. These cleans are typically required by landlords or letting agents and are often needed to meet deposit-return standards. End of tenancy work commands premium pricing and can be a highly profitable niche for cleaning companies.",
-    "category": "Services",
-    "relatedTerms": ["deep-clean", "one-off-clean", "scope-of-work"],
-    "relatedPosts": ["how-to-price-cleaning-services", "how-to-get-cleaning-clients"],
-    "relatedPages": ["/move-in-out", "/residential"]
-  },
-  {
-    "term": "One-Off Clean",
-    "slug": "one-off-clean",
-    "definition": "A single, non-recurring cleaning job performed as a standalone service without an ongoing agreement. One-off cleans include spring cleans, post-event cleanups, and pre-sale property preparations. While they generate less predictable revenue than regular work, they provide opportunities to upsell clients into recurring service plans.",
-    "category": "Services",
-    "relatedTerms": ["deep-clean", "upsell", "regular-clean"],
-    "relatedPosts": ["how-to-price-cleaning-services", "cleaning-estimates-that-win-jobs"],
-    "relatedPages": ["/residential"]
-  },
-  {
-    "term": "Upsell",
-    "slug": "upsell",
-    "definition": "The practice of offering existing cleaning clients upgraded or additional services beyond their current package, such as adding oven cleaning or carpet shampooing to a regular clean. Upselling increases average job value without the cost of acquiring a new client. Effective upselling relies on identifying client needs and timing offers around seasonal demand or service milestones.",
-    "category": "Sales",
-    "relatedTerms": ["cross-sell", "average-job-value", "customer-lifetime-value"],
-    "relatedPosts": ["how-to-grow-cleaning-business", "cleaning-business-customer-retention"],
-    "relatedPages": ["/product/automations"]
-  },
-  {
-    "term": "Cross-Sell",
-    "slug": "cross-sell",
-    "definition": "Offering complementary services to existing clients that differ from their primary service — for example, offering window cleaning to a regular domestic cleaning client, or carpet cleaning to a commercial office client. Cross-selling leverages established trust and broadens your revenue streams without additional acquisition costs. It works best when the added service naturally complements the client's existing package.",
-    "category": "Sales",
-    "relatedTerms": ["upsell", "average-job-value"],
-    "relatedPosts": ["how-to-grow-cleaning-business", "cleaning-business-marketing-plan"],
-    "relatedPages": ["/product/automations", "/product"]
-  },
-  {
-    "term": "PPE",
-    "slug": "ppe",
-    "definition": "Personal Protective Equipment refers to gloves, masks, goggles, aprons, and other gear worn by cleaning staff to protect against chemical exposure, biological hazards, and physical injury. Providing appropriate PPE is both a legal requirement and a duty of care for cleaning business owners. Proper PPE use reduces workplace injuries and demonstrates professionalism to clients.",
-    "category": "Compliance",
-    "relatedTerms": ["coshh", "risk-assessment"],
-    "relatedPosts": ["service-business-insurance-ireland-uk", "hire-train-retain-cleaning-staff"],
-    "relatedPages": ["/commercial"]
-  },
-  {
-    "term": "Risk Assessment",
-    "slug": "risk-assessment",
-    "definition": "A systematic process of identifying potential hazards at a cleaning site and evaluating the measures needed to minimise risk to staff and occupants. Risk assessments are legally required in most jurisdictions before commencing work on commercial premises. They cover chemical handling, slip hazards, working at height, electrical safety, and lone working protocols.",
-    "category": "Compliance",
-    "relatedTerms": ["coshh", "ppe", "walk-through"],
-    "relatedPosts": ["service-business-insurance-ireland-uk", "commercial-cleaning-contracts-guide"],
-    "relatedPages": ["/commercial"]
-  },
-  {
-    "term": "KPI",
-    "slug": "kpi",
-    "definition": "A Key Performance Indicator is a measurable value that tracks how effectively a cleaning business is achieving its core objectives. Common cleaning industry KPIs include client retention rate, average job value, staff utilisation, and customer satisfaction scores. Regularly reviewing KPIs helps owners make data-driven decisions and spot problems before they escalate.",
-    "category": "Metrics",
-    "relatedTerms": ["churn-rate", "close-rate", "average-job-value"],
-    "relatedPosts": ["how-to-grow-cleaning-business", "cleaning-business-profit-margins"],
-    "relatedPages": ["/product/finance", "/product"]
-  },
-  {
-    "term": "CRM",
-    "slug": "crm",
-    "definition": "Customer Relationship Management software helps cleaning businesses organise client data, track communications, manage leads, and nurture ongoing relationships. A good CRM centralises contact details, job history, notes, and preferences so that nothing falls through the cracks. For cleaning companies, CRM functionality is often built into all-in-one business management platforms.",
-    "category": "Technology",
-    "relatedTerms": ["kpi", "close-rate"],
-    "relatedPosts": ["cleaning-business-crm-guide", "cleaning-business-software-guide"],
-    "relatedPages": ["/product", "/product/custom-forms"]
+    "term": "Back Office",
+    "slug": "back-office",
+    "definition": "The administrative and support functions of a cleaning business that clients never see, including accounting, payroll, scheduling coordination, and HR. Efficient back-office operations free up owners to focus on growth and client relationships. Modern cleaning software automates many back-office tasks that previously required manual effort.",
+    "category": "Operations",
+    "relatedTerms": [
+      "crm",
+      "kpi"
+    ],
+    "relatedPosts": [
+      "automate-cleaning-business",
+      "cleaning-business-software-guide"
+    ],
+    "relatedPages": [
+      "/product"
+    ]
   },
   {
     "term": "Bid Rate",
     "slug": "bid-rate",
     "definition": "The percentage of incoming cleaning enquiries for which you submit a formal quote or estimate. A low bid rate may indicate capacity constraints, poor lead qualification, or inefficient quoting processes. Tracking bid rate alongside close rate gives owners a complete picture of their sales funnel efficiency from enquiry to booked job.",
     "category": "Sales",
-    "relatedTerms": ["close-rate", "average-job-value"],
-    "relatedPosts": ["cleaning-estimates-that-win-jobs", "how-to-get-cleaning-clients"],
-    "relatedPages": ["/product/custom-forms"]
+    "relatedTerms": [
+      "close-rate",
+      "average-job-value"
+    ],
+    "relatedPosts": [
+      "cleaning-estimates-that-win-jobs",
+      "how-to-get-cleaning-clients"
+    ],
+    "relatedPages": [
+      "/product/custom-forms"
+    ]
   },
   {
-    "term": "Walk-Through",
-    "slug": "walk-through",
-    "definition": "A pre-service site inspection where a cleaning company representative visits the premises to assess the scope of work, identify special requirements, and provide an accurate quote. Walk-throughs are standard practice for commercial contracts and larger residential jobs. They build client confidence and reduce the risk of under-quoting or scope disputes after work begins.",
+    "term": "Booking Rate",
+    "slug": "booking-rate",
+    "definition": "The ratio of enquiries or leads that convert into confirmed cleaning bookings. A healthy booking rate for residential cleaning is typically 40-60%, though this varies by lead source and market competition. Tracking booking rate helps identify whether issues lie in your pricing, response time, or sales approach.",
+    "category": "Sales",
+    "relatedTerms": [
+      "close-rate",
+      "bid-rate"
+    ],
+    "relatedPosts": [
+      "how-to-get-cleaning-clients",
+      "cleaning-estimates-that-win-jobs"
+    ],
+    "relatedPages": [
+      "/product/custom-forms"
+    ]
+  },
+  {
+    "term": "Break-Even Point",
+    "slug": "break-even-point",
+    "definition": "The point at which a cleaning business's total revenue equals its total costs, meaning it is neither making a profit nor a loss. Knowing your break-even point helps you set minimum pricing, evaluate new services, and plan hiring decisions. Most new cleaning businesses reach break-even within 3 to 6 months if managed effectively.",
+    "category": "Finance",
+    "relatedTerms": [
+      "fixed-cost",
+      "variable-cost",
+      "gross-margin"
+    ],
+    "relatedPosts": [
+      "cleaning-business-profit-margins",
+      "how-to-start-cleaning-business"
+    ],
+    "relatedPages": [
+      "/tools/startup-cost-calculator"
+    ]
+  },
+  {
+    "term": "Churn Rate",
+    "slug": "churn-rate",
+    "definition": "The percentage of clients who cancel or do not renew their cleaning services over a given period. A high churn rate signals problems with service quality, pricing, or customer communication. Tracking churn helps cleaning businesses identify retention issues early and protect recurring revenue.",
+    "category": "Metrics",
+    "relatedTerms": [
+      "customer-lifetime-value",
+      "recurring-revenue"
+    ],
+    "relatedPosts": [
+      "cleaning-business-customer-retention",
+      "how-to-grow-cleaning-business"
+    ],
+    "relatedPages": [
+      "/product/finance"
+    ]
+  },
+  {
+    "term": "Client Acquisition Cost",
+    "slug": "client-acquisition-cost",
+    "definition": "The total cost of acquiring one new cleaning client, including marketing spend, advertising, free estimates, and sales time. Knowing your CAC helps determine how much you can afford to spend on growth while remaining profitable. A sustainable CAC should be significantly lower than your customer lifetime value.",
+    "category": "Finance",
+    "relatedTerms": [
+      "customer-lifetime-value",
+      "booking-rate"
+    ],
+    "relatedPosts": [
+      "cleaning-business-marketing-plan",
+      "how-to-get-cleaning-clients"
+    ],
+    "relatedPages": [
+      "/product/finance"
+    ]
+  },
+  {
+    "term": "Client Retention Rate",
+    "slug": "client-retention-rate",
+    "definition": "The percentage of cleaning clients who continue using your services over a specific period, typically measured annually. A high retention rate indicates strong service quality and client satisfaction, while a low rate signals problems that need addressing. Most successful cleaning businesses maintain retention rates above 80%.",
+    "category": "Metrics",
+    "relatedTerms": [
+      "churn-rate",
+      "customer-lifetime-value",
+      "recurring-revenue"
+    ],
+    "relatedPosts": [
+      "cleaning-business-customer-retention",
+      "how-to-grow-cleaning-business"
+    ],
+    "relatedPages": [
+      "/product/finance"
+    ]
+  },
+  {
+    "term": "Close Rate",
+    "slug": "close-rate",
+    "definition": "The percentage of cleaning quotes or estimates that convert into confirmed, paying jobs. A strong close rate for residential cleaning typically ranges from 40% to 60%, while commercial contracts may be lower due to longer decision cycles. Improving close rate involves faster follow-ups, competitive pricing, and professional presentations.",
+    "category": "Sales",
+    "relatedTerms": [
+      "bid-rate",
+      "average-job-value"
+    ],
+    "relatedPosts": [
+      "cleaning-estimates-that-win-jobs",
+      "how-to-get-cleaning-clients"
+    ],
+    "relatedPages": [
+      "/product/custom-forms",
+      "/product"
+    ]
+  },
+  {
+    "term": "Colour Coding",
+    "slug": "colour-coding",
+    "definition": "A hygiene system where different coloured cloths, mops, and buckets are assigned to specific areas \u2014 typically red for bathrooms, blue for general areas, green for kitchens, and yellow for clinical spaces. Colour coding prevents cross-contamination and is a requirement in many commercial cleaning contracts. Proper colour-coded systems demonstrate professionalism and compliance to clients.",
+    "category": "Compliance",
+    "relatedTerms": [
+      "coshh",
+      "risk-assessment"
+    ],
+    "relatedPosts": [
+      "cleaning-quality-control-checklist",
+      "commercial-cleaning-contracts-guide"
+    ],
+    "relatedPages": [
+      "/commercial"
+    ]
+  },
+  {
+    "term": "COSHH",
+    "slug": "coshh",
+    "definition": "Control of Substances Hazardous to Health \u2014 UK regulations that require cleaning businesses to assess and control exposure to hazardous chemicals. Compliance is mandatory for any company using industrial cleaning products, solvents, or disinfectants. Proper COSHH documentation protects both staff and clients while avoiding costly fines.",
+    "category": "Compliance",
+    "relatedTerms": [
+      "ppe",
+      "risk-assessment"
+    ],
+    "relatedPosts": [
+      "service-business-insurance-ireland-uk",
+      "hire-train-retain-cleaning-staff"
+    ],
+    "relatedPages": [
+      "/commercial"
+    ]
+  },
+  {
+    "term": "Crew Leader",
+    "slug": "crew-leader",
+    "definition": "A senior cleaning team member responsible for supervising on-site work, managing quality standards, and acting as the point of contact between the team and management. Crew leaders handle task delegation, time management, and client communication during service delivery. Promoting reliable staff to crew leader roles is a key step in scaling beyond solo operations.",
     "category": "Operations",
-    "relatedTerms": ["scope-of-work", "sla", "risk-assessment"],
-    "relatedPosts": ["commercial-cleaning-contracts-guide", "cleaning-estimates-that-win-jobs"],
-    "relatedPages": ["/commercial", "/product/scheduling"]
+    "relatedTerms": [
+      "scope-of-work",
+      "quality-audit"
+    ],
+    "relatedPosts": [
+      "hire-train-retain-cleaning-staff",
+      "manage-multiple-cleaning-teams"
+    ],
+    "relatedPages": [
+      "/product/staff-management"
+    ]
   },
   {
-    "term": "Square Footage Pricing",
-    "slug": "square-footage-pricing",
-    "definition": "A pricing model that charges clients based on the total area of the space to be cleaned, typically calculated per square foot or square metre. This method provides transparent, objective pricing that is easy for clients to understand and compare. Square footage pricing is particularly common in commercial cleaning and is often combined with per-service-type rates.",
-    "category": "Pricing",
-    "relatedTerms": ["flat-rate", "scope-of-work"],
-    "relatedPosts": ["how-to-price-commercial-cleaning", "how-to-price-cleaning-services"],
-    "relatedPages": ["/tools/pricing-calculator", "/commercial"]
+    "term": "CRM",
+    "slug": "crm",
+    "definition": "Customer Relationship Management software helps cleaning businesses organise client data, track communications, manage leads, and nurture ongoing relationships. A good CRM centralises contact details, job history, notes, and preferences so that nothing falls through the cracks. For cleaning companies, CRM functionality is often built into all-in-one business management platforms.",
+    "category": "Technology",
+    "relatedTerms": [
+      "kpi",
+      "close-rate"
+    ],
+    "relatedPosts": [
+      "cleaning-business-crm-guide",
+      "cleaning-business-software-guide"
+    ],
+    "relatedPages": [
+      "/product",
+      "/product/custom-forms"
+    ]
+  },
+  {
+    "term": "Cross-Sell",
+    "slug": "cross-sell",
+    "definition": "Offering complementary services to existing clients that differ from their primary service \u2014 for example, offering window cleaning to a regular domestic cleaning client, or carpet cleaning to a commercial office client. Cross-selling leverages established trust and broadens your revenue streams without additional acquisition costs. It works best when the added service naturally complements the client's existing package.",
+    "category": "Sales",
+    "relatedTerms": [
+      "upsell",
+      "average-job-value"
+    ],
+    "relatedPosts": [
+      "how-to-grow-cleaning-business",
+      "cleaning-business-marketing-plan"
+    ],
+    "relatedPages": [
+      "/product/automations",
+      "/product"
+    ]
+  },
+  {
+    "term": "Customer Lifetime Value",
+    "slug": "customer-lifetime-value",
+    "definition": "The total revenue a cleaning business can expect from a single client over the entire duration of the relationship. CLV helps owners understand how much they can afford to spend on acquiring new clients while remaining profitable. A higher CLV often results from strong retention, upselling additional services, and consistent quality.",
+    "category": "Metrics",
+    "relatedTerms": [
+      "churn-rate",
+      "recurring-revenue",
+      "upsell"
+    ],
+    "relatedPosts": [
+      "cleaning-business-customer-retention",
+      "cleaning-business-marketing-plan"
+    ],
+    "relatedPages": [
+      "/product/finance"
+    ]
+  },
+  {
+    "term": "Deep Clean",
+    "slug": "deep-clean",
+    "definition": "A thorough, intensive cleaning service that goes beyond routine maintenance to address built-up grime, hard-to-reach areas, and neglected surfaces. Deep cleans are typically one-off or periodic services charged at a premium compared to regular cleans. They often serve as an entry point for converting new clients into recurring service agreements.",
+    "category": "Services",
+    "relatedTerms": [
+      "regular-clean",
+      "one-off-clean",
+      "end-of-tenancy-clean"
+    ],
+    "relatedPosts": [
+      "how-to-price-cleaning-services",
+      "how-to-get-cleaning-clients"
+    ],
+    "relatedPages": [
+      "/residential",
+      "/commercial"
+    ]
+  },
+  {
+    "term": "End of Tenancy Clean",
+    "slug": "end-of-tenancy-clean",
+    "definition": "A comprehensive cleaning service performed when a tenant moves out of a rented property, designed to restore it to move-in condition. These cleans are typically required by landlords or letting agents and are often needed to meet deposit-return standards. End of tenancy work commands premium pricing and can be a highly profitable niche for cleaning companies.",
+    "category": "Services",
+    "relatedTerms": [
+      "deep-clean",
+      "one-off-clean",
+      "scope-of-work"
+    ],
+    "relatedPosts": [
+      "how-to-price-cleaning-services",
+      "how-to-get-cleaning-clients"
+    ],
+    "relatedPages": [
+      "/move-in-out",
+      "/residential"
+    ]
+  },
+  {
+    "term": "First Clean",
+    "slug": "first-clean",
+    "definition": "The initial deep cleaning session performed for a new client, typically more intensive and time-consuming than subsequent regular visits. First cleans establish the baseline standard and are usually priced 50-100% higher than regular cleans to account for the additional work. They serve as both a service delivery and a sales opportunity to demonstrate quality.",
+    "category": "Services",
+    "relatedTerms": [
+      "deep-clean",
+      "regular-clean"
+    ],
+    "relatedPosts": [
+      "how-to-price-cleaning-services",
+      "cleaning-business-client-onboarding"
+    ],
+    "relatedPages": [
+      "/residential"
+    ]
+  },
+  {
+    "term": "Fixed Cost",
+    "slug": "fixed-cost",
+    "definition": "Business expenses that remain constant regardless of how many cleaning jobs are completed, such as insurance, vehicle payments, software subscriptions, and office rent. Understanding fixed costs is essential for accurate pricing and profitability analysis. High fixed costs require a reliable base of recurring clients to cover before any profit is generated.",
+    "category": "Finance",
+    "relatedTerms": [
+      "variable-cost",
+      "break-even-point",
+      "net-margin"
+    ],
+    "relatedPosts": [
+      "cleaning-business-profit-margins",
+      "cleaning-business-cash-flow"
+    ],
+    "relatedPages": [
+      "/tools/profit-margin-calculator"
+    ]
   },
   {
     "term": "Flat Rate",
     "slug": "flat-rate",
     "definition": "A fixed-price model where the client pays a set amount for a defined cleaning service regardless of how long the job takes. Flat rate pricing simplifies quoting, sets clear expectations, and rewards efficient teams. It works best for standardised services with predictable scope, such as regular residential cleans or end of tenancy packages.",
     "category": "Pricing",
-    "relatedTerms": ["square-footage-pricing", "scope-of-work", "average-job-value"],
-    "relatedPosts": ["how-to-price-cleaning-services", "cleaning-estimates-that-win-jobs"],
-    "relatedPages": ["/tools/pricing-calculator", "/residential"]
+    "relatedTerms": [
+      "square-footage-pricing",
+      "scope-of-work",
+      "average-job-value"
+    ],
+    "relatedPosts": [
+      "how-to-price-cleaning-services",
+      "cleaning-estimates-that-win-jobs"
+    ],
+    "relatedPages": [
+      "/tools/pricing-calculator",
+      "/residential"
+    ]
+  },
+  {
+    "term": "Gross Margin",
+    "slug": "gross-margin",
+    "definition": "The percentage of revenue remaining after subtracting direct costs such as labour, cleaning supplies, and travel expenses. For cleaning businesses, a healthy gross margin typically falls between 40% and 60%. Monitoring gross margin per job or client helps owners identify unprofitable work before it drains resources.",
+    "category": "Finance",
+    "relatedTerms": [
+      "net-margin",
+      "average-job-value"
+    ],
+    "relatedPosts": [
+      "cleaning-business-profit-margins",
+      "how-to-price-cleaning-services"
+    ],
+    "relatedPages": [
+      "/product/finance",
+      "/tools/profit-margin-calculator"
+    ]
+  },
+  {
+    "term": "Gross Revenue",
+    "slug": "gross-revenue",
+    "definition": "The total income a cleaning business earns before any expenses, taxes, or deductions are subtracted. Gross revenue shows the scale of your business but not its profitability \u2014 a company can have high gross revenue and still operate at a loss. Tracking gross revenue alongside margins gives the clearest picture of business health.",
+    "category": "Finance",
+    "relatedTerms": [
+      "gross-margin",
+      "net-margin",
+      "recurring-revenue"
+    ],
+    "relatedPosts": [
+      "cleaning-business-profit-margins",
+      "how-to-grow-cleaning-business"
+    ],
+    "relatedPages": [
+      "/product/finance"
+    ]
+  },
+  {
+    "term": "Job Costing",
+    "slug": "job-costing",
+    "definition": "The process of calculating the true cost of completing a specific cleaning job, including labour, supplies, travel, and allocated overhead. Accurate job costing reveals which clients and service types are most profitable and which are losing money. Many cleaning business owners underprice their services because they only consider direct labour costs.",
+    "category": "Finance",
+    "relatedTerms": [
+      "variable-cost",
+      "fixed-cost",
+      "profit-per-job"
+    ],
+    "relatedPosts": [
+      "how-to-price-cleaning-services",
+      "cleaning-business-profit-margins"
+    ],
+    "relatedPages": [
+      "/tools/profit-margin-calculator"
+    ]
+  },
+  {
+    "term": "KPI",
+    "slug": "kpi",
+    "definition": "A Key Performance Indicator is a measurable value that tracks how effectively a cleaning business is achieving its core objectives. Common cleaning industry KPIs include client retention rate, average job value, staff utilisation, and customer satisfaction scores. Regularly reviewing KPIs helps owners make data-driven decisions and spot problems before they escalate.",
+    "category": "Metrics",
+    "relatedTerms": [
+      "churn-rate",
+      "close-rate",
+      "average-job-value"
+    ],
+    "relatedPosts": [
+      "how-to-grow-cleaning-business",
+      "cleaning-business-profit-margins"
+    ],
+    "relatedPages": [
+      "/product/finance",
+      "/product"
+    ]
+  },
+  {
+    "term": "Lead Time",
+    "slug": "lead-time",
+    "definition": "The time between a client booking a cleaning service and the actual delivery of that service. Short lead times improve client satisfaction and reduce the chance of cancellations, while long lead times may indicate capacity constraints. Managing lead time effectively requires good scheduling systems and accurate availability tracking.",
+    "category": "Operations",
+    "relatedTerms": [
+      "booking-rate",
+      "sla"
+    ],
+    "relatedPosts": [
+      "cleaning-business-scheduling-guide",
+      "cleaning-business-client-onboarding"
+    ],
+    "relatedPages": [
+      "/product/scheduling"
+    ]
+  },
+  {
+    "term": "Maintenance Clean",
+    "slug": "maintenance-clean",
+    "definition": "A lighter, routine cleaning visit focused on upkeep rather than intensive deep cleaning, typically performed after an initial first clean has been completed. Maintenance cleans keep properties at a consistent standard between deeper cleans and are usually the most time-efficient service type. They form the core of most recurring cleaning schedules.",
+    "category": "Services",
+    "relatedTerms": [
+      "regular-clean",
+      "first-clean",
+      "recurring-revenue"
+    ],
+    "relatedPosts": [
+      "how-to-price-cleaning-services",
+      "cleaning-business-scheduling-guide"
+    ],
+    "relatedPages": [
+      "/residential",
+      "/product/scheduling"
+    ]
+  },
+  {
+    "term": "Method Statement",
+    "slug": "method-statement",
+    "definition": "A written document outlining the step-by-step procedure for carrying out specific cleaning tasks safely and to the required standard. Method statements are commonly required for commercial contracts and demonstrate compliance with health and safety regulations. They typically cover equipment needed, chemicals used, safety precautions, and waste disposal procedures.",
+    "category": "Compliance",
+    "relatedTerms": [
+      "risk-assessment",
+      "coshh",
+      "scope-of-work"
+    ],
+    "relatedPosts": [
+      "commercial-cleaning-contracts-guide",
+      "cleaning-quality-control-checklist"
+    ],
+    "relatedPages": [
+      "/commercial"
+    ]
+  },
+  {
+    "term": "Move-Out Clean",
+    "slug": "move-out-clean",
+    "definition": "A thorough cleaning service performed when tenants vacate a rental property, often called an end-of-tenancy clean. Move-out cleans must typically meet strict standards set by landlords or letting agents to qualify for deposit returns. This service type commands premium pricing and is a high-margin niche for many cleaning businesses.",
+    "category": "Services",
+    "relatedTerms": [
+      "end-of-tenancy-clean",
+      "deep-clean",
+      "first-clean"
+    ],
+    "relatedPosts": [
+      "how-to-price-move-in-out-cleaning",
+      "how-to-price-cleaning-services"
+    ],
+    "relatedPages": [
+      "/move-in-out"
+    ]
+  },
+  {
+    "term": "Net Margin",
+    "slug": "net-margin",
+    "definition": "The percentage of revenue that remains as profit after all expenses are deducted, including overheads, marketing, insurance, and administrative costs. Net margin gives cleaning business owners the clearest picture of true profitability. Most successful cleaning companies target a net margin of 10% to 20%.",
+    "category": "Finance",
+    "relatedTerms": [
+      "gross-margin",
+      "recurring-revenue"
+    ],
+    "relatedPosts": [
+      "cleaning-business-profit-margins",
+      "cleaning-business-plan-template"
+    ],
+    "relatedPages": [
+      "/product/finance",
+      "/tools/profit-margin-calculator"
+    ]
+  },
+  {
+    "term": "No-Show",
+    "slug": "no-show",
+    "definition": "When either a cleaning client or a cleaner fails to be present for a scheduled service without prior cancellation. Client no-shows waste time and revenue, while cleaner no-shows damage reputation and client trust. Implementing cancellation policies, deposit requirements, and automated reminders significantly reduce no-show rates.",
+    "category": "Operations",
+    "relatedTerms": [
+      "sla",
+      "churn-rate"
+    ],
+    "relatedPosts": [
+      "cleaning-business-scheduling-guide",
+      "cleaning-business-customer-communication"
+    ],
+    "relatedPages": [
+      "/product/scheduling",
+      "/product/automations"
+    ]
+  },
+  {
+    "term": "One-Off Clean",
+    "slug": "one-off-clean",
+    "definition": "A single, non-recurring cleaning job performed as a standalone service without an ongoing agreement. One-off cleans include spring cleans, post-event cleanups, and pre-sale property preparations. While they generate less predictable revenue than regular work, they provide opportunities to upsell clients into recurring service plans.",
+    "category": "Services",
+    "relatedTerms": [
+      "deep-clean",
+      "upsell",
+      "regular-clean"
+    ],
+    "relatedPosts": [
+      "how-to-price-cleaning-services",
+      "cleaning-estimates-that-win-jobs"
+    ],
+    "relatedPages": [
+      "/residential"
+    ]
+  },
+  {
+    "term": "PPE",
+    "slug": "ppe",
+    "definition": "Personal Protective Equipment refers to gloves, masks, goggles, aprons, and other gear worn by cleaning staff to protect against chemical exposure, biological hazards, and physical injury. Providing appropriate PPE is both a legal requirement and a duty of care for cleaning business owners. Proper PPE use reduces workplace injuries and demonstrates professionalism to clients.",
+    "category": "Compliance",
+    "relatedTerms": [
+      "coshh",
+      "risk-assessment"
+    ],
+    "relatedPosts": [
+      "service-business-insurance-ireland-uk",
+      "hire-train-retain-cleaning-staff"
+    ],
+    "relatedPages": [
+      "/commercial"
+    ]
+  },
+  {
+    "term": "Profit Per Job",
+    "slug": "profit-per-job",
+    "definition": "The net profit earned from completing a single cleaning job after all direct and allocated costs are deducted. This metric reveals which jobs, clients, and service types actually make money for your business. Improving profit per job involves optimising routes, reducing supply waste, and pricing services accurately.",
+    "category": "Finance",
+    "relatedTerms": [
+      "job-costing",
+      "gross-margin",
+      "average-job-value"
+    ],
+    "relatedPosts": [
+      "cleaning-business-profit-margins",
+      "how-to-price-cleaning-services"
+    ],
+    "relatedPages": [
+      "/tools/profit-margin-calculator"
+    ]
+  },
+  {
+    "term": "Quality Audit",
+    "slug": "quality-audit",
+    "definition": "A systematic inspection of completed cleaning work against predefined standards, typically using checklists and scoring criteria. Regular quality audits identify training gaps, maintain service consistency, and provide documented evidence of standards for commercial clients. Many cleaning businesses conduct audits monthly or after client complaints.",
+    "category": "Operations",
+    "relatedTerms": [
+      "kpi",
+      "scope-of-work",
+      "crew-leader"
+    ],
+    "relatedPosts": [
+      "cleaning-quality-control-checklist",
+      "manage-multiple-cleaning-teams"
+    ],
+    "relatedPages": [
+      "/product/staff-management"
+    ]
+  },
+  {
+    "term": "Recurring Clean",
+    "slug": "recurring-clean",
+    "definition": "Any regularly scheduled cleaning service performed on a repeating basis \u2014 weekly, fortnightly, monthly, or at custom intervals. Recurring cleans provide predictable revenue, easier scheduling, and stronger client relationships compared to one-off work. Building a strong base of recurring clients is the foundation of a sustainable cleaning business.",
+    "category": "Services",
+    "relatedTerms": [
+      "regular-clean",
+      "recurring-revenue",
+      "maintenance-clean"
+    ],
+    "relatedPosts": [
+      "cleaning-business-recurring-revenue",
+      "cleaning-business-scheduling-guide"
+    ],
+    "relatedPages": [
+      "/product/scheduling"
+    ]
+  },
+  {
+    "term": "Recurring Revenue",
+    "slug": "recurring-revenue",
+    "definition": "Predictable income generated from repeat clients on regular cleaning schedules, such as weekly or fortnightly services. Recurring revenue is the backbone of a sustainable cleaning business because it reduces reliance on constantly finding new clients. Building a strong base of recurring work stabilises cash flow and increases company valuation.",
+    "category": "Finance",
+    "relatedTerms": [
+      "customer-lifetime-value",
+      "churn-rate"
+    ],
+    "relatedPosts": [
+      "cleaning-business-customer-retention",
+      "how-to-grow-cleaning-business"
+    ],
+    "relatedPages": [
+      "/product/finance",
+      "/residential"
+    ]
+  },
+  {
+    "term": "Regular Clean",
+    "slug": "regular-clean",
+    "definition": "A routine, recurring cleaning service performed on a set schedule \u2014 typically weekly, fortnightly, or monthly. Regular cleans form the foundation of most cleaning businesses because they generate consistent, predictable revenue. The scope usually covers standard maintenance tasks like vacuuming, mopping, dusting, and bathroom sanitisation.",
+    "category": "Services",
+    "relatedTerms": [
+      "deep-clean",
+      "recurring-revenue",
+      "scope-of-work"
+    ],
+    "relatedPosts": [
+      "how-to-price-cleaning-services",
+      "cleaning-business-scheduling-guide"
+    ],
+    "relatedPages": [
+      "/residential",
+      "/product/scheduling"
+    ]
+  },
+  {
+    "term": "Risk Assessment",
+    "slug": "risk-assessment",
+    "definition": "A systematic process of identifying potential hazards at a cleaning site and evaluating the measures needed to minimise risk to staff and occupants. Risk assessments are legally required in most jurisdictions before commencing work on commercial premises. They cover chemical handling, slip hazards, working at height, electrical safety, and lone working protocols.",
+    "category": "Compliance",
+    "relatedTerms": [
+      "coshh",
+      "ppe",
+      "walk-through"
+    ],
+    "relatedPosts": [
+      "service-business-insurance-ireland-uk",
+      "commercial-cleaning-contracts-guide"
+    ],
+    "relatedPages": [
+      "/commercial"
+    ]
+  },
+  {
+    "term": "Sanitisation",
+    "slug": "sanitisation",
+    "definition": "The process of reducing pathogenic microorganisms on surfaces to safe levels as determined by public health standards, distinct from general cleaning which primarily removes visible dirt. Sanitisation requires specific chemicals, contact times, and procedures to be effective. It became a particularly important service offering following increased hygiene awareness in commercial and residential settings.",
+    "category": "Operations",
+    "relatedTerms": [
+      "coshh",
+      "deep-clean",
+      "method-statement"
+    ],
+    "relatedPosts": [
+      "cleaning-quality-control-checklist",
+      "eco-friendly-cleaning-business"
+    ],
+    "relatedPages": [
+      "/commercial"
+    ]
   },
   {
     "term": "Scope of Work",
     "slug": "scope-of-work",
     "definition": "A detailed written description of all cleaning tasks, areas, frequencies, and standards included in a service agreement. A clear scope of work prevents misunderstandings between cleaning companies and clients about what is and is not included. It serves as the foundation for accurate pricing, quality control, and dispute resolution.",
     "category": "Operations",
-    "relatedTerms": ["sla", "walk-through", "flat-rate"],
-    "relatedPosts": ["commercial-cleaning-contracts-guide", "cleaning-estimates-that-win-jobs"],
-    "relatedPages": ["/commercial", "/product"]
+    "relatedTerms": [
+      "sla",
+      "walk-through",
+      "flat-rate"
+    ],
+    "relatedPosts": [
+      "commercial-cleaning-contracts-guide",
+      "cleaning-estimates-that-win-jobs"
+    ],
+    "relatedPages": [
+      "/commercial",
+      "/product"
+    ]
+  },
+  {
+    "term": "Service Agreement",
+    "slug": "service-agreement",
+    "definition": "A formal written contract between a cleaning company and client that defines service scope, pricing, payment terms, cancellation policies, and liability provisions. Service agreements protect both parties and set clear expectations from the outset. Having professional service agreements in place is essential for commercial contracts and recommended for all recurring residential work.",
+    "category": "Compliance",
+    "relatedTerms": [
+      "sla",
+      "scope-of-work"
+    ],
+    "relatedPosts": [
+      "commercial-cleaning-contracts-guide",
+      "cleaning-business-client-onboarding"
+    ],
+    "relatedPages": [
+      "/tools/contract-generator"
+    ]
+  },
+  {
+    "term": "SLA",
+    "slug": "sla",
+    "definition": "A Service Level Agreement is a formal contract between a cleaning company and a client that defines expected service standards, response times, and penalties for non-compliance. SLAs are especially common in commercial cleaning where consistency and accountability are critical. They typically cover cleaning frequency, quality benchmarks, and issue-resolution timelines.",
+    "category": "Operations",
+    "relatedTerms": [
+      "scope-of-work",
+      "walk-through"
+    ],
+    "relatedPosts": [
+      "commercial-cleaning-contracts-guide",
+      "how-to-price-commercial-cleaning"
+    ],
+    "relatedPages": [
+      "/commercial",
+      "/product"
+    ]
+  },
+  {
+    "term": "Spot Cleaning",
+    "slug": "spot-cleaning",
+    "definition": "Targeted cleaning of specific areas, stains, or surfaces rather than a full room or property clean. Spot cleaning is common in commercial environments where only certain areas need attention between full cleaning visits. It can also refer to addressing specific client requests or dealing with spills and marks outside the normal schedule.",
+    "category": "Services",
+    "relatedTerms": [
+      "maintenance-clean",
+      "scope-of-work"
+    ],
+    "relatedPosts": [
+      "how-to-price-cleaning-services",
+      "cleaning-business-upselling-guide"
+    ],
+    "relatedPages": [
+      "/commercial"
+    ]
+  },
+  {
+    "term": "Spring Clean",
+    "slug": "spring-clean",
+    "definition": "An intensive seasonal deep clean traditionally performed in spring to refresh a property after winter, though the term is now used year-round for any thorough one-off clean. Spring cleans typically include tasks beyond regular maintenance such as window washing, carpet shampooing, and deep kitchen cleaning. They represent a significant upselling opportunity for cleaning businesses with existing regular clients.",
+    "category": "Services",
+    "relatedTerms": [
+      "deep-clean",
+      "one-off-clean",
+      "upsell"
+    ],
+    "relatedPosts": [
+      "cleaning-business-seasonal-strategy",
+      "cleaning-business-upselling-guide"
+    ],
+    "relatedPages": [
+      "/residential"
+    ]
+  },
+  {
+    "term": "Square Footage Pricing",
+    "slug": "square-footage-pricing",
+    "definition": "A pricing model that charges clients based on the total area of the space to be cleaned, typically calculated per square foot or square metre. This method provides transparent, objective pricing that is easy for clients to understand and compare. Square footage pricing is particularly common in commercial cleaning and is often combined with per-service-type rates.",
+    "category": "Pricing",
+    "relatedTerms": [
+      "flat-rate",
+      "scope-of-work"
+    ],
+    "relatedPosts": [
+      "how-to-price-commercial-cleaning",
+      "how-to-price-cleaning-services"
+    ],
+    "relatedPages": [
+      "/tools/pricing-calculator",
+      "/commercial"
+    ]
+  },
+  {
+    "term": "Touch Point",
+    "slug": "touch-point",
+    "definition": "Any interaction or communication between a cleaning business and a client, from initial enquiry through to post-service follow-up. Common touch points include booking confirmations, arrival notifications, completion reports, invoices, and review requests. Managing touch points consistently across all clients builds trust and reduces churn.",
+    "category": "Operations",
+    "relatedTerms": [
+      "crm",
+      "client-retention-rate"
+    ],
+    "relatedPosts": [
+      "cleaning-business-customer-communication",
+      "cleaning-business-customer-retention"
+    ],
+    "relatedPages": [
+      "/product/automations"
+    ]
+  },
+  {
+    "term": "Turnover Rate",
+    "slug": "turnover-rate",
+    "definition": "The rate at which employees leave a cleaning company over a given period, typically expressed as an annual percentage. The cleaning industry often experiences turnover rates above 100%, making retention a critical operational challenge. Reducing turnover through better pay, training, and working conditions directly improves service quality and profitability.",
+    "category": "HR",
+    "relatedTerms": [
+      "kpi",
+      "scope-of-work"
+    ],
+    "relatedPosts": [
+      "hire-train-retain-cleaning-staff",
+      "how-to-start-cleaning-business"
+    ],
+    "relatedPages": [
+      "/product/staff-management"
+    ]
+  },
+  {
+    "term": "Upsell",
+    "slug": "upsell",
+    "definition": "The practice of offering existing cleaning clients upgraded or additional services beyond their current package, such as adding oven cleaning or carpet shampooing to a regular clean. Upselling increases average job value without the cost of acquiring a new client. Effective upselling relies on identifying client needs and timing offers around seasonal demand or service milestones.",
+    "category": "Sales",
+    "relatedTerms": [
+      "cross-sell",
+      "average-job-value",
+      "customer-lifetime-value"
+    ],
+    "relatedPosts": [
+      "how-to-grow-cleaning-business",
+      "cleaning-business-customer-retention"
+    ],
+    "relatedPages": [
+      "/product/automations"
+    ]
+  },
+  {
+    "term": "Variable Cost",
+    "slug": "variable-cost",
+    "definition": "Business expenses that fluctuate based on the volume of cleaning work performed, such as cleaning supplies, fuel, hourly wages, and equipment wear. Variable costs increase with each additional job but can be controlled through efficient purchasing and route optimisation. Understanding the split between variable and fixed costs is critical for setting profitable prices.",
+    "category": "Finance",
+    "relatedTerms": [
+      "fixed-cost",
+      "job-costing",
+      "break-even-point"
+    ],
+    "relatedPosts": [
+      "cleaning-business-profit-margins",
+      "cleaning-business-cash-flow"
+    ],
+    "relatedPages": [
+      "/tools/profit-margin-calculator"
+    ]
+  },
+  {
+    "term": "Walk-Through",
+    "slug": "walk-through",
+    "definition": "A pre-service site inspection where a cleaning company representative visits the premises to assess the scope of work, identify special requirements, and provide an accurate quote. Walk-throughs are standard practice for commercial contracts and larger residential jobs. They build client confidence and reduce the risk of under-quoting or scope disputes after work begins.",
+    "category": "Operations",
+    "relatedTerms": [
+      "scope-of-work",
+      "sla",
+      "risk-assessment"
+    ],
+    "relatedPosts": [
+      "commercial-cleaning-contracts-guide",
+      "cleaning-estimates-that-win-jobs"
+    ],
+    "relatedPages": [
+      "/commercial",
+      "/product/scheduling"
+    ]
   }
 ]
