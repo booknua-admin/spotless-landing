@@ -41,14 +41,28 @@ export default function Footer() {
             <a href="/move-in-out">Move-In / Move-Out</a>
           </div>
           <div className="footer-col">
-            <h4>Resources</h4>
-            <a href="/blog">Blog</a>
-            <a href="/tools">Free Tools</a>
+            <h4>Free Tools</h4>
+            <a href="/tools">All Tools</a>
             <a href="/tools/pricing-calculator">Pricing Calculator</a>
             <a href="/tools/profit-margin-calculator">Profit Margin Calculator</a>
             <a href="/tools/cleaning-time-estimator">Time Estimator</a>
             <a href="/tools/startup-cost-calculator">Startup Cost Calculator</a>
-            <a href="/compare">Compare</a>
+            <a href="/tools/invoice-generator">Invoice Generator</a>
+            <a href="/tools/proposal-generator">Proposal Generator</a>
+            <a href="/tools/contract-generator">Contract Generator</a>
+            <a href="/tools/name-generator">Name Generator</a>
+          </div>
+          <div className="footer-col">
+            <h4>Resources</h4>
+            <a href="/blog">Blog</a>
+            <a href="/compare">Compare Software</a>
+            <a href="/compare/jobber">Spotless vs Jobber</a>
+            <a href="/compare/zenmaid">Spotless vs ZenMaid</a>
+            <a href="/compare/housecall-pro">Spotless vs Housecall Pro</a>
+            <a href="/compare/best-cleaning-software">Best Cleaning Software</a>
+            <a href="/locations">Locations</a>
+            <a href="/locations/ireland/dublin">Dublin</a>
+            <a href="/locations/uk/london">London</a>
           </div>
           <div className="footer-col">
             <h4>Company</h4>
