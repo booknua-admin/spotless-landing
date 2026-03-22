@@ -23,7 +23,7 @@ export default function ROICalculator() {
     setCurrency(getStoredCurrency());
   }, []);
 
-  useEffect(() => {
+  function calculate() {
     const monthlyAdminTimeSaved = form.adminHoursPerWeek * 0.6;
     const monthlyMoneySaved = monthlyAdminTimeSaved * 4.33 * form.hourlyRate;
     const annualSavings = monthlyMoneySaved * 12;
@@ -44,7 +44,7 @@ export default function ROICalculator() {
       roiPercentage: Math.round(roiPercentage),
       paybackDays,
     });
-  }, [form]);
+  }
 
   function handleChange(field, value) {
     setForm((prev) => ({ ...prev, [field]: Number(value) }));
@@ -103,6 +103,10 @@ export default function ROICalculator() {
           );
         })}
       </div>
+
+      <button className="tool-calculate-btn" onClick={calculate}>
+        Calculate
+      </button>
 
       {results && (
         <>

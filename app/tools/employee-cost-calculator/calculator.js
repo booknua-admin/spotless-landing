@@ -36,7 +36,7 @@ export default function EmployeeCostCalculator() {
     setCurrency(getStoredCurrency());
   }, []);
 
-  useEffect(() => {
+  function calculate() {
     const grossMonthly = form.hourlyWage * form.hoursPerWeek * 4.33;
     const taxes = grossMonthly * (form.taxRate / 100);
     const additionalCosts =
@@ -70,7 +70,7 @@ export default function EmployeeCostCalculator() {
       margin50: margin50.toFixed(2),
       breakdown,
     });
-  }, [form]);
+  }
 
   function handleChange(field, value) {
     setForm((prev) => ({ ...prev, [field]: Number(value) }));
@@ -128,6 +128,10 @@ export default function EmployeeCostCalculator() {
           );
         })}
       </div>
+
+      <button className="tool-calculate-btn" onClick={calculate}>
+        Calculate
+      </button>
 
       {results && (
         <>

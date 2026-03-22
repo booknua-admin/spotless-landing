@@ -77,7 +77,7 @@ export default function PricingCalculator() {
     }));
   }
 
-  useEffect(() => {
+  function calculate() {
     const svc = SERVICE_TYPES.find((s) => s.value === form.serviceType);
     if (!svc) return;
 
@@ -123,7 +123,7 @@ export default function PricingCalculator() {
       industryAvg: Math.round(basePrice * 1.05),
       estimatedMargin: Math.round(((total - total * 0.55) / total) * 100),
     });
-  }, [form]);
+  }
 
   function renderBreakdownBar() {
     if (!results) return null;
@@ -262,6 +262,10 @@ export default function PricingCalculator() {
           </div>
         </div>
       </div>
+
+      <button className="tool-calculate-btn" onClick={calculate}>
+        Calculate
+      </button>
 
       {results && (
         <>

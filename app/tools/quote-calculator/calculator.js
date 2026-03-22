@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import CurrencySelector from '../../../components/currency-selector';
 import ToolCTA from '../../../components/tool-cta';
 import StickyTrialBar from '../../../components/sticky-trial-bar';
+import EmailGate from '../../../components/email-gate';
 import { formatCurrency, getStoredCurrency } from '../../../lib/currency';
 
 const SERVICE_TYPES = [
@@ -73,7 +74,7 @@ export default function QuoteCalculator() {
     }));
   }
 
-  useEffect(() => {
+  function calculate() {
     const svc = SERVICE_TYPES.find((s) => s.value === form.serviceType);
     if (!svc) return;
 
@@ -104,7 +105,7 @@ export default function QuoteCalculator() {
       discountPct: freq.discount,
       total: Math.round(total),
     });
-  }, [form]);
+  }
 
   function buildQuoteText() {
     if (!results) return '';
@@ -250,6 +251,10 @@ export default function QuoteCalculator() {
         </div>
       </div>
 
+      <button className="tool-calculate-btn" onClick={calculate}>
+        Calculate
+      </button>
+
       {results && (
         <>
           <div className="tool-results tool-results-animated">
@@ -289,9 +294,11 @@ export default function QuoteCalculator() {
           </div>
 
           <div style={{ textAlign: 'center', marginTop: '24px' }}>
-            <button className="btn-primary" onClick={handleCopy}>
-              {copied ? 'Copied!' : 'Copy Quote'}
-            </button>
+            <EmailGate toolName="quote-calculator">
+              <button className="btn-primary" onClick={handleCopy}>
+                {copied ? 'Copied!' : 'Copy Quote'}
+              </button>
+            </EmailGate>
           </div>
 
           <ToolCTA

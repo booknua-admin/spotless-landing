@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import ToolCTA from '../../../components/tool-cta';
 import StickyTrialBar from '../../../components/sticky-trial-bar';
+import EmailGate from '../../../components/email-gate';
 
 const TEMPLATES = {
   residential_standard: {
@@ -590,9 +591,11 @@ export default function ChecklistGenerator() {
       </div>
 
       <div style={{ textAlign: 'center', marginTop: '24px' }}>
-        <button className="btn-primary" onClick={handlePrint}>
-          Print Checklist
-        </button>
+        <EmailGate toolName="checklist-generator">
+          <button className="btn-primary" onClick={handlePrint}>
+            Print Checklist
+          </button>
+        </EmailGate>
       </div>
 
       <ToolCTA

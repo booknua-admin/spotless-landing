@@ -28,7 +28,7 @@ export default function ProfitMarginCalculator() {
     setCurrency(getStoredCurrency());
   }, []);
 
-  useEffect(() => {
+  function calculate() {
     const labourPerJob = form.hourlyRate * form.hoursPerJob * form.staff;
     const totalVariableCosts = (labourPerJob + form.suppliesCost) * form.jobs;
     const totalFixedCosts = form.fuel + form.insurance + form.software + form.overhead;
@@ -53,7 +53,7 @@ export default function ProfitMarginCalculator() {
       totalFixedCosts: Math.round(totalFixedCosts),
       breakEvenJobs,
     });
-  }, [form]);
+  }
 
   function handleChange(field, value) {
     setForm((prev) => ({ ...prev, [field]: Number(value) }));
@@ -160,6 +160,10 @@ export default function ProfitMarginCalculator() {
           );
         })}
       </div>
+
+      <button className="tool-calculate-btn" onClick={calculate}>
+        Calculate
+      </button>
 
       {results && (
         <>

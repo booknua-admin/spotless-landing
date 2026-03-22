@@ -94,7 +94,7 @@ export default function StartupCostCalculator() {
     setForm((prev) => ({ ...prev, [field]: value }));
   }
 
-  useEffect(() => {
+  function calculate() {
     const equipment = EQUIPMENT_COSTS[form.businessType][form.equipmentLevel];
     const insurance = INSURANCE_COSTS[form.businessType];
     const suppliesMonthly = SUPPLY_COSTS_MONTHLY[form.teamSize];
@@ -149,7 +149,7 @@ export default function StartupCostCalculator() {
       softwareMonthly,
       teamWageMonthly,
     });
-  }, [form]);
+  }
 
   // Build 6-month projection data
   function buildProjection() {
@@ -242,6 +242,10 @@ export default function StartupCostCalculator() {
           </div>
         </div>
       </div>
+
+      <button className="tool-calculate-btn" onClick={calculate}>
+        Calculate
+      </button>
 
       {results && (
         <>
