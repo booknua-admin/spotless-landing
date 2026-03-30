@@ -85,7 +85,7 @@ export default function StartupCostCalculator() {
     marketing: 'low',
   });
   const [results, setResults] = useState(null);
-  const [currency, setCurrency] = useState('USD');
+  const [currency, setCurrency] = useState('EUR');
 
   useEffect(() => {
     setCurrency(getStoredCurrency());

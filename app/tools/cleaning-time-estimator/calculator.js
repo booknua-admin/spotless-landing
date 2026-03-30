@@ -51,7 +51,7 @@ export default function TimeEstimator() {
     serviceLevel: 'standard',
   });
   const [results, setResults] = useState(null);
-  const [currency, setCurrency] = useState('USD');
+  const [currency, setCurrency] = useState('EUR');
 
   useEffect(() => {
     setCurrency(getStoredCurrency());

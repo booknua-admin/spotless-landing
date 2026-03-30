@@ -30,7 +30,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'How does annual billing work?',
-    answer: 'When you choose annual billing, you pay for 10 months upfront and get 2 months free. For example, the Pro plan is $29/mo monthly or $290/year ($24.17/mo). You can switch between monthly and annual billing at any time.',
+    answer: 'When you choose annual billing, you pay for 10 months upfront and get 2 months free. For example, the Pro plan is €29/mo monthly or €290/year (€24.17/mo). You can switch between monthly and annual billing at any time.',
   },
   {
     question: 'Do you charge per transaction?',
@@ -80,11 +80,6 @@ export default function PricingPage() {
               <div className="pricing-amount">
                 <span className="pricing-value" data-monthly="Free" data-annual="Free">Free</span>
               </div>
-              <div className="pricing-limits">
-                <span>Staff: 3</span>
-                <span>Forms: 1</span>
-                <span>Automations: 0</span>
-              </div>
               <ul className="pricing-features">
                 <li><span className="pricing-check">&#10003;</span> 1 booking form</li>
                 <li><span className="pricing-check">&#10003;</span> Up to 3 staff members</li>
@@ -101,14 +96,9 @@ export default function PricingPage() {
               <div className="pricing-plan">Pro</div>
               <div className="pricing-desc">For growing teams ready to scale</div>
               <div className="pricing-amount">
-                <span className="pricing-currency">$</span>
+                <span className="pricing-currency">&euro;</span>
                 <span className="pricing-value" data-monthly="29" data-annual="24.17">29</span>
                 <span className="pricing-period">/mo</span>
-              </div>
-              <div className="pricing-limits">
-                <span>Staff: 10</span>
-                <span>Forms: 5</span>
-                <span>Automations: 3</span>
               </div>
               <ul className="pricing-features">
                 <li><span className="pricing-check">&#10003;</span> Up to 5 booking forms</li>
@@ -128,14 +118,9 @@ export default function PricingPage() {
               <div className="pricing-plan">Growth</div>
               <div className="pricing-desc">For companies scaling fast with automation</div>
               <div className="pricing-amount">
-                <span className="pricing-currency">$</span>
+                <span className="pricing-currency">&euro;</span>
                 <span className="pricing-value" data-monthly="69" data-annual="57.50">69</span>
                 <span className="pricing-period">/mo</span>
-              </div>
-              <div className="pricing-limits">
-                <span>Staff: 25</span>
-                <span>Forms: Unlimited</span>
-                <span>Automations: Unlimited</span>
               </div>
               <ul className="pricing-features">
                 <li><span className="pricing-check">&#10003;</span> Unlimited booking forms</li>
@@ -154,14 +139,9 @@ export default function PricingPage() {
               <div className="pricing-plan">Business</div>
               <div className="pricing-desc">For established companies with large teams</div>
               <div className="pricing-amount">
-                <span className="pricing-currency">$</span>
+                <span className="pricing-currency">&euro;</span>
                 <span className="pricing-value" data-monthly="129" data-annual="107.50">129</span>
                 <span className="pricing-period">/mo</span>
-              </div>
-              <div className="pricing-limits">
-                <span>Staff: Unlimited</span>
-                <span>Forms: Unlimited</span>
-                <span>Automations: Unlimited</span>
               </div>
               <ul className="pricing-features">
                 <li><span className="pricing-check">&#10003;</span> Everything in Growth</li>

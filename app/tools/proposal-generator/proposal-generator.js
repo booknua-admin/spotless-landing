@@ -59,7 +59,7 @@ function monthlyEquivalent(price, freq) {
 }
 
 export default function ProposalGenerator() {
-  const [currency, setCurrency] = useState('USD');
+  const [currency, setCurrency] = useState('EUR');
   const [logo, setLogo] = useState(null);
   const [form, setForm] = useState({
     companyName: '',

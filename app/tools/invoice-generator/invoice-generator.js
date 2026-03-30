@@ -38,7 +38,7 @@ function dueDateStr(terms) {
 const EMPTY_ITEM = { description: '', quantity: 1, unitPrice: 0 };
 
 export default function InvoiceGenerator() {
-  const [currency, setCurrency] = useState('USD');
+  const [currency, setCurrency] = useState('EUR');
   const [logo, setLogo] = useState(null);
   const [form, setForm] = useState({
     companyName: '',

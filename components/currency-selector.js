@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { CURRENCIES, getStoredCurrency, setStoredCurrency } from '../lib/currency';
 
 export default function CurrencySelector({ onChange }) {
-  const [currency, setCurrency] = useState('USD');
+  const [currency, setCurrency] = useState('EUR');
 
   useEffect(() => {
     setCurrency(getStoredCurrency());

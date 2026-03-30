@@ -52,7 +52,7 @@ export default function QuoteCalculator() {
     addOns: [],
   });
   const [results, setResults] = useState(null);
-  const [currency, setCurrency] = useState('USD');
+  const [currency, setCurrency] = useState('EUR');
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
