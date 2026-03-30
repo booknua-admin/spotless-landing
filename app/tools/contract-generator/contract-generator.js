@@ -51,7 +51,7 @@ function defaultEndDate() {
 const EMPTY_SERVICE = { description: '', frequency: 'weekly', included: true };
 
 export default function ContractGenerator() {
-  const [currency, setCurrency] = useState('USD');
+  const [currency, setCurrency] = useState('EUR');
   const [logo, setLogo] = useState(null);
   const [form, setForm] = useState({
     providerName: '',

@@ -79,7 +79,7 @@ function calcWeekTotals(week) {
 }
 
 export default function TimesheetCalculator() {
-  const [currency, setCurrency] = useState('USD');
+  const [currency, setCurrency] = useState('EUR');
   const [employeeName, setEmployeeName] = useState('');
   const [payRate, setPayRate] = useState(25);
   const [payPeriod, setPayPeriod] = useState('weekly');

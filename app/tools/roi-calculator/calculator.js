@@ -18,7 +18,7 @@ export default function ROICalculator() {
     monthlySoftwareCost: 29,
   });
   const [results, setResults] = useState(null);
-  const [currency, setCurrency] = useState('USD');
+  const [currency, setCurrency] = useState('EUR');
 
   useEffect(() => {
     setCurrency(getStoredCurrency());
