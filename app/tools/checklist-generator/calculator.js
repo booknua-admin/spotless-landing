@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import ToolCTA from '../../../components/tool-cta';
+import ToolGateway from '../../../components/tool-gateway';
+import { serializeToolData } from '../../../lib/lead-capture';
 import StickyTrialBar from '../../../components/sticky-trial-bar';
 import EmailGate from '../../../components/email-gate';
 
@@ -598,10 +599,17 @@ export default function ChecklistGenerator() {
         </EmailGate>
       </div>
 
-      <ToolCTA
-        headline="Manage checklists digitally with Spotless"
+      <ToolGateway
+        toolName="checklist-generator"
+        headline="Use this checklist on every job with Spotless"
         description="Assign checklists to jobs, track completion in real time, and ensure quality on every clean."
-        featureLink="/product/checklists"
+        toolData={serializeToolData('checklist-generator', { template: selectedTemplate, companyName }, null)}
+        featureLink="/product/scheduling"
+        valueProp={[
+          'Attach checklists to specific job types',
+          'Cleaners tick off tasks on their phone',
+          'Track completion rates and quality scores',
+        ]}
       />
 
       <StickyTrialBar />

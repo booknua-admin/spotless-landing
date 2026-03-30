@@ -3,7 +3,8 @@
 import { useState, useEffect } from 'react';
 import CurrencySelector from '../../../components/currency-selector';
 import EmailGate from '../../../components/email-gate';
-import ToolCTA from '../../../components/tool-cta';
+import ToolGateway from '../../../components/tool-gateway';
+import { serializeToolData } from '../../../lib/lead-capture';
 import StickyTrialBar from '../../../components/sticky-trial-bar';
 import { formatCurrency, getStoredCurrency } from '../../../lib/currency';
 import { triggerPrint } from '../../../lib/pdf-export';
@@ -412,10 +413,17 @@ export default function StartupCostCalculator() {
             </EmailGate>
           </div>
 
-          <ToolCTA
-            headline="Manage your business finances with Spotless"
-            description="Track startup costs, monthly expenses, and revenue all in one place. Start your 14-day free trial."
-            featureLink="/product/reporting"
+          <ToolGateway
+            toolName="startup-cost-calculator"
+            headline="Launch your business with Spotless"
+            description="Track startup costs, monthly expenses, and revenue all in one place from day one."
+            toolData={serializeToolData('startup-cost-calculator', form, results)}
+            featureLink="/product/scheduling"
+            valueProp={[
+              'Scheduling, invoicing, and CRM from the start',
+              'Track expenses against your budget',
+              'Grow from solo to team without switching tools',
+            ]}
           />
         </>
       )}

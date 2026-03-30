@@ -4,7 +4,8 @@ import { useState, useEffect } from 'react';
 import CurrencySelector from '../../../components/currency-selector';
 import LogoUpload from '../../../components/logo-upload';
 import EmailGate from '../../../components/email-gate';
-import ToolCTA from '../../../components/tool-cta';
+import ToolGateway from '../../../components/tool-gateway';
+import { serializeToolData } from '../../../lib/lead-capture';
 import StickyTrialBar from '../../../components/sticky-trial-bar';
 import PrintableDocument from '../../../components/printable-document';
 import { formatCurrency, getStoredCurrency } from '../../../lib/currency';
@@ -329,10 +330,17 @@ export default function ProposalGenerator() {
         </div>
       </div>
 
-      <ToolCTA
-        headline="Create and send proposals automatically with Spotless"
-        description="Stop creating proposals manually. With Spotless, proposals are generated from your service templates and sent directly to prospects with digital acceptance."
-        featureLink="/product/proposals"
+      <ToolGateway
+        toolName="proposal-generator"
+        headline="Send this proposal professionally with Spotless"
+        description="Generate proposals from service templates and send them with digital acceptance built in."
+        toolData={serializeToolData('proposal-generator', form, null)}
+        featureLink="/product/custom-forms"
+        valueProp={[
+          'Create proposals from your saved service templates',
+          'Clients accept and sign digitally',
+          'Auto-convert accepted proposals to scheduled jobs',
+        ]}
       />
 
       <StickyTrialBar />

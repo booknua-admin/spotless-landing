@@ -4,7 +4,8 @@ import { useState, useEffect } from 'react';
 import CurrencySelector from '../../../components/currency-selector';
 import LogoUpload from '../../../components/logo-upload';
 import EmailGate from '../../../components/email-gate';
-import ToolCTA from '../../../components/tool-cta';
+import ToolGateway from '../../../components/tool-gateway';
+import { serializeToolData } from '../../../lib/lead-capture';
 import StickyTrialBar from '../../../components/sticky-trial-bar';
 import PrintableDocument from '../../../components/printable-document';
 import { formatCurrency, getStoredCurrency } from '../../../lib/currency';
@@ -326,10 +327,17 @@ export default function InvoiceGenerator() {
         </div>
       </div>
 
-      <ToolCTA
-        headline="Send invoices automatically with Spotless"
-        description="Stop creating invoices manually. With Spotless, invoices are generated from your jobs and sent directly to clients with payment links."
-        featureLink="/product/invoicing"
+      <ToolGateway
+        toolName="invoice-generator"
+        headline="Save this invoice & send it from Spotless"
+        description="Create, send, and track invoices automatically — with payment links built in."
+        toolData={serializeToolData('invoice-generator', form, null)}
+        featureLink="/product/payments"
+        valueProp={[
+          'Auto-generate invoices from completed jobs',
+          'Send to clients with one-click payment links',
+          'Track paid, unpaid, and overdue invoices',
+        ]}
       />
 
       <StickyTrialBar />

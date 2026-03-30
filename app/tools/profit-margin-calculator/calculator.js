@@ -3,7 +3,8 @@
 import { useState, useEffect } from 'react';
 import CurrencySelector from '../../../components/currency-selector';
 import EmailGate from '../../../components/email-gate';
-import ToolCTA from '../../../components/tool-cta';
+import ToolGateway from '../../../components/tool-gateway';
+import { serializeToolData } from '../../../lib/lead-capture';
 import StickyTrialBar from '../../../components/sticky-trial-bar';
 import { formatCurrency, getStoredCurrency } from '../../../lib/currency';
 import { triggerPrint } from '../../../lib/pdf-export';
@@ -297,11 +298,17 @@ export default function ProfitMarginCalculator() {
             </EmailGate>
           </div>
 
-          {/* ToolCTA */}
-          <ToolCTA
-            headline="Track your margins in real-time with Spotless"
-            description="See your profit margins update live as you complete jobs. Spotless tracks revenue, costs, and margins automatically."
-            featureLink="/product/reporting"
+          <ToolGateway
+            toolName="profit-margin-calculator"
+            headline="Track real margins with Spotless"
+            description="See profit margins update live as you complete jobs — revenue, costs, and margins tracked automatically."
+            toolData={serializeToolData('profit-margin-calculator', form, results)}
+            featureLink="/product/finance"
+            valueProp={[
+              'Real-time margin tracking per job and per client',
+              'Automatic cost and revenue recording',
+              'Monthly and weekly profitability reports',
+            ]}
           />
         </>
       )}

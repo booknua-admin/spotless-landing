@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useCallback } from 'react';
-import ToolCTA from '../../../components/tool-cta';
+import ToolGateway from '../../../components/tool-gateway';
 import StickyTrialBar from '../../../components/sticky-trial-bar';
 
 const NICHES = [
@@ -290,10 +290,12 @@ export default function NameGenerator() {
         </div>
       )}
 
-      <ToolCTA
-        headline="Brand your business with Spotless"
-        description="Once you have picked the perfect name, set up branded booking forms, invoices, and a customer portal with Spotless."
+      <ToolGateway
+        toolName="name-generator"
+        headline="Ready to launch? Set up your business in Spotless"
+        description="Once you have the perfect name, set up branded booking forms, invoices, and a customer portal."
         featureLink="/product/custom-forms"
+        compact
       />
 
       <StickyTrialBar />

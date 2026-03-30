@@ -3,7 +3,8 @@
 import { useState, useEffect } from 'react';
 import CurrencySelector from '../../../components/currency-selector';
 import EmailGate from '../../../components/email-gate';
-import ToolCTA from '../../../components/tool-cta';
+import ToolGateway from '../../../components/tool-gateway';
+import { serializeToolData } from '../../../lib/lead-capture';
 import StickyTrialBar from '../../../components/sticky-trial-bar';
 import { formatCurrency, getStoredCurrency } from '../../../lib/currency';
 import { triggerPrint } from '../../../lib/pdf-export';
@@ -326,10 +327,17 @@ export default function PricingCalculator() {
             </EmailGate>
           </div>
 
-          <ToolCTA
-            headline="Automate your pricing with Spotless"
-            description="Stop guessing prices. With Spotless, set pricing rules once and let the system calculate quotes automatically."
-            featureLink="/product/custom-forms"
+          <ToolGateway
+            toolName="pricing-calculator"
+            headline="Set up these pricing rules in Spotless"
+            description="Define your rates once and let Spotless calculate quotes for every job automatically."
+            toolData={serializeToolData('pricing-calculator', form, results)}
+            featureLink="/product/payments"
+            valueProp={[
+              'Set pricing rules by service type and property size',
+              'Auto-calculate quotes based on job details',
+              'Apply frequency discounts and add-ons automatically',
+            ]}
           />
         </>
       )}

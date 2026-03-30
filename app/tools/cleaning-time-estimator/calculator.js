@@ -3,7 +3,8 @@
 import { useState, useEffect } from 'react';
 import CurrencySelector from '../../../components/currency-selector';
 import EmailGate from '../../../components/email-gate';
-import ToolCTA from '../../../components/tool-cta';
+import ToolGateway from '../../../components/tool-gateway';
+import { serializeToolData } from '../../../lib/lead-capture';
 import StickyTrialBar from '../../../components/sticky-trial-bar';
 import { formatCurrency, getStoredCurrency } from '../../../lib/currency';
 import { triggerPrint } from '../../../lib/pdf-export';
@@ -285,10 +286,17 @@ export default function TimeEstimator() {
             </EmailGate>
           </div>
 
-          <ToolCTA
-            headline="Automate your scheduling with Spotless"
-            description="Let Spotless calculate job times and schedule your team automatically based on property details."
+          <ToolGateway
+            toolName="cleaning-time-estimator"
+            headline="Build schedules based on these estimates"
+            description="Let Spotless calculate job durations and schedule your team automatically."
+            toolData={serializeToolData('cleaning-time-estimator', form, results)}
             featureLink="/product/scheduling"
+            valueProp={[
+              'Auto-calculate job duration from property details',
+              'Optimise team schedules and routes',
+              'Track actual vs estimated times per job',
+            ]}
           />
         </>
       )}

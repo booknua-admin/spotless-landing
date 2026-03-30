@@ -777,6 +777,136 @@
 }
 .tool-cta-learn:hover { text-decoration: underline; }
 
+/* ── Tool Gateway ──────────────────────────────────────── */
+.tool-gateway {
+  margin-top: 40px;
+  padding: 32px;
+  background: linear-gradient(135deg, rgba(62,207,142,0.10), rgba(62,207,142,0.03));
+  border: 1px solid rgba(62,207,142,0.25);
+  border-radius: var(--radius);
+}
+.tool-gateway-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.tool-gateway-header h4 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0 0 8px;
+}
+.tool-gateway-header p {
+  color: rgba(255,255,255,0.5);
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.5;
+}
+.tool-gateway-alt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 16px;
+}
+.tool-gateway-skip {
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.tool-gateway-skip:hover { color: rgba(255,255,255,0.7); }
+.tool-gateway-learn {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--mint);
+  text-decoration: none;
+}
+.tool-gateway-learn:hover { text-decoration: underline; }
+
+/* ── Inline Signup ─────────────────────────────────────── */
+.inline-signup {
+  max-width: 420px;
+  margin: 0 auto;
+}
+.inline-signup-value {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.inline-signup-value li {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.5;
+}
+.inline-signup-value li::before {
+  content: '\2713';
+  position: absolute;
+  left: 0;
+  color: var(--mint);
+  font-weight: 700;
+}
+.inline-signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.inline-signup-input {
+  width: 100%;
+  padding: 12px 14px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--white);
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+.inline-signup-input:focus {
+  outline: none;
+  border-color: var(--mint);
+}
+.inline-signup-input::placeholder { color: rgba(255,255,255,0.3); }
+.inline-signup-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 700;
+}
+.inline-signup-note {
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+  margin: 12px 0 0;
+}
+.inline-signup-success {
+  text-align: center;
+  padding: 20px;
+}
+.inline-signup-success-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(62,207,142,0.15);
+  color: var(--mint);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.inline-signup-success p {
+  color: rgba(255,255,255,0.6);
+  font-size: 14px;
+  margin: 0;
+}
+
 /* ── Sticky Trial Bar ──────────────────────────────────── */
 .sticky-trial-bar {
   position: fixed;
@@ -1243,6 +1373,8 @@
   .tool-cta-card { flex-direction: column; text-align: center; }
   .tool-cta-actions { justify-content: center; }
   .email-gate-form { flex-direction: column; }
+  .tool-gateway { padding: 24px; }
+  .tool-gateway-alt { flex-direction: column; gap: 12px; }
   .timesheet-header, .timesheet-row { grid-template-columns: 80px 1fr 1fr 60px 60px; gap: 4px; }
   .sticky-trial-bar-content { flex-wrap: wrap; justify-content: center; text-align: center; }
   .tool-form-header { flex-direction: column; gap: 12px; align-items: flex-start; }
