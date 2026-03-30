@@ -3,7 +3,8 @@
 import { useState, useEffect } from 'react';
 import CurrencySelector from '../../../components/currency-selector';
 import EmailGate from '../../../components/email-gate';
-import ToolCTA from '../../../components/tool-cta';
+import ToolGateway from '../../../components/tool-gateway';
+import { serializeToolData } from '../../../lib/lead-capture';
 import StickyTrialBar from '../../../components/sticky-trial-bar';
 import { formatCurrency, getStoredCurrency } from '../../../lib/currency';
 import { triggerPrint } from '../../../lib/pdf-export';
@@ -240,10 +241,17 @@ export default function ROICalculator() {
             </EmailGate>
           </div>
 
-          <ToolCTA
-            headline="See the ROI for yourself with a free trial"
-            description="Start your 14-day free trial and experience how much time Spotless saves on scheduling, invoicing, and team management."
-            featureLink="/product/reporting"
+          <ToolGateway
+            toolName="roi-calculator"
+            headline="See real ROI — start your free trial"
+            description="Experience the time and money savings first-hand with a 14-day free trial."
+            toolData={serializeToolData('roi-calculator', form, results)}
+            featureLink="/product/automations"
+            valueProp={[
+              'Save hours weekly on admin and scheduling',
+              'Reduce no-shows with automated reminders',
+              'Get paid faster with online payment links',
+            ]}
           />
         </>
       )}

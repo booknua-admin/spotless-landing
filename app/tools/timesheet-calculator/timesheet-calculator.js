@@ -3,7 +3,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import CurrencySelector from '../../../components/currency-selector';
 import EmailGate from '../../../components/email-gate';
-import ToolCTA from '../../../components/tool-cta';
+import ToolGateway from '../../../components/tool-gateway';
 import StickyTrialBar from '../../../components/sticky-trial-bar';
 import { formatCurrency, getStoredCurrency } from '../../../lib/currency';
 import { triggerPrint } from '../../../lib/pdf-export';
@@ -333,10 +333,12 @@ export default function TimesheetCalculator() {
         </button>
       </EmailGate>
 
-      <ToolCTA
-        headline="Track time and pay automatically with Spotless"
-        description="Stop calculating timesheets manually. With Spotless, employee hours are tracked automatically and pay is calculated in real time."
-        featureLink="/product/team-management"
+      <ToolGateway
+        toolName="timesheet-calculator"
+        headline="Automate timesheets with Spotless"
+        description="Employee hours tracked automatically, pay calculated in real time. No more spreadsheets."
+        featureLink="/product/staff-management"
+        compact
       />
 
       <StickyTrialBar />

@@ -4,7 +4,8 @@ import { useState, useEffect } from 'react';
 import CurrencySelector from '../../../components/currency-selector';
 import LogoUpload from '../../../components/logo-upload';
 import EmailGate from '../../../components/email-gate';
-import ToolCTA from '../../../components/tool-cta';
+import ToolGateway from '../../../components/tool-gateway';
+import { serializeToolData } from '../../../lib/lead-capture';
 import StickyTrialBar from '../../../components/sticky-trial-bar';
 import PrintableDocument from '../../../components/printable-document';
 import { formatCurrency, getStoredCurrency } from '../../../lib/currency';
@@ -367,10 +368,17 @@ export default function ContractGenerator() {
         </div>
       </div>
 
-      <ToolCTA
-        headline="Manage all your contracts in one place with Spotless"
-        description="Stop juggling contract templates. With Spotless, contracts are tied to your clients and jobs — auto-generated, tracked, and stored in one place."
-        featureLink="/product/contracts"
+      <ToolGateway
+        toolName="contract-generator"
+        headline="Store & manage contracts in Spotless"
+        description="Contracts tied to clients and jobs — auto-generated, tracked, and stored in one place."
+        toolData={serializeToolData('contract-generator', form, null)}
+        featureLink="/product/payments"
+        valueProp={[
+          'Auto-generate contracts for new clients',
+          'Digital signatures and acceptance tracking',
+          'All contracts stored alongside client records',
+        ]}
       />
 
       <StickyTrialBar />

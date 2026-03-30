@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import CurrencySelector from '../../../components/currency-selector';
-import ToolCTA from '../../../components/tool-cta';
+import ToolGateway from '../../../components/tool-gateway';
+import { serializeToolData } from '../../../lib/lead-capture';
 import StickyTrialBar from '../../../components/sticky-trial-bar';
 import EmailGate from '../../../components/email-gate';
 import { formatCurrency, getStoredCurrency } from '../../../lib/currency';
@@ -301,10 +302,17 @@ export default function QuoteCalculator() {
             </EmailGate>
           </div>
 
-          <ToolCTA
-            headline="Automate your quoting with Spotless"
-            description="Stop building quotes manually. With Spotless, generate and send professional quotes to clients in one click."
+          <ToolGateway
+            toolName="quote-calculator"
+            headline="Send this quote to clients with Spotless"
+            description="Generate and send professional quotes in one click — with online acceptance built in."
+            toolData={serializeToolData('quote-calculator', form, results)}
             featureLink="/product/custom-forms"
+            valueProp={[
+              'Send branded quotes via email or text',
+              'Clients accept online with one click',
+              'Auto-convert accepted quotes to scheduled jobs',
+            ]}
           />
         </>
       )}

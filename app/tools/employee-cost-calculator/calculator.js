@@ -3,7 +3,8 @@
 import { useState, useEffect } from 'react';
 import CurrencySelector from '../../../components/currency-selector';
 import EmailGate from '../../../components/email-gate';
-import ToolCTA from '../../../components/tool-cta';
+import ToolGateway from '../../../components/tool-gateway';
+import { serializeToolData } from '../../../lib/lead-capture';
 import StickyTrialBar from '../../../components/sticky-trial-bar';
 import { formatCurrency, getStoredCurrency } from '../../../lib/currency';
 import { triggerPrint } from '../../../lib/pdf-export';
@@ -329,10 +330,17 @@ export default function EmployeeCostCalculator() {
             </EmailGate>
           </div>
 
-          <ToolCTA
-            headline="Track employee costs automatically with Spotless"
-            description="Spotless tracks hours, calculates payroll costs, and shows you real-time profitability per cleaner. Start your 14-day free trial."
-            featureLink="/product/reporting"
+          <ToolGateway
+            toolName="employee-cost-calculator"
+            headline="Track real staff costs in Spotless"
+            description="See real-time profitability per cleaner with automatic hour tracking and payroll cost calculation."
+            toolData={serializeToolData('employee-cost-calculator', form, results)}
+            featureLink="/product/staff-management"
+            valueProp={[
+              'Automatic hour tracking per cleaner',
+              'Real-time cost and profitability per team member',
+              'Payroll reports ready for your accountant',
+            ]}
           />
         </>
       )}
