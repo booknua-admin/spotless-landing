@@ -1,9 +1,11 @@
+import { Suspense } from 'react';
 import Script from 'next/script';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import PageInit from '../components/page-init';
 import JsonLd from '../components/json-ld';
 import CookieConsent from '../components/cookie-consent';
+import MixpanelAnalytics from '../components/mixpanel-analytics';
 import { organizationSchema, websiteSchema } from '../lib/schema';
 import '../css/base.css';
 import '../css/navbar.css';
@@ -43,6 +45,9 @@ export default function RootLayout({ children }) {
         <Footer />
         <JsonLd data={organizationSchema()} />
         <JsonLd data={websiteSchema()} />
+        <Suspense fallback={null}>
+          <MixpanelAnalytics />
+        </Suspense>
         <Script src="/js/main.js" strategy="afterInteractive" />
         <PageInit />
         <CookieConsent />
