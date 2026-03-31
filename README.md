@@ -26,7 +26,7 @@ npm run dev
 
 - `NEXT_PUBLIC_SITE_URL` — set this to your production domain to enable canonical and Open Graph URLs.
 - `NEXT_PUBLIC_MIXPANEL_TOKEN` — enables Mixpanel when set.
-- `NEXT_PUBLIC_MIXPANEL_API_HOST` — optional custom API host if you proxy Mixpanel traffic.
+- `NEXT_PUBLIC_MIXPANEL_API_HOST` — Mixpanel ingestion host. Use `https://api-eu.mixpanel.com` for EU-hosted projects.
 - `NEXT_PUBLIC_MIXPANEL_DEBUG` — set to `true` to enable Mixpanel debug logging locally.
 
 ## Mixpanel analytics

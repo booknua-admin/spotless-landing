@@ -5,7 +5,8 @@ import { usePathname, useSearchParams } from 'next/navigation';
 import Script from 'next/script';
 
 const mixpanelToken = process.env.NEXT_PUBLIC_MIXPANEL_TOKEN;
-const mixpanelApiHost = process.env.NEXT_PUBLIC_MIXPANEL_API_HOST || 'https://api-js.mixpanel.com';
+const mixpanelApiHost =
+  process.env.NEXT_PUBLIC_MIXPANEL_API_HOST || 'https://api-eu.mixpanel.com';
 const mixpanelDebug = process.env.NEXT_PUBLIC_MIXPANEL_DEBUG === 'true';
 const ctaSelector = 'a.btn-primary, a.btn-ghost, button.btn-primary, button.btn-ghost';
 const bookedDemoQueryKeys = ['booked_demo', 'demo_booked', 'scheduled_demo'];
