@@ -128,6 +128,17 @@
   cursor: pointer;
 }
 
+/* Navbar CTA becomes warm orange on scroll for higher visibility */
+.navbar.scrolled .nav-cta .btn-primary {
+  background: var(--cta-warm);
+  color: var(--white);
+}
+
+.navbar.scrolled .nav-cta .btn-primary:hover {
+  background: var(--cta-warm-hover);
+  box-shadow: 0 4px 20px rgba(249,115,22,0.35);
+}
+
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .nav-cta .btn-ghost { display: none; }

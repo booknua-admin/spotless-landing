@@ -1927,6 +1927,69 @@ body {
   transition: width 0.1s linear;
 }
 
+/* ============ FOCUS STATES — keyboard accessibility ============ */
+:focus-visible {
+  outline: 3px solid var(--mint);
+  outline-offset: 2px;
+  border-radius: var(--radius-xs);
+}
+
+.btn-primary:focus-visible,
+.btn-cta:focus-visible,
+.btn-ghost:focus-visible,
+.btn-outline:focus-visible {
+  outline: 3px solid var(--mint);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px rgba(62,207,142,0.15);
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ============ SKIP LINK ============ */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 100000;
+  padding: 12px 24px;
+  background: var(--mint);
+  color: var(--dark);
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+/* ============ HOVER GUARD — touch devices ============ */
+@media (hover: none) {
+  .pain-card:hover,
+  .feature-card:hover,
+  .feature-mini-card:hover,
+  .testimonial-card:hover,
+  .pricing-card:hover,
+  .faq-item:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: inherit;
+  }
+}
+
+/* ============ TOUCH TARGETS — minimum 44x44px ============ */
+@media (max-width: 768px) {
+  .faq-question { min-height: 48px; }
+  .toggle-switch { min-width: 48px; min-height: 30px; }
+  .btn-primary, .btn-ghost, .btn-outline, .btn-cta { min-height: 44px; }
+  .mobile-toggle { min-width: 44px; min-height: 44px; }
+  .nav-links a, .nav-link-btn { min-height: 44px; display: inline-flex; align-items: center; }
+}
+
 /* ============ REDUCED MOTION ============ */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

@@ -40,9 +40,12 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
+        <a href="#main-content" className="skip-link">Skip to main content</a>
         <div className="scroll-progress" id="scrollProgress"></div>
         <Navbar />
+        <main id="main-content">
         {children}
+        </main>
         <Footer />
         <JsonLd data={organizationSchema()} />
         <JsonLd data={websiteSchema()} />

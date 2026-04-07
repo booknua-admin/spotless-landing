@@ -190,7 +190,7 @@
   border-radius: 14px;
   padding: 16px 20px;
   box-shadow: 0 16px 40px rgba(0,0,0,0.2);
-  animation: float 4s ease-in-out infinite;
+  animation: float 4s ease-in-out 3;
 }
 
 .hero-float-card.revenue {
@@ -313,6 +313,17 @@
   font-size: 24px;
   margin-bottom: 20px;
 }
+
+/* SVG icon color inheritance */
+.pain-icon svg { color: inherit; }
+.pain-icon.red svg { color: var(--red-accent); }
+.pain-icon.orange svg { color: var(--orange-accent); }
+.pain-icon.yellow svg { color: #ca8a04; }
+.pain-icon.blue svg { color: var(--blue-accent); }
+.pain-icon.green svg { color: var(--green-accent); }
+.pain-icon.purple svg { color: var(--purple-accent); }
+.feature-card-icon svg { color: var(--mint); }
+.feature-mini-icon svg { color: var(--mint); }
 
 .pain-icon.red { background: #fef2f2; }
 .pain-icon.orange { background: #fff7ed; }
@@ -993,6 +1004,19 @@
   font-size: 15px;
   line-height: 1.7;
   color: var(--text-light);
+}
+
+/* ============ LARGE SCREENS ============ */
+@media (min-width: 1440px) {
+  .hero-grid { gap: 80px; }
+  .hero h1 { font-size: 68px; }
+  .hero-sub { font-size: 20px; max-width: 560px; }
+  .feature-showcase { gap: 32px; }
+  .feature-card { padding: 48px; }
+  .stats-grid { gap: 60px; }
+  .testimonial-grid { gap: 32px; }
+  .pricing-grid { gap: 28px; }
+  .roi-grid { gap: 100px; }
 }
 
 @media (max-width: 1024px) {
