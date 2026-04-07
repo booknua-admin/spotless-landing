@@ -40,6 +40,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
+        <div className="scroll-progress" id="scrollProgress"></div>
         <Navbar />
         {children}
         <Footer />

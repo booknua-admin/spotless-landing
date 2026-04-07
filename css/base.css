@@ -19,6 +19,10 @@
   --purple-accent: #a78bfa;
   --red-accent: #ef4444;
 
+  /* Warm CTA */
+  --cta-warm: #f97316;
+  --cta-warm-hover: #ea580c;
+
   /* Neutrals */
   --bg: #f4f5f7;
   --white: #ffffff;
@@ -236,6 +240,42 @@ body {
   color: var(--dark);
 }
 
+/* Warm CTA variant — high-contrast for primary conversion actions */
+.btn-cta {
+  padding: 18px 40px;
+  background: var(--cta-warm);
+  color: var(--white);
+  border: none;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: inherit;
+}
+
+.btn-cta:hover {
+  background: var(--cta-warm-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(249,115,22,0.35);
+}
+
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--mint), var(--cta-warm));
+  z-index: 10000;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
 /* ============ SHARED SECTION STYLES ============ */
 .section-tag {
   display: inline-flex;
@@ -331,6 +371,27 @@ body {
 /* ============ RESPONSIVE ============ */
 @media (max-width: 480px) {
   .container { padding: 0 16px; }
+}
+
+@media (max-width: 375px) {
+  .container { padding: 0 12px; }
+  .section-title { font-size: clamp(26px, 7vw, 32px); }
+  .btn-cta, .btn-primary-lg { padding: 14px 28px; font-size: 15px; }
+  .final-cta { padding: 80px 0; }
+  .final-cta .section-title { font-size: clamp(28px, 7vw, 36px); }
+}
+
+/* ============ INTERACTIVE ELEMENTS — cursor ============ */
+.pain-card,
+.feature-card,
+.feature-mini-card,
+.testimonial-card,
+.pricing-card,
+.faq-question,
+.toggle-switch,
+.pricing-toggle span,
+[role="button"] {
+  cursor: pointer;
 }
 
 /* ============ REDUCED MOTION ============ */

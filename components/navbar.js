@@ -312,6 +312,7 @@ export default function Navbar() {
             </li>
             <li><a href="/pricing">Pricing</a></li>
             <li><a href="/blog">Blog</a></li>
+            <li><a href="/contact">Contact</a></li>
             <li className="nav-item has-mega-menu">
               <button className="nav-link-btn" aria-expanded="false" aria-haspopup="true">
                 Free Tools <span className="nav-chevron">&#9662;</span>
@@ -461,6 +462,7 @@ export default function Navbar() {
         <a href="/pricing">Pricing</a>
         <a href="/blog">Blog</a>
         <a href="/locations">Locations</a>
+        <a href="/contact">Contact</a>
         <div className="mobile-accordion">
           <button className="mobile-accordion-toggle">Free Tools <span className="mobile-accordion-chevron">&#9662;</span></button>
           <div className="mobile-accordion-panel">

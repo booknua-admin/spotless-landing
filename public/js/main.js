@@ -14,6 +14,7 @@ function initPage() {
   initMobileAccordion();
   initSmoothScroll();
   initAnimationPause();
+  initScrollProgress();
 }
 
 if (document.readyState === 'loading') {
@@ -290,7 +291,7 @@ function initSmoothScroll() {
 
 /* ============ ANIMATION PAUSE ============ */
 function initAnimationPause() {
-  var animated = document.querySelectorAll('.hero-float-card, .hero-actions .btn-primary, .logo-marquee');
+  var animated = document.querySelectorAll('.hero-float-card, .hero-actions .btn-cta, .hero-actions .btn-primary, .logo-marquee');
   if (!animated.length) return;
 
   var obs = new IntersectionObserver(function(entries) {
@@ -303,4 +304,17 @@ function initAnimationPause() {
     el.style.animationPlayState = 'paused';
     obs.observe(el);
   });
+}
+
+/* ============ SCROLL PROGRESS BAR ============ */
+function initScrollProgress() {
+  var bar = document.getElementById('scrollProgress');
+  if (!bar) return;
+
+  window.addEventListener('scroll', function() {
+    var scrollTop = window.scrollY;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = progress + '%';
+  }, { passive: true });
 }
