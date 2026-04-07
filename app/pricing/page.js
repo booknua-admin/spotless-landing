@@ -81,12 +81,12 @@ export default function PricingPage() {
                 <span className="pricing-value" data-monthly="Free" data-annual="Free">Free</span>
               </div>
               <ul className="pricing-features">
-                <li><span className="pricing-check">&#10003;</span> 1 booking form</li>
-                <li><span className="pricing-check">&#10003;</span> Up to 3 staff members</li>
-                <li><span className="pricing-check">&#10003;</span> Email notifications</li>
-                <li><span className="pricing-check">&#10003;</span> Customer portal</li>
-                <li><span className="pricing-check">&#10003;</span> Basic reporting</li>
-                <li><span className="pricing-check">&#10003;</span> Weekly payouts</li>
+                <li><span className="pricing-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> 1 booking form</li>
+                <li><span className="pricing-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Up to 3 staff members</li>
+                <li><span className="pricing-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Email notifications</li>
+                <li><span className="pricing-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Customer portal</li>
+                <li><span className="pricing-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Basic reporting</li>
+                <li><span className="pricing-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Weekly payouts</li>
               </ul>
               <a href="https://app.spotlessapp.io/register" className="btn-primary dark">Get Started</a>
             </div>
@@ -101,13 +101,13 @@ export default function PricingPage() {
                 <span className="pricing-period">/mo</span>
               </div>
               <ul className="pricing-features">
-                <li><span className="pricing-check">&#10003;</span> Up to 5 booking forms</li>
-                <li><span className="pricing-check">&#10003;</span> Up to 10 staff members</li>
-                <li><span className="pricing-check">&#10003;</span> 3 automations</li>
-                <li><span className="pricing-check">&#10003;</span> Email + SMS notifications</li>
-                <li><span className="pricing-check">&#10003;</span> Staff portal</li>
-                <li><span className="pricing-check">&#10003;</span> Next-day payouts</li>
-                <li><span className="pricing-check">&#10003;</span> Advanced reporting</li>
+                <li><span className="pricing-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Up to 5 booking forms</li>
+                <li><span className="pricing-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Up to 10 staff members</li>
+                <li><span className="pricing-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> 3 automations</li>
+                <li><span className="pricing-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Email + SMS notifications</li>
+                <li><span className="pricing-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Staff portal</li>
+                <li><span className="pricing-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Next-day payouts</li>
+                <li><span className="pricing-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Advanced reporting</li>
               </ul>
               <a href="https://app.spotlessapp.io/register" className="btn-primary dark">Start Free Trial</a>
             </div>
@@ -123,13 +123,13 @@ export default function PricingPage() {
                 <span className="pricing-period">/mo</span>
               </div>
               <ul className="pricing-features">
-                <li><span className="pricing-check">&#10003;</span> Unlimited booking forms</li>
-                <li><span className="pricing-check">&#10003;</span> Up to 25 staff members</li>
-                <li><span className="pricing-check">&#10003;</span> Unlimited automations</li>
-                <li><span className="pricing-check">&#10003;</span> Email + SMS + WhatsApp</li>
-                <li><span className="pricing-check">&#10003;</span> Google Reviews integration</li>
-                <li><span className="pricing-check">&#10003;</span> Next-day payouts</li>
-                <li><span className="pricing-check">&#10003;</span> Referral program</li>
+                <li><span className="pricing-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Unlimited booking forms</li>
+                <li><span className="pricing-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Up to 25 staff members</li>
+                <li><span className="pricing-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Unlimited automations</li>
+                <li><span className="pricing-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Email + SMS + WhatsApp</li>
+                <li><span className="pricing-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Google Reviews integration</li>
+                <li><span className="pricing-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Next-day payouts</li>
+                <li><span className="pricing-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Referral program</li>
               </ul>
               <a href="https://app.spotlessapp.io/register" className="btn-primary btn-primary-lg">Start Free Trial</a>
             </div>
@@ -144,14 +144,14 @@ export default function PricingPage() {
                 <span className="pricing-period">/mo</span>
               </div>
               <ul className="pricing-features">
-                <li><span className="pricing-check">&#10003;</span> Everything in Growth</li>
-                <li><span className="pricing-check">&#10003;</span> Unlimited staff</li>
-                <li><span className="pricing-check">&#10003;</span> Custom domain</li>
-                <li><span className="pricing-check">&#10003;</span> White-label branding</li>
-                <li><span className="pricing-check">&#10003;</span> API access</li>
-                <li><span className="pricing-check">&#10003;</span> Same-day payouts</li>
-                <li><span className="pricing-check">&#10003;</span> Lower transaction fees</li>
-                <li><span className="pricing-check">&#10003;</span> Priority support</li>
+                <li><span className="pricing-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Everything in Growth</li>
+                <li><span className="pricing-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Unlimited staff</li>
+                <li><span className="pricing-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Custom domain</li>
+                <li><span className="pricing-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> White-label branding</li>
+                <li><span className="pricing-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> API access</li>
+                <li><span className="pricing-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Same-day payouts</li>
+                <li><span className="pricing-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Lower transaction fees</li>
+                <li><span className="pricing-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Priority support</li>
               </ul>
               <a href="https://app.spotlessapp.io/register" className="btn-primary dark">Start Free Trial</a>
             </div>
@@ -221,24 +221,24 @@ export default function PricingPage() {
                     </tr>
                     <tr>
                       <td>Email notifications</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
                     </tr>
                     <tr>
                       <td>SMS notifications</td>
                       <td style={{ textAlign: 'center', color: 'var(--text-lighter)' }}>&mdash;</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
                     </tr>
                     <tr>
                       <td>WhatsApp notifications</td>
                       <td style={{ textAlign: 'center', color: 'var(--text-lighter)' }}>&mdash;</td>
                       <td style={{ textAlign: 'center', color: 'var(--text-lighter)' }}>&mdash;</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
                     </tr>
 
                     {/* Payments */}
@@ -249,10 +249,10 @@ export default function PricingPage() {
                     </tr>
                     <tr>
                       <td>Online card payments</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
                     </tr>
                     <tr>
                       <td>Payout speed</td>
@@ -266,7 +266,7 @@ export default function PricingPage() {
                       <td style={{ textAlign: 'center', color: 'var(--text-lighter)' }}>&mdash;</td>
                       <td style={{ textAlign: 'center', color: 'var(--text-lighter)' }}>&mdash;</td>
                       <td style={{ textAlign: 'center', color: 'var(--text-lighter)' }}>&mdash;</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
                     </tr>
 
                     {/* Portals */}
@@ -277,31 +277,31 @@ export default function PricingPage() {
                     </tr>
                     <tr>
                       <td>Customer portal</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
                     </tr>
                     <tr>
                       <td>Staff portal</td>
                       <td style={{ textAlign: 'center', color: 'var(--text-lighter)' }}>&mdash;</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
                     </tr>
                     <tr>
                       <td>Basic reporting</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
                     </tr>
                     <tr>
                       <td>Advanced reporting</td>
                       <td style={{ textAlign: 'center', color: 'var(--text-lighter)' }}>&mdash;</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
                     </tr>
 
                     {/* Growth Features */}
@@ -314,15 +314,15 @@ export default function PricingPage() {
                       <td>Google Reviews integration</td>
                       <td style={{ textAlign: 'center', color: 'var(--text-lighter)' }}>&mdash;</td>
                       <td style={{ textAlign: 'center', color: 'var(--text-lighter)' }}>&mdash;</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
                     </tr>
                     <tr>
                       <td>Referral program</td>
                       <td style={{ textAlign: 'center', color: 'var(--text-lighter)' }}>&mdash;</td>
                       <td style={{ textAlign: 'center', color: 'var(--text-lighter)' }}>&mdash;</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
                     </tr>
 
                     {/* Business Features */}
@@ -336,28 +336,28 @@ export default function PricingPage() {
                       <td style={{ textAlign: 'center', color: 'var(--text-lighter)' }}>&mdash;</td>
                       <td style={{ textAlign: 'center', color: 'var(--text-lighter)' }}>&mdash;</td>
                       <td style={{ textAlign: 'center', color: 'var(--text-lighter)' }}>&mdash;</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
                     </tr>
                     <tr>
                       <td>White-label branding</td>
                       <td style={{ textAlign: 'center', color: 'var(--text-lighter)' }}>&mdash;</td>
                       <td style={{ textAlign: 'center', color: 'var(--text-lighter)' }}>&mdash;</td>
                       <td style={{ textAlign: 'center', color: 'var(--text-lighter)' }}>&mdash;</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
                     </tr>
                     <tr>
                       <td>API access</td>
                       <td style={{ textAlign: 'center', color: 'var(--text-lighter)' }}>&mdash;</td>
                       <td style={{ textAlign: 'center', color: 'var(--text-lighter)' }}>&mdash;</td>
                       <td style={{ textAlign: 'center', color: 'var(--text-lighter)' }}>&mdash;</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
                     </tr>
                     <tr>
                       <td>Priority support</td>
                       <td style={{ textAlign: 'center', color: 'var(--text-lighter)' }}>&mdash;</td>
                       <td style={{ textAlign: 'center', color: 'var(--text-lighter)' }}>&mdash;</td>
                       <td style={{ textAlign: 'center', color: 'var(--text-lighter)' }}>&mdash;</td>
-                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}>&#10003;</td>
+                      <td style={{ textAlign: 'center', color: 'var(--green-accent)' }}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
                     </tr>
                   </tbody>
                 </table>

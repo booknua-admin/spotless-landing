@@ -223,17 +223,17 @@ export default function AutomationsPage() {
           <h2 className="section-title animate-on-scroll" style={{ textAlign: 'center' }}>And that&rsquo;s not all</h2>
           <div className="product-mini-grid animate-on-scroll">
             <div className="product-mini-card">
-              <div className="product-mini-card-icon">&#128100;</div>
+              <div className="product-mini-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
               <h4>Auto-Assignment</h4>
               <p>Automatically assign jobs to the nearest, most available, or best-rated staff.</p>
             </div>
             <div className="product-mini-card">
-              <div className="product-mini-card-icon">&#128260;</div>
+              <div className="product-mini-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></div>
               <h4>Status Triggers</h4>
               <p>Trigger actions when job status changes &mdash; confirmed, started, completed, cancelled.</p>
             </div>
             <div className="product-mini-card">
-              <div className="product-mini-card-icon">&#128231;</div>
+              <div className="product-mini-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
               <h4>Email Sequences</h4>
               <p>Welcome emails, booking confirmations, follow-ups &mdash; all sent automatically.</p>
             </div>
@@ -251,21 +251,21 @@ export default function AutomationsPage() {
           <h2 className="section-title animate-on-scroll" style={{ textAlign: 'center' }}>Works seamlessly with</h2>
           <div className="crosslink-grid animate-on-scroll">
             <a href="/product/scheduling" className="crosslink-card">
-              <div className="crosslink-icon">&#128197;</div>
+              <div className="crosslink-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
               <div>
                 <h4>Scheduling</h4>
                 <p>Automations trigger based on job events in your calendar.</p>
               </div>
             </a>
             <a href="/product/payments" className="crosslink-card">
-              <div className="crosslink-icon">&#128179;</div>
+              <div className="crosslink-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
               <div>
                 <h4>Payments</h4>
                 <p>Auto-invoice on job completion, remind on overdue payments.</p>
               </div>
             </a>
             <a href="/product/referrals-reviews" className="crosslink-card">
-              <div className="crosslink-icon">&#11088;</div>
+              <div className="crosslink-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
               <div>
                 <h4>Referrals &amp; Reviews</h4>
                 <p>Trigger review requests and referral rewards automatically.</p>

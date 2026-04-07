@@ -240,7 +240,7 @@ export default function SchedulingPage() {
           <h2 className="section-title animate-on-scroll" style={{ textAlign: 'center' }}>And that&rsquo;s not all</h2>
           <div className="product-mini-grid animate-on-scroll">
             <div className="product-mini-card">
-              <div className="product-mini-card-icon">&#128203;</div>
+              <div className="product-mini-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
               <h4>Bookings</h4>
               <p>Accept and manage bookings with instant confirmation and customer notifications.</p>
             </div>
@@ -255,7 +255,7 @@ export default function SchedulingPage() {
               <p>A focused daily view showing exactly what needs to happen today and who&rsquo;s doing it.</p>
             </div>
             <div className="product-mini-card">
-              <div className="product-mini-card-icon">&#128100;</div>
+              <div className="product-mini-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
               <h4>Customers</h4>
               <p>Full customer profiles with job history, preferences, access codes, and notes.</p>
             </div>
@@ -269,21 +269,21 @@ export default function SchedulingPage() {
           <h2 className="section-title animate-on-scroll" style={{ textAlign: 'center' }}>Works seamlessly with</h2>
           <div className="crosslink-grid animate-on-scroll">
             <a href="/product/staff-management" className="crosslink-card">
-              <div className="crosslink-icon">&#128101;</div>
+              <div className="crosslink-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
               <div>
                 <h4>Staff Management</h4>
                 <p>Assign staff to scheduled jobs and track their availability.</p>
               </div>
             </a>
             <a href="/product/custom-forms" className="crosslink-card">
-              <div className="crosslink-icon">&#128221;</div>
+              <div className="crosslink-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
               <div>
                 <h4>Custom Forms</h4>
                 <p>Bookings from your forms flow straight into the calendar.</p>
               </div>
             </a>
             <a href="/product/automations" className="crosslink-card">
-              <div className="crosslink-icon">&#9889;</div>
+              <div className="crosslink-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
               <div>
                 <h4>Automations</h4>
                 <p>Auto-assign jobs, send reminders, and trigger follow-ups.</p>
