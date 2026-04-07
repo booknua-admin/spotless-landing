@@ -41,7 +41,7 @@
 .product-hero .section-tag { margin-bottom: 20px; }
 
 .product-hero h1 {
-  font-family: 'Bricolage Grotesque', sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(38px, 5vw, 60px);
   font-weight: 800;
   color: var(--white);
@@ -101,7 +101,7 @@
 }
 
 .story-label {
-  font-size: 12px;
+  font-size: var(--text-xs);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -110,7 +110,7 @@
 }
 
 .story-content h2 {
-  font-family: 'Bricolage Grotesque', sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(28px, 3vw, 40px);
   font-weight: 800;
   color: var(--white);
@@ -132,7 +132,7 @@
   color: var(--mint);
   text-decoration: none;
   font-weight: 700;
-  font-size: 15px;
+  font-size: var(--text-sm);
   transition: gap 0.2s;
 }
 
@@ -141,7 +141,7 @@
 .story-visual {
   background: var(--dark-light);
   border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 20px;
+  border-radius: var(--radius-xl);
   padding: 40px;
   min-height: 300px;
   display: flex;
@@ -201,7 +201,7 @@
 }
 
 .product-feature-content h3 {
-  font-family: 'Bricolage Grotesque', sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(24px, 3vw, 32px);
   font-weight: 800;
   color: var(--white);
@@ -210,7 +210,7 @@
 }
 
 .product-feature-content p {
-  font-size: 16px;
+  font-size: var(--text-base);
   color: rgba(255,255,255,0.55);
   line-height: 1.7;
 }
@@ -218,7 +218,7 @@
 .product-feature-visual {
   background: var(--dark-light);
   border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 20px;
+  border-radius: var(--radius-xl);
   padding: 36px;
   position: relative;
   overflow: hidden;
@@ -270,7 +270,7 @@
   border: 1px solid rgba(255,255,255,0.06);
   border-radius: var(--radius);
   padding: 32px 28px;
-  transition: all 0.3s ease;
+  transition: all var(--duration-normal) var(--ease-out);
   position: relative;
   overflow: hidden;
 }
@@ -303,19 +303,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
+  font-size: var(--text-2xl);
   margin-bottom: 20px;
 }
 
 .product-mini-card h4 {
-  font-size: 16px;
+  font-size: var(--text-base);
   font-weight: 700;
   color: var(--white);
   margin-bottom: 8px;
 }
 
 .product-mini-card p {
-  font-size: 14px;
+  font-size: var(--text-sm);
   color: rgba(255,255,255,0.5);
   line-height: 1.6;
 }
@@ -357,7 +357,7 @@
   border: 1px solid rgba(255,255,255,0.06);
   border-radius: var(--radius);
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all var(--duration-normal) var(--ease-out);
   position: relative;
   overflow: hidden;
 }
@@ -389,14 +389,14 @@
 }
 
 .crosslink-card h4 {
-  font-size: 16px;
+  font-size: var(--text-base);
   font-weight: 700;
   color: var(--white);
   margin-bottom: 6px;
 }
 
 .crosslink-card p {
-  font-size: 14px;
+  font-size: var(--text-sm);
   color: rgba(255,255,255,0.5);
   line-height: 1.5;
 }
@@ -416,7 +416,7 @@
   padding: 32px 24px;
   text-align: center;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all var(--duration-normal) var(--ease-out);
   position: relative;
   overflow: hidden;
 }
@@ -447,7 +447,7 @@
 }
 
 .product-category-card h4 {
-  font-size: 15px;
+  font-size: var(--text-sm);
   font-weight: 700;
   color: var(--white);
 }
@@ -478,7 +478,7 @@
   .story-section { padding: 80px 0; }
   .story-content h2 { font-size: 28px; }
   .product-feature-section { padding: 80px 0; }
-  .product-feature-content h3 { font-size: 24px; }
+  .product-feature-content h3 { font-size: var(--text-2xl); }
   .product-more-section { padding: 80px 0; }
   .product-mini-grid { grid-template-columns: 1fr 1fr; }
   .product-crosslinks { padding: 80px 0; }

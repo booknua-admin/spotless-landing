@@ -7,9 +7,9 @@
 .mockup-window {
   background: #FAFAFA;
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  box-shadow: var(--shadow-md);
 }
 
 .mockup-topbar {
@@ -50,7 +50,7 @@
 .mockup-stat-card {
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   padding: 16px;
   border-left: 3px solid var(--mint);
   position: relative;
@@ -72,7 +72,7 @@
 }
 
 .mockup-stat-value {
-  font-size: 22px;
+  font-size: var(--text-xl);
   font-weight: 800;
   color: var(--text);
   line-height: 1.2;
@@ -91,7 +91,7 @@
 .mockup-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 12px;
+  font-size: var(--text-xs);
 }
 
 .mockup-table thead th {
@@ -125,7 +125,7 @@
   display: inline-flex;
   align-items: center;
   padding: 3px 10px;
-  border-radius: 100px;
+  border-radius: var(--radius-full);
   font-size: 11px;
   font-weight: 600;
   line-height: 1.4;
@@ -145,7 +145,7 @@
   gap: 6px;
   padding: 7px 16px;
   border-radius: 6px;
-  font-size: 12px;
+  font-size: var(--text-xs);
   font-weight: 600;
   border: none;
   cursor: default;
@@ -173,7 +173,7 @@
   padding: 8px 12px;
   border: 1px solid var(--border);
   border-radius: 6px;
-  font-size: 12px;
+  font-size: var(--text-xs);
   color: var(--text);
   background: var(--white);
 }
@@ -193,7 +193,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 12px;
+  font-size: var(--text-xs);
   color: var(--text);
 }
 
@@ -221,7 +221,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 12px;
+  font-size: var(--text-xs);
   color: var(--text);
 }
 
@@ -257,7 +257,7 @@
 }
 
 .mockup-avatar.sm { width: 24px; height: 24px; font-size: 10px; }
-.mockup-avatar.lg { width: 36px; height: 36px; font-size: 14px; }
+.mockup-avatar.lg { width: 36px; height: 36px; font-size: var(--text-sm); }
 
 /* Status dots */
 .mockup-status-dot {
@@ -318,7 +318,7 @@
 
 .mockup-kanban-col {
   background: var(--bg);
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   padding: 10px;
 }
 
@@ -341,7 +341,7 @@
   font-size: 10px;
   font-weight: 600;
   padding: 1px 7px;
-  border-radius: 100px;
+  border-radius: var(--radius-full);
   background: var(--white);
   color: var(--text-light);
 }
@@ -382,8 +382,8 @@
 }
 
 .mockup-sidebar-brand {
-  font-family: 'Bricolage Grotesque', sans-serif;
-  font-size: 16px;
+  font-family: var(--font-display);
+  font-size: var(--text-base);
   font-weight: 800;
   color: var(--white);
   margin-bottom: 20px;
@@ -396,7 +396,7 @@
   gap: 8px;
   padding: 7px 10px;
   border-radius: 6px;
-  font-size: 12px;
+  font-size: var(--text-xs);
   color: rgba(255,255,255,0.5);
   margin-bottom: 2px;
 }
@@ -408,7 +408,7 @@
 }
 
 .mockup-sidebar-icon {
-  font-size: 14px;
+  font-size: var(--text-sm);
   width: 18px;
   text-align: center;
 }
@@ -426,7 +426,7 @@
 }
 
 .mockup-main-title {
-  font-size: 16px;
+  font-size: var(--text-base);
   font-weight: 700;
   color: var(--text);
 }
@@ -434,11 +434,11 @@
 /* Action/alert cards */
 .mockup-alert-card {
   padding: 12px 14px;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 12px;
+  font-size: var(--text-xs);
   margin-bottom: 8px;
 }
 
@@ -468,7 +468,7 @@
 
 .mockup-flow-node {
   padding: 10px 16px;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   font-size: 11px;
   font-weight: 600;
   white-space: nowrap;
@@ -499,7 +499,7 @@
 .mockup-invoice {
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   padding: 20px;
 }
 
@@ -512,7 +512,7 @@
 }
 
 .mockup-invoice-title {
-  font-size: 14px;
+  font-size: var(--text-sm);
   font-weight: 700;
   color: var(--text);
 }
@@ -526,7 +526,7 @@
   display: flex;
   justify-content: space-between;
   padding: 6px 0;
-  font-size: 12px;
+  font-size: var(--text-xs);
   color: var(--text);
   border-bottom: 1px solid #f5f5f5;
 }
@@ -541,7 +541,7 @@
   padding: 10px 0 0;
   margin-top: 6px;
   border-top: 2px solid var(--dark);
-  font-size: 14px;
+  font-size: var(--text-sm);
   font-weight: 700;
   color: var(--text);
 }
@@ -551,14 +551,14 @@
   display: flex;
   gap: 2px;
   color: #f59e0b;
-  font-size: 14px;
+  font-size: var(--text-sm);
 }
 
 /* Review card */
 .mockup-review-card {
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   padding: 14px;
   margin-bottom: 8px;
 }
@@ -579,7 +579,7 @@
 }
 
 .mockup-review-name {
-  font-size: 12px;
+  font-size: var(--text-xs);
   font-weight: 600;
   color: var(--text);
 }
@@ -590,7 +590,7 @@
 }
 
 .mockup-review-text {
-  font-size: 12px;
+  font-size: var(--text-xs);
   color: var(--text-light);
   line-height: 1.5;
 }
@@ -598,7 +598,7 @@
 /* Code snippet */
 .mockup-code {
   background: var(--dark);
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   padding: 14px 16px;
   font-family: 'SF Mono', 'Fira Code', monospace;
   font-size: 11px;
@@ -614,7 +614,7 @@
 
 /* Section headers in mockup body */
 .mockup-section-title {
-  font-size: 12px;
+  font-size: var(--text-xs);
   font-weight: 700;
   color: var(--text);
   margin-bottom: 10px;
@@ -627,7 +627,7 @@
   gap: 10px;
   padding: 8px 0;
   border-bottom: 1px solid #f0f0f0;
-  font-size: 12px;
+  font-size: var(--text-xs);
 }
 
 .mockup-leaderboard-row:last-child { border-bottom: none; }
@@ -675,7 +675,7 @@
 .compare-table-wrap {
   background: var(--dark-light);
   border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 16px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
   margin: 40px 0;
 }
@@ -687,7 +687,7 @@
 
 .compare-table thead th {
   padding: 20px 24px;
-  font-size: 14px;
+  font-size: var(--text-sm);
   font-weight: 700;
   text-align: left;
   color: var(--white);
@@ -697,7 +697,7 @@
 .compare-table thead th:first-child {
   width: 40%;
   color: rgba(255,255,255,0.6);
-  font-size: 13px;
+  font-size: var(--text-xs);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -707,7 +707,7 @@
 
 .compare-table tbody td {
   padding: 16px 24px;
-  font-size: 15px;
+  font-size: var(--text-sm);
   color: rgba(255,255,255,0.8);
   border-bottom: 1px solid rgba(255,255,255,0.04);
   transition: background 0.15s;
@@ -732,8 +732,8 @@
   justify-content: center;
   width: 28px;
   height: 28px;
-  border-radius: 8px;
-  font-size: 14px;
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
   font-weight: 700;
 }
 .compare-check.yes {
@@ -762,11 +762,11 @@
 .compare-card {
   background: var(--dark-light);
   border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 16px;
+  border-radius: var(--radius-lg);
   padding: 32px;
 }
 .compare-card h3 {
-  font-size: 18px;
+  font-size: var(--text-lg);
   margin-bottom: 20px;
 }
 .compare-card ul {
@@ -781,7 +781,7 @@
   display: flex;
   gap: 12px;
   align-items: flex-start;
-  font-size: 15px;
+  font-size: var(--text-sm);
   line-height: 1.5;
 }
 .compare-card .icon-check {
@@ -793,7 +793,7 @@
   border-radius: 6px;
   background: rgba(62,207,142,0.12);
   color: var(--mint);
-  font-size: 13px;
+  font-size: var(--text-xs);
   font-weight: 700;
   flex-shrink: 0;
   margin-top: 2px;
@@ -807,7 +807,7 @@
   border-radius: 6px;
   background: rgba(255,255,255,0.04);
   color: rgba(255,255,255,0.3);
-  font-size: 13px;
+  font-size: var(--text-xs);
   font-weight: 700;
   flex-shrink: 0;
   margin-top: 2px;
@@ -818,12 +818,12 @@
   .compare-table thead th,
   .compare-table tbody td {
     padding: 12px 16px;
-    font-size: 13px;
+    font-size: var(--text-xs);
   }
   .compare-check {
     width: 24px;
     height: 24px;
-    font-size: 12px;
+    font-size: var(--text-xs);
   }
   .compare-cards-grid {
     grid-template-columns: 1fr;
