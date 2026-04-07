@@ -1,23 +1,22 @@
 /* ============ NAVBAR ============ */
 .navbar {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   z-index: 1000;
-  padding: 16px 0;
-  transition: background 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-              padding 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: var(--space-4) 0;
+  transition: background var(--duration-slow) var(--ease-out),
+              padding var(--duration-slow) var(--ease-out),
+              border-color var(--duration-slow) var(--ease-out);
   background: transparent;
+  border-bottom: 1px solid transparent;
 }
 
 .navbar.scrolled {
-  background: rgba(28, 28, 46, 0.95);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  padding: 10px 0;
-  box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+  background: rgba(28, 28, 46, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: var(--space-2) 0;
+  border-bottom-color: rgba(255,255,255,0.06);
 }
 
 .navbar .container {
@@ -29,17 +28,15 @@
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: var(--space-3);
   text-decoration: none;
 }
 
-.nav-logo-icon {
-  display: none;
-}
+.nav-logo-icon { display: none; }
 
 .nav-logo-text {
-  font-family: 'Bricolage Grotesque', sans-serif;
-  font-size: 24px;
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
   font-weight: 800;
   color: var(--white);
   letter-spacing: -0.5px;
@@ -48,24 +45,33 @@
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: var(--space-8);
   list-style: none;
 }
 
 .nav-links a {
-  color: rgba(255,255,255,0.75);
+  color: rgba(255,255,255,0.7);
   text-decoration: none;
-  font-size: 14px;
+  font-size: var(--text-sm);
   font-weight: 500;
-  transition: color 0.2s;
+  transition: color var(--duration-fast);
 }
-
 .nav-links a:hover { color: var(--mint); }
 
 .nav-cta {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: var(--space-3);
+}
+
+/* Navbar CTA transitions to warm orange on scroll */
+.navbar.scrolled .nav-cta .btn-primary {
+  background: var(--cta-warm);
+  color: var(--white);
+}
+.navbar.scrolled .nav-cta .btn-primary:hover {
+  background: var(--cta-warm-hover);
+  box-shadow: var(--shadow-glow-warm);
 }
 
 .mobile-toggle {
@@ -75,29 +81,28 @@
   color: white;
   font-size: 24px;
   cursor: pointer;
-  padding: 8px;
+  padding: var(--space-2);
 }
 
 .mobile-menu {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background: rgba(28, 28, 46, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   z-index: 1001;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 32px;
+  gap: var(--space-8);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  padding: 80px 24px 40px;
+  padding: var(--space-20) var(--space-6) var(--space-10);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-              visibility 0.3s;
+  transition: opacity var(--duration-normal) var(--ease-out),
+              visibility var(--duration-normal);
   pointer-events: none;
 }
 
@@ -110,33 +115,21 @@
 .mobile-menu a {
   color: var(--white);
   text-decoration: none;
-  font-size: 20px;
+  font-size: var(--text-xl);
   font-weight: 600;
-  transition: color 0.2s;
+  transition: color var(--duration-fast);
 }
-
 .mobile-menu a:hover { color: var(--mint); }
 
 .mobile-menu-close {
   position: absolute;
-  top: 20px;
-  right: 24px;
+  top: var(--space-5);
+  right: var(--space-6);
   background: none;
   border: none;
   color: white;
   font-size: 28px;
   cursor: pointer;
-}
-
-/* Navbar CTA becomes warm orange on scroll for higher visibility */
-.navbar.scrolled .nav-cta .btn-primary {
-  background: var(--cta-warm);
-  color: var(--white);
-}
-
-.navbar.scrolled .nav-cta .btn-primary:hover {
-  background: var(--cta-warm-hover);
-  box-shadow: 0 4px 20px rgba(249,115,22,0.35);
 }
 
 @media (max-width: 768px) {
@@ -147,6 +140,5 @@
 }
 
 @media (max-width: 480px) {
-  .mobile-menu { gap: 20px; padding: 70px 16px 32px; }
+  .mobile-menu { gap: var(--space-5); padding: var(--space-16) var(--space-4) var(--space-8); }
 }
-
